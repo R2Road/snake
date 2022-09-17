@@ -19,6 +19,14 @@ namespace psnake
 		const char String4Version[15] = { 'S', 'n', 'a', 'k', 'e', ' ', ':', ' ', 'v', VersionNumber_1, '.', VersionNumber_2, '.', VersionNumber_3, '\0' };
 
 
+		const char* const String4Road2Version_0_0_1 = {
+			"### Road 2 Version 0.0.1 ###"
+			"\n"
+			"\n"	"[ ] " "Make Empty Map"
+			"\n"	"[ ] " "Make Snake Head"
+			"\n"	"[ ] " "Move Snake Head"
+		};
+
 		const char* const String4Road2Version_0_0_0 = {
 			"### Road 2 Version 0.0.0 ###"
 			"\n"

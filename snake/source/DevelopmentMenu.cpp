@@ -31,7 +31,7 @@ r2cm::MenuUp DevelopmentMenu::Create( r2cm::Director& director )
 	r2cm::MenuUp ret( new ( std::nothrow ) r2cm::Menu(
 		director
 		, GetTitle()
-		, psnake::VersionInfo.String4Road2Version_0_0_0
+		, psnake::VersionInfo.String4Road2Version_0_0_1
 	) );
 
 	{
