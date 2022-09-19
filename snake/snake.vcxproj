@@ -91,6 +91,7 @@
     <ClCompile Include="source\psnake\psnake_Terrain.cpp" />
     <ClCompile Include="source\test\item\test_psnake_terrain.cpp" />
     <ClCompile Include="source\test\TestMenu.cpp" />
+    <ClCompile Include="source\test\Utility4Terrain.cpp" />
     <ClCompile Include="source\test\Utility4Test.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +199,7 @@
     <ClInclude Include="source\psnake\psnake_VersionInfo.h" />
     <ClInclude Include="source\test\item\test_psnake_terrain.h" />
     <ClInclude Include="source\test\TestMenu.h" />
+    <ClInclude Include="source\test\Utility4Terrain.h" />
     <ClInclude Include="source\test\Utility4Test.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

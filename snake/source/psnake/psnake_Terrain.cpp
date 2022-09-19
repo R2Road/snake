@@ -26,4 +26,11 @@ namespace psnake
 			++i;
 		}
 	}
+
+	Terrain::Cell Terrain::Get( const uint32_t x, const uint32_t y ) const
+	{
+		const auto target_linear_index = mGridIndexConverter.To_Linear( x, y );
+
+		return mContainer[target_linear_index];
+	}
 }

@@ -2,8 +2,11 @@
 
 #include "r2cm/r2cm_Inspector.h"
 #include "r2cm/r2cm_ostream.h"
+#include "r2cm/r2cm_WindowUtility.h"
 
 #include "psnake/psnake_Terrain.h"
+
+#include "test/Utility4Terrain.h"
 
 namespace test_psnake_terrain
 {
@@ -79,16 +82,15 @@ namespace test_psnake_terrain
 					,	psnake::eCellType::Obstacle		, psnake::eCellType::Road		, psnake::eCellType::Road			,psnake::eCellType::Obstacle
 					,	psnake::eCellType::Obstacle		, psnake::eCellType::Road		, psnake::eCellType::Road			,psnake::eCellType::Obstacle
 					,	psnake::eCellType::Obstacle		, psnake::eCellType::Obstacle	, psnake::eCellType::Obstacle		,psnake::eCellType::Obstacle
-				} ) );
+					} ) );
+			}
+			
+			std::cout << r2cm::split;
 
-				std::cout << r2cm::linefeed;
-
-				std::cout << "# Iteration" << " > ";
-				for( const auto c : terrain )
-				{
-					std::cout << c << ' ';
-				}
-				std::cout << r2cm::linefeed;
+			{
+				std::cout << "# View" << r2cm::linefeed2;
+				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
 			}
 
 			std::cout << r2cm::split;

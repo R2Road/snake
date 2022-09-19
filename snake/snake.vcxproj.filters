@@ -245,6 +245,9 @@
     <ClCompile Include="source\test\item\test_psnake_terrain.cpp">
       <Filter>test\item</Filter>
     </ClCompile>
+    <ClCompile Include="source\test\Utility4Terrain.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\DevelopmentMenu.h" />
@@ -559,6 +562,9 @@
     </ClInclude>
     <ClInclude Include="source\psnake\psnake_constant.h">
       <Filter>project_snake</Filter>
+    </ClInclude>
+    <ClInclude Include="source\test\Utility4Terrain.h">
+      <Filter>test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -67,6 +67,11 @@ namespace psnake
 		//
 		void Fill( const std::initializer_list<eCellType> datas );
 
+		//
+		//
+		//
+		Cell Get( const uint32_t x, const uint32_t y ) const;
+
 	private:
 		r2::GridIndexConverter mGridIndexConverter;
 		ContainerT mContainer;
