@@ -13,11 +13,6 @@ namespace psnake
 		struct Cell
 		{
 			eCellType type;
-
-			operator int() const
-			{
-				return static_cast<int32_t>( type );
-			}
 		};
 
 		using ContainerT = std::vector<Cell>;
