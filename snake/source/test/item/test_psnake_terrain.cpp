@@ -40,15 +40,14 @@ namespace test_psnake_terrain
 
 				EXPECT_EQ( terrain.GetWidth() * terrain.GetHeight(), terrain.Size() );
 				OUTPUT_VALUE( terrain.Size() );
+			}
 
-				std::cout << r2cm::linefeed;
+			std::cout << r2cm::split;
 
-				std::cout << "# Iteration" << " > ";
-				for( const auto c : terrain )
-				{
-					std::cout << c << ' ';
-				}
-				std::cout << r2cm::linefeed;
+			{
+				std::cout << "# View" << r2cm::linefeed2;
+				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
 			}
 
 			std::cout << r2cm::split;
