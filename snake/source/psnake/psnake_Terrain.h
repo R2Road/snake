@@ -70,7 +70,7 @@ namespace psnake
 		//
 		//
 		//
-		Cell Get( const uint32_t x, const uint32_t y ) const;
+		eCellType Get( const uint32_t x, const uint32_t y ) const;
 
 	private:
 		r2::GridIndexConverter mGridIndexConverter;
