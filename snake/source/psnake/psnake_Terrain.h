@@ -10,11 +10,7 @@ namespace psnake
 	class Terrain
 	{
 	public:
-		struct Cell
-		{
-			eCellType type;
-		};
-
+		using Cell = eCellType;
 		using ContainerT = std::vector<Cell>;
 		using ConstIteratorT = typename ContainerT::const_iterator;
 

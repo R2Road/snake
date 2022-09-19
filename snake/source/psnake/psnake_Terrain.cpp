@@ -6,7 +6,7 @@ namespace psnake
 {
 	Terrain::Terrain( const uint32_t width, const uint32_t height ) :
 		mGridIndexConverter( width, height )
-		, mContainer( width * height, { eCellType::Road } )
+		, mContainer( width * height, eCellType::Road )
 	{}
 
 	bool Terrain::IsIn( const int32_t x, const int32_t y ) const
@@ -21,7 +21,7 @@ namespace psnake
 		std::size_t i = 0u;
 		for( const auto c : datas )
 		{
-			mContainer[i].type = c;
+			mContainer[i] = c;
 
 			++i;
 		}
@@ -31,6 +31,6 @@ namespace psnake
 	{
 		const auto target_linear_index = mGridIndexConverter.To_Linear( x, y );
 
-		return mContainer[target_linear_index].type;
+		return mContainer[target_linear_index];
 	}
 }
