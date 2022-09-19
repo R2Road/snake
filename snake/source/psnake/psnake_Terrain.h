@@ -9,7 +9,21 @@ namespace psnake
 	class Terrain
 	{
 	public:
-		using Cell = bool;
+		enum class eCellType
+		{
+			Road,
+			Obstacle,
+		};
+		struct Cell
+		{
+			eCellType type;
+
+			operator int() const
+			{
+				return static_cast<int32_t>( type );
+			}
+		};
+
 		using ContainerT = std::vector<Cell>;
 		using ConstIteratorT = typename ContainerT::const_iterator;
 
