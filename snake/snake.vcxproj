@@ -187,6 +187,7 @@
     <ClInclude Include="external\r2\r2_ValueWithTracking.h" />
     <ClInclude Include="external\r2\r2_VersionInfo.h" />
     <ClInclude Include="source\DevelopmentMenu.h" />
+    <ClInclude Include="source\psnake\psnake_constant.h" />
     <ClInclude Include="source\psnake\psnake_scene_CompanyScene.h" />
     <ClInclude Include="source\psnake\psnake_DebugConfig.h" />
     <ClInclude Include="source\psnake\psnake_DirectorConfig.h" />

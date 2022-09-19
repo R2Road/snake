@@ -3,17 +3,13 @@
 #include <vector>
 
 #include "r2/r2_GridIndexConverter.h"
+#include "psnake_constant.h"
 
 namespace psnake
 {
 	class Terrain
 	{
 	public:
-		enum class eCellType
-		{
-			Road,
-			Obstacle,
-		};
 		struct Cell
 		{
 			eCellType type;

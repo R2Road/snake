@@ -557,5 +557,8 @@
     <ClInclude Include="source\test\item\test_psnake_terrain.h">
       <Filter>test\item</Filter>
     </ClInclude>
+    <ClInclude Include="source\psnake\psnake_constant.h">
+      <Filter>project_snake</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
