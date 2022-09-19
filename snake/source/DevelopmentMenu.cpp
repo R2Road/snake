@@ -26,12 +26,26 @@ const char* DevelopmentMenu::GetTitle()
 	return ret.c_str();
 }
 
+const char* GetMessage()
+{
+	static const std::string ret =
+		std::string()
+		+ psnake::VersionInfo.String4SubjectAsAProgrammer
+		+ "\n"
+		+ "\n"	"==============================="
+		+ "\n"
+		+ "\n"
+		+ psnake::VersionInfo.String4Road2Version_0_0_1
+		;
+	return ret.c_str();
+}
+
 r2cm::MenuUp DevelopmentMenu::Create( r2cm::Director& director )
 {
 	r2cm::MenuUp ret( new ( std::nothrow ) r2cm::Menu(
 		director
 		, GetTitle()
-		, psnake::VersionInfo.String4Road2Version_0_0_1
+		, GetMessage()
 	) );
 
 	{
