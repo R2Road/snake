@@ -14,6 +14,7 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 
 	{
 		ret->AddItem( '1', test_psnake_terrain::Declaration::GetInstance() );
+		ret->AddItem( '2', test_psnake_terrain::Fill::GetInstance() );
 
 
 

@@ -62,6 +62,11 @@ namespace psnake
 		}
 		bool IsIn( const int32_t x, const int32_t y ) const;
 
+		//
+		//
+		//
+		void Fill( const std::initializer_list<eCellType> datas );
+
 	private:
 		r2::GridIndexConverter mGridIndexConverter;
 		ContainerT mContainer;
