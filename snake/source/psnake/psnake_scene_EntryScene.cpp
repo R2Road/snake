@@ -2,6 +2,7 @@
 
 #include "r2bix/r2base_Director.h"
 
+#include "psnake_GameCore.h"
 #include "psnake_table_TextureTable.h"
 #include "psnake_table_TextureFrameAnimationTable.h"
 
@@ -30,7 +31,7 @@ namespace psnake_scene
 			//
 			// Scene
 			//
-			auto next_scene = psnake_scene::CompanyScene::Create( mOwnerNode.GetDirector() );
+			auto next_scene = psnake_scene::CompanyScene::Create( mOwnerNode.GetDirector(), psnake::GameCore::Create() );
 
 			//
 			// Go Next 

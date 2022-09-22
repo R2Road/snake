@@ -84,6 +84,7 @@
     <ClCompile Include="external\r2\r2_TimerFloat.cpp" />
     <ClCompile Include="source\DevelopmentMenu.cpp" />
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\psnake\psnake_GameCore.cpp" />
     <ClCompile Include="source\psnake\psnake_scene_CompanyScene.cpp" />
     <ClCompile Include="source\psnake\psnake_scene_EntryScene.cpp" />
     <ClCompile Include="source\psnake\psnake_table_TextureFrameAnimationTable.cpp" />
@@ -189,6 +190,7 @@
     <ClInclude Include="external\r2\r2_VersionInfo.h" />
     <ClInclude Include="source\DevelopmentMenu.h" />
     <ClInclude Include="source\psnake\psnake_constant.h" />
+    <ClInclude Include="source\psnake\psnake_GameCore.h" />
     <ClInclude Include="source\psnake\psnake_scene_CompanyScene.h" />
     <ClInclude Include="source\psnake\psnake_DebugConfig.h" />
     <ClInclude Include="source\psnake\psnake_DirectorConfig.h" />

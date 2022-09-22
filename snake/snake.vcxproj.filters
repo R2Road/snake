@@ -248,6 +248,9 @@
     <ClCompile Include="source\test\Utility4Terrain.cpp">
       <Filter>test</Filter>
     </ClCompile>
+    <ClCompile Include="source\psnake\psnake_GameCore.cpp">
+      <Filter>project_snake</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\DevelopmentMenu.h" />
@@ -565,6 +568,9 @@
     </ClInclude>
     <ClInclude Include="source\test\Utility4Terrain.h">
       <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psnake\psnake_GameCore.h">
+      <Filter>project_snake</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
