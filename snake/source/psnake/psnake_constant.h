@@ -4,7 +4,7 @@ namespace psnake
 {
 	enum class eCellType
 	{
-		Road,
+		Open,
 		Obstacle,
 	};
 }

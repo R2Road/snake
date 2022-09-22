@@ -78,8 +78,8 @@ namespace test_psnake_terrain
 			{
 				PROCESS_MAIN( terrain.Fill( {
 						psnake::eCellType::Obstacle		, psnake::eCellType::Obstacle	, psnake::eCellType::Obstacle		,psnake::eCellType::Obstacle
-					,	psnake::eCellType::Obstacle		, psnake::eCellType::Road		, psnake::eCellType::Road			,psnake::eCellType::Obstacle
-					,	psnake::eCellType::Obstacle		, psnake::eCellType::Road		, psnake::eCellType::Road			,psnake::eCellType::Obstacle
+					,	psnake::eCellType::Obstacle		, psnake::eCellType::Open		, psnake::eCellType::Open			,psnake::eCellType::Obstacle
+					,	psnake::eCellType::Obstacle		, psnake::eCellType::Open		, psnake::eCellType::Open			,psnake::eCellType::Obstacle
 					,	psnake::eCellType::Obstacle		, psnake::eCellType::Obstacle	, psnake::eCellType::Obstacle		,psnake::eCellType::Obstacle
 					} ) );
 			}
@@ -115,8 +115,8 @@ namespace test_psnake_terrain
 
 			DECLARATION_MAIN( psnake::Terrain terrain( 2, 2 ) );
 			PROCESS_MAIN( terrain.Fill( {
-						psnake::eCellType::Road		, psnake::eCellType::Obstacle
-					,	psnake::eCellType::Obstacle		, psnake::eCellType::Road
+						psnake::eCellType::Open		, psnake::eCellType::Obstacle
+					,	psnake::eCellType::Obstacle		, psnake::eCellType::Open
 			} ) );
 
 			std::cout << r2cm::split;
@@ -130,15 +130,15 @@ namespace test_psnake_terrain
 			std::cout << r2cm::split;
 
 			{
-				EXPECT_EQ( psnake::eCellType::Road, terrain.Get( 0, 0 ) );
+				EXPECT_EQ( psnake::eCellType::Open, terrain.Get( 0, 0 ) );
 				EXPECT_EQ( psnake::eCellType::Obstacle, terrain.Get( 1, 0 ) );
 				EXPECT_EQ( psnake::eCellType::Obstacle, terrain.Get( 0, 1 ) );
-				EXPECT_EQ( psnake::eCellType::Road, terrain.Get( 1, 1 ) );
+				EXPECT_EQ( psnake::eCellType::Open, terrain.Get( 1, 1 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( psnake::eCellType::Road, terrain.Get( 2, 1 ) );
-				EXPECT_EQ( psnake::eCellType::Road, terrain.Get( 1, 2 ) );
+				EXPECT_EQ( psnake::eCellType::Open, terrain.Get( 2, 1 ) );
+				EXPECT_EQ( psnake::eCellType::Open, terrain.Get( 1, 2 ) );
 			}
 
 			std::cout << r2cm::split;

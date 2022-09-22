@@ -6,7 +6,7 @@ namespace psnake
 {
 	Terrain::Terrain( const uint32_t width, const uint32_t height ) :
 		mGridIndexConverter( width, height )
-		, mContainer( width * height, eCellType::Road )
+		, mContainer( width * height, eCellType::Open )
 	{}
 
 	bool Terrain::IsIn( const int32_t x, const int32_t y ) const
