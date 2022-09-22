@@ -18,4 +18,11 @@ namespace test_psnake_terrain
 		TitleFunctionT GetTitleFunction() const override;
 		DoFunctionT GetDoFunction() override;
 	};
+
+	class Get_IsIn : public r2cm::iItem, public r2cm::SingleTon<Get_IsIn>
+	{
+	public:
+		TitleFunctionT GetTitleFunction() const override;
+		DoFunctionT GetDoFunction() override;
+	};
 }
