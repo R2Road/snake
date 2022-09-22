@@ -5,6 +5,6 @@ namespace psnake
 	enum class eCellType
 	{
 		Open,
-		Obstacle,
+		Close,
 	};
 }
