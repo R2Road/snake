@@ -17,7 +17,7 @@ void Utility4Terrain::Draw( const short x, const short y, const psnake::Terrain&
 		{
 			r2cm::WindowUtility::FillCharacter(
 				{ static_cast<short>( pivot_point.x + ( cx * 2 ) ),	static_cast<short>( pivot_point.y + cy ) }
-				, static_cast<char>( 48 + static_cast<int>( terrain.Get( cx, cy ) ) )
+				, ( psnake::eCellType::Open == terrain.Get( cx, cy ) ? 'o' : 'x' )
 			);
 		}
 	}
