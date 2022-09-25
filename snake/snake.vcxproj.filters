@@ -260,6 +260,9 @@
     <ClCompile Include="source\psnake\psnake_Snake.cpp">
       <Filter>project_snake</Filter>
     </ClCompile>
+    <ClCompile Include="source\test\Utility4Snake.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\DevelopmentMenu.h" />
@@ -589,6 +592,9 @@
     </ClInclude>
     <ClInclude Include="source\psnake\psnake_Snake.h">
       <Filter>project_snake</Filter>
+    </ClInclude>
+    <ClInclude Include="source\test\Utility4Snake.h">
+      <Filter>test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

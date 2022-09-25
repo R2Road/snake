@@ -1,0 +1,26 @@
+#include "Utility4Snake.h"
+
+#include <iomanip>
+
+#include "r2cm/r2cm_ostream.h"
+#include "r2cm/r2cm_WindowUtility.h"
+
+#include "psnake/psnake_Snake.h"
+
+void Utility4Snake::Draw( const short x, const short y, const psnake::Snake& snake )
+{
+	const r2cm::WindowUtility::CursorPoint pivot_point{ x, y };
+
+	for( uint32_t cy = 0; cy < snake.GetHeight(); ++cy )
+	{
+		for( uint32_t cx = 0; cx < snake.GetWidth(); ++cx )
+		{
+			r2cm::WindowUtility::FillCharacter(
+				{ static_cast<short>( pivot_point.x + ( cx * 2 ) ),	static_cast<short>( pivot_point.y + cy ) }
+				, static_cast<char>( 48 + static_cast<int>( snake.Get( cx, cy ) ) )
+			);
+		}
+	}
+
+	r2cm::WindowUtility::MoveCursorPoint( { static_cast<short>( pivot_point.x ), static_cast<short>( pivot_point.y + snake.GetHeight() ) } );
+}

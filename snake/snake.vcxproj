@@ -95,6 +95,7 @@
     <ClCompile Include="source\test\item\test_psnake_snake.cpp" />
     <ClCompile Include="source\test\item\test_psnake_terrain.cpp" />
     <ClCompile Include="source\test\TestMenu.cpp" />
+    <ClCompile Include="source\test\Utility4Snake.cpp" />
     <ClCompile Include="source\test\Utility4Terrain.cpp" />
     <ClCompile Include="source\test\Utility4Test.cpp" />
   </ItemGroup>
@@ -207,6 +208,7 @@
     <ClInclude Include="source\test\item\test_psnake_snake.h" />
     <ClInclude Include="source\test\item\test_psnake_terrain.h" />
     <ClInclude Include="source\test\TestMenu.h" />
+    <ClInclude Include="source\test\Utility4Snake.h" />
     <ClInclude Include="source\test\Utility4Terrain.h" />
     <ClInclude Include="source\test\Utility4Test.h" />
   </ItemGroup>

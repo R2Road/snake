@@ -2,8 +2,11 @@
 
 #include "r2cm/r2cm_Inspector.h"
 #include "r2cm/r2cm_ostream.h"
+#include "r2cm/r2cm_WindowUtility.h"
 
 #include "psnake/psnake_Snake.h"
+
+#include "test/Utility4Snake.h"
 
 namespace test_psnake_snake
 {
@@ -37,6 +40,14 @@ namespace test_psnake_snake
 
 				EXPECT_EQ( snake.GetWidth() * snake.GetHeight(), snake.Size() );
 				OUTPUT_VALUE( snake.Size() );
+			}
+
+			std::cout << r2cm::split;
+
+			{
+				std::cout << "# View" << r2cm::linefeed2;
+				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+				Utility4Snake::Draw( 4, current_cursor_point.y, snake );
 			}
 
 			std::cout << r2cm::split;
