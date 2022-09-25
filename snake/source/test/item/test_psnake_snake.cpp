@@ -58,14 +58,14 @@ namespace test_psnake_snake
 
 
 
-	r2cm::iItem::TitleFunctionT Add::GetTitleFunction() const
+	r2cm::iItem::TitleFunctionT Add_Remove::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
-			return "Snake : Add";
+			return "Snake : Add, Remove";
 		};
 	}
-	r2cm::iItem::DoFunctionT Add::GetDoFunction()
+	r2cm::iItem::DoFunctionT Add_Remove::GetDoFunction()
 	{
 		return []()->r2cm::eItemLeaveAction
 		{

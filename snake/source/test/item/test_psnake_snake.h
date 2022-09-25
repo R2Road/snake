@@ -12,7 +12,7 @@ namespace test_psnake_snake
 		DoFunctionT GetDoFunction() override;
 	};
 
-	class Add : public r2cm::iItem, public r2cm::SingleTon<Add>
+	class Add_Remove : public r2cm::iItem, public r2cm::SingleTon<Add_Remove>
 	{
 	public:
 		TitleFunctionT GetTitleFunction() const override;
