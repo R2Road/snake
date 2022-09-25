@@ -26,6 +26,7 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 
 
 		ret->AddItem( 'q', test_psnake_snake::Declaration::GetInstance() );
+		ret->AddItem( 'w', test_psnake_snake::Add::GetInstance() );
 
 
 

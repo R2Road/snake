@@ -22,6 +22,14 @@ namespace psnake
 
 		mContainer[target_linear_index] = true;
 	}
+	void Snake::Remove( const uint32_t x, const uint32_t y )
+	{
+		R2ASSERT( true == Get( x, y ), "" );
+
+		const auto target_linear_index = mGridIndexConverter.To_Linear( x, y );
+
+		mContainer[target_linear_index] = false;
+	}
 
 	bool Snake::Get( const uint32_t x, const uint32_t y ) const
 	{

@@ -55,4 +55,78 @@ namespace test_psnake_snake
 			return r2cm::eItemLeaveAction::Pause;
 		};
 	}
+
+
+
+	r2cm::iItem::TitleFunctionT Add::GetTitleFunction() const
+	{
+		return []()->const char*
+		{
+			return "Snake : Add";
+		};
+	}
+	r2cm::iItem::DoFunctionT Add::GetDoFunction()
+	{
+		return []()->r2cm::eItemLeaveAction
+		{
+			std::cout << r2cm::split;
+
+			DECLARATION_MAIN( psnake::Snake snake( 4, 4 ) );
+
+			std::cout << r2cm::split;
+
+			{
+				std::cout << r2cm::tab << "+ Add" << r2cm::linefeed2;
+
+				EXPECT_FALSE( snake.Get( 1, 1 ) );
+				PROCESS_MAIN( snake.Add( 1, 1 ) );
+				EXPECT_TRUE( snake.Get( 1, 1 ) );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_FALSE( snake.Get( 2, 2 ) );
+				PROCESS_MAIN( snake.Add( 2, 2 ) );
+				EXPECT_TRUE( snake.Get( 2, 2 ) );
+
+				std::cout << r2cm::linefeed;
+
+				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+				Utility4Snake::Draw( 4, current_cursor_point.y, snake );
+			}
+
+			std::cout << r2cm::split;
+
+			{
+				std::cout << r2cm::tab << "+ Remove" << r2cm::linefeed2;
+
+				EXPECT_TRUE( snake.Get( 1, 1 ) );
+				PROCESS_MAIN( snake.Remove( 1, 1 ) );
+				EXPECT_FALSE( snake.Get( 1, 1 ) );
+
+				std::cout << r2cm::linefeed;
+
+				{
+					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+					Utility4Snake::Draw( 4, current_cursor_point.y, snake );
+				}
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_TRUE( snake.Get( 2, 2 ) );
+				PROCESS_MAIN( snake.Remove( 2, 2 ) );
+				EXPECT_FALSE( snake.Get( 2, 2 ) );
+
+				std::cout << r2cm::linefeed;
+
+				{
+					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+					Utility4Snake::Draw( 4, current_cursor_point.y, snake );
+				}
+			}
+
+			std::cout << r2cm::split;
+
+			return r2cm::eItemLeaveAction::Pause;
+		};
+	}
 }
