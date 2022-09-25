@@ -38,9 +38,9 @@ namespace psnake
 		const char* const String4Road2Version_0_0_1 = {
 			"### Road 2 Version 0.0.1 ###"
 			"\n"
-			"\n"	"[ ] " "Make Empty Map"
-			"\n"	"[ ] " "Make Snake Head"
-			"\n"	"[ ] " "Move Snake Head"
+			"\n"	"[o] " "Terrain : 이동 가능 지역 과 불가능 지역 설정"
+			"\n"	"[ ] " "Snake Container : 뱀의 구성 요소를 추가, 삭제"
+			"\n"	"[ ] " "Move Direction Indicator : WASD Key 를 이용해 다음 이동 방향을 지정"
 		};
 
 		const char* const String4Road2Version_0_0_0 = {
