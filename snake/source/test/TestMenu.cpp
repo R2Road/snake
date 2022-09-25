@@ -4,6 +4,7 @@
 #include "r2cm/r2cm_ostream.h"
 
 #include "item/test_psnake_demo.h"
+#include "item/test_psnake_snake.h"
 #include "item/test_psnake_terrain.h"
 
 r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
@@ -17,6 +18,14 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 		ret->AddItem( '1', test_psnake_terrain::Declaration::GetInstance() );
 		ret->AddItem( '2', test_psnake_terrain::Fill::GetInstance() );
 		ret->AddItem( '3', test_psnake_terrain::Get_IsIn::GetInstance() );
+
+
+
+		ret->AddLineFeed();
+
+
+
+		ret->AddItem( 'q', test_psnake_snake::Declaration::GetInstance() );
 
 
 

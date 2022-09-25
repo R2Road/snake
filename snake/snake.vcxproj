@@ -87,10 +87,12 @@
     <ClCompile Include="source\psnake\psnake_GameCore.cpp" />
     <ClCompile Include="source\psnake\psnake_scene_CompanyScene.cpp" />
     <ClCompile Include="source\psnake\psnake_scene_EntryScene.cpp" />
+    <ClCompile Include="source\psnake\psnake_Snake.cpp" />
     <ClCompile Include="source\psnake\psnake_table_TextureFrameAnimationTable.cpp" />
     <ClCompile Include="source\psnake\psnake_table_TextureTable.cpp" />
     <ClCompile Include="source\psnake\psnake_Terrain.cpp" />
     <ClCompile Include="source\test\item\test_psnake_demo.cpp" />
+    <ClCompile Include="source\test\item\test_psnake_snake.cpp" />
     <ClCompile Include="source\test\item\test_psnake_terrain.cpp" />
     <ClCompile Include="source\test\TestMenu.cpp" />
     <ClCompile Include="source\test\Utility4Terrain.cpp" />
@@ -196,11 +198,13 @@
     <ClInclude Include="source\psnake\psnake_DebugConfig.h" />
     <ClInclude Include="source\psnake\psnake_DirectorConfig.h" />
     <ClInclude Include="source\psnake\psnake_scene_EntryScene.h" />
+    <ClInclude Include="source\psnake\psnake_Snake.h" />
     <ClInclude Include="source\psnake\psnake_table_TextureFrameAnimationTable.h" />
     <ClInclude Include="source\psnake\psnake_table_TextureTable.h" />
     <ClInclude Include="source\psnake\psnake_Terrain.h" />
     <ClInclude Include="source\psnake\psnake_VersionInfo.h" />
     <ClInclude Include="source\test\item\test_psnake_demo.h" />
+    <ClInclude Include="source\test\item\test_psnake_snake.h" />
     <ClInclude Include="source\test\item\test_psnake_terrain.h" />
     <ClInclude Include="source\test\TestMenu.h" />
     <ClInclude Include="source\test\Utility4Terrain.h" />
