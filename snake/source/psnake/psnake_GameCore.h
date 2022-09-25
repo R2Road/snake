@@ -28,6 +28,11 @@ namespace psnake
 			return mSnake;
 		}
 
+		//
+		//
+		//
+		void Reset();
+
 	private:
 		Terrain mTerrain;
 		Snake mSnake;

@@ -25,6 +25,7 @@ namespace test_psnake_demo
 			std::cout << r2cm::split;
 
 			DECLARATION_MAIN( auto game_core = psnake::GameCore::Create() );
+			PROCESS_MAIN( game_core->Reset() );
 
 			std::cout << r2cm::split;
 

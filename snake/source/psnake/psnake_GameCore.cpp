@@ -11,4 +11,14 @@ namespace psnake
 	{
 		return GameCoreUp( new (std::nothrow) GameCore );
 	}
+
+	void GameCore::Reset()
+	{
+		mTerrain.Fill( {
+				psnake::eCellType::Close		, psnake::eCellType::Close		, psnake::eCellType::Close		,psnake::eCellType::Close
+			,	psnake::eCellType::Close		, psnake::eCellType::Open		, psnake::eCellType::Open		,psnake::eCellType::Close
+			,	psnake::eCellType::Close		, psnake::eCellType::Open		, psnake::eCellType::Open		,psnake::eCellType::Close
+			,	psnake::eCellType::Close		, psnake::eCellType::Close		, psnake::eCellType::Close		,psnake::eCellType::Close
+		} );
+	}
 }
