@@ -3,6 +3,7 @@
 #include <memory>
 
 #include "psnake_Terrain.h"
+#include "psnake_Snake.h"
 
 namespace psnake
 {
@@ -22,8 +23,13 @@ namespace psnake
 		{
 			return mTerrain;
 		}
+		const Snake& GetSnake() const
+		{
+			return mSnake;
+		}
 
 	private:
 		Terrain mTerrain;
+		Snake mSnake;
 	};
 }

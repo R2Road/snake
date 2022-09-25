@@ -4,7 +4,7 @@
 
 namespace psnake
 {
-	GameCore::GameCore() : mTerrain( 4, 4 )
+	GameCore::GameCore() : mTerrain( 4, 4 ), mSnake( 4, 4 )
 	{}
 
 	GameCoreUp GameCore::Create()

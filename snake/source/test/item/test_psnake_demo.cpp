@@ -7,6 +7,7 @@
 #include "psnake/psnake_GameCore.h"
 
 #include "test/Utility4Terrain.h"
+#include "test/Utility4Snake.h"
 
 namespace test_psnake_demo
 {
@@ -30,6 +31,7 @@ namespace test_psnake_demo
 			{
 				const auto pivot_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				Utility4Terrain::Draw( pivot_cursor_point.x, pivot_cursor_point.y, game_core->GetTerrain() );
+				Utility4Snake::Draw( pivot_cursor_point.x, pivot_cursor_point.y, game_core->GetSnake() );
 			}
 
 			std::cout << r2cm::split;
