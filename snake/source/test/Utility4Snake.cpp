@@ -15,10 +15,13 @@ void Utility4Snake::Draw( const short x, const short y, const psnake::Snake& sna
 	{
 		for( uint32_t cx = 0; cx < snake.GetWidth(); ++cx )
 		{
-			r2cm::WindowUtility::FillCharacter(
-				{ static_cast<short>( pivot_point.x + ( cx * 2 ) ),	static_cast<short>( pivot_point.y + cy ) }
-				, static_cast<char>( 48 + static_cast<int>( snake.Get( cx, cy ) ) )
-			);
+			if( snake.Get( cx, cy ) )
+			{
+				r2cm::WindowUtility::FillCharacter(
+					{ static_cast<short>( pivot_point.x + ( cx * 2 ) ),	static_cast<short>( pivot_point.y + cy ) }
+					, 'S'
+				);
+			}
 		}
 	}
 

@@ -5,8 +5,10 @@
 #include "r2cm/r2cm_WindowUtility.h"
 
 #include "psnake/psnake_Snake.h"
+#include "psnake/psnake_Terrain.h"
 
 #include "test/Utility4Snake.h"
+#include "test/Utility4Terrain.h"
 
 namespace test_psnake_snake
 {
@@ -23,6 +25,7 @@ namespace test_psnake_snake
 		{
 			std::cout << r2cm::split;
 
+			DECLARATION_SUB( psnake::Terrain terrain( 3, 7 ) );
 			DECLARATION_MAIN( psnake::Snake snake( 3, 7 ) );
 
 			std::cout << r2cm::split;
@@ -47,6 +50,7 @@ namespace test_psnake_snake
 			{
 				std::cout << "# View" << r2cm::linefeed2;
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
 				Utility4Snake::Draw( 4, current_cursor_point.y, snake );
 			}
 
@@ -71,6 +75,7 @@ namespace test_psnake_snake
 		{
 			std::cout << r2cm::split;
 
+			DECLARATION_SUB( psnake::Terrain terrain( 4, 4 ) );
 			DECLARATION_MAIN( psnake::Snake snake( 4, 4 ) );
 
 			std::cout << r2cm::split;
@@ -91,6 +96,7 @@ namespace test_psnake_snake
 				std::cout << r2cm::linefeed;
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
 				Utility4Snake::Draw( 4, current_cursor_point.y, snake );
 			}
 
@@ -107,6 +113,7 @@ namespace test_psnake_snake
 
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+					Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
 					Utility4Snake::Draw( 4, current_cursor_point.y, snake );
 				}
 
@@ -120,6 +127,7 @@ namespace test_psnake_snake
 
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+					Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
 					Utility4Snake::Draw( 4, current_cursor_point.y, snake );
 				}
 			}
