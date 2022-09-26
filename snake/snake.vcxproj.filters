@@ -596,5 +596,8 @@
     <ClInclude Include="source\test\Utility4Snake.h">
       <Filter>test</Filter>
     </ClInclude>
+    <ClInclude Include="external\r2\r2_Grid.h">
+      <Filter>external\r2</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
