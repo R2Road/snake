@@ -1,8 +1,6 @@
 #pragma once
 
-#include <vector>
-
-#include "r2/r2_GridIndexConverter.h"
+#include "r2/r2_Grid.h"
 
 namespace psnake
 {
@@ -24,8 +22,8 @@ namespace psnake
 	{
 	public:
 		using Cell = bool;
-		using ContainerT = std::vector<Cell>;
-		using ConstIteratorT = typename ContainerT::const_iterator;
+		using ContainerT = r2::Grid<Cell>;
+		using ConstIteratorT = typename ContainerT::ConstIteratorT;
 
 		Snake( const uint32_t width, const uint32_t height );
 
@@ -46,23 +44,23 @@ namespace psnake
 		//
 		uint32_t GetWidth() const
 		{
-			return mGridIndexConverter.GetWidth();
+			return mContainer.GetWidth();
 		}
 		uint32_t GetHeight() const
 		{
-			return mGridIndexConverter.GetHeight();
+			return mContainer.GetHeight();
 		}
 		uint32_t GetMaxX() const
 		{
-			return mGridIndexConverter.GetWidth() - 1;
+			return mContainer.GetWidth() - 1;
 		}
 		uint32_t GetMaxY() const
 		{
-			return mGridIndexConverter.GetHeight() - 1;
+			return mContainer.GetHeight() - 1;
 		}
 		uint32_t Size() const
 		{
-			return static_cast<uint32_t>( mContainer.size() );
+			return static_cast<uint32_t>( mContainer.GetSize() );
 		}
 		bool IsIn( const int32_t x, const int32_t y ) const;
 
@@ -78,7 +76,6 @@ namespace psnake
 		bool Get( const uint32_t x, const uint32_t y ) const;
 
 	private:
-		r2::GridIndexConverter mGridIndexConverter;
 		ContainerT mContainer;
 	};
 }

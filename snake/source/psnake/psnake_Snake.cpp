@@ -5,8 +5,7 @@
 namespace psnake
 {
 	Snake::Snake( const uint32_t width, const uint32_t height ) :
-		mGridIndexConverter( width, height )
-		, mContainer( width * height, false )
+		mContainer( width, height, false )
 	{}
 
 	bool Snake::IsIn( const int32_t x, const int32_t y ) const
@@ -18,23 +17,17 @@ namespace psnake
 	{
 		R2ASSERT( false == Get( x, y ), "" );
 
-		const auto target_linear_index = mGridIndexConverter.To_Linear( x, y );
-
-		mContainer[target_linear_index] = true;
+		mContainer.Set( x, y, true );
 	}
 	void Snake::Remove( const uint32_t x, const uint32_t y )
 	{
 		R2ASSERT( true == Get( x, y ), "" );
 
-		const auto target_linear_index = mGridIndexConverter.To_Linear( x, y );
-
-		mContainer[target_linear_index] = false;
+		mContainer.Set( x, y, false );
 	}
 
-	bool Snake::Get( const uint32_t x, const uint32_t y ) const
+	Snake::Cell Snake::Get( const uint32_t x, const uint32_t y ) const
 	{
-		const auto target_linear_index = mGridIndexConverter.To_Linear( x, y );
-
-		return mContainer[target_linear_index];
+		return mContainer.Get( x, y );
 	}
 }
