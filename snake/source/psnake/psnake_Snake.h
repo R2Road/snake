@@ -6,6 +6,20 @@
 
 namespace psnake
 {
+
+	//
+	// # 현 상황 분석
+	// > 필요한 기능은 Queue를 쓰는 것으로 모두 해결 된다.
+	//
+	// # 원하는 것
+	// > index 를 통한 빠른 참조와 메모리 사전 할당으로 인한 이점을 누리고 싶다.
+	//
+	// # 해결책
+	// > 1. 기반이 되어줄 Array 기반 Grid 를 만든다.
+	// > 2. Grid의 Cell을 ListNode 기반으로 만들어서 따로 엮을 수 있게 한다.
+	// > 3. Add 함수가 불리면 해당 그리드의 ListNode 를 가져와서 단방향 List로 엮는다.
+	//
+
 	class Snake
 	{
 	public:
