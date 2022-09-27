@@ -17,13 +17,15 @@ namespace psnake
 	{
 		R2ASSERT( false == Get( x, y ), "" );
 
-		mContainer.Set( x, y, Node{ true } );
+		auto& node = mContainer.Get( x, y );
+		node.value = true;
 	}
 	void Snake::Remove( const uint32_t x, const uint32_t y )
 	{
 		R2ASSERT( true == Get( x, y ), "" );
 
-		mContainer.Set( x, y, Node{ false } );
+		auto& node = mContainer.Get( x, y );
+		node.value = false;
 	}
 
 	bool Snake::Get( const uint32_t x, const uint32_t y ) const
