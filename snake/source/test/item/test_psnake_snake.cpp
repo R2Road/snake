@@ -88,17 +88,36 @@ namespace test_psnake_snake
 			std::cout << r2cm::split;
 
 			{
-				std::cout << r2cm::tab << "+ Add" << r2cm::linefeed2;
-
 				EXPECT_FALSE( snake.Get( 1, 1 ) );
 				PROCESS_MAIN( snake.PushFront( 1, 1 ) );
 				EXPECT_TRUE( snake.Get( 1, 1 ) );
 
 				std::cout << r2cm::linefeed;
 
+				EXPECT_EQ( snake.begin(), &snake.GetNode( 1, 1 ) );
+				EXPECT_EQ( snake.begin()->prev, snake.end() );
+				EXPECT_EQ( snake.begin()->next, snake.end() );
+
+				std::cout << r2cm::linefeed;
+
+				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				Utility4Snake::Draw( 4, current_cursor_point.y, snake );
+			}
+
+			std::cout << r2cm::split;
+
+			{
 				EXPECT_FALSE( snake.Get( 2, 2 ) );
 				PROCESS_MAIN( snake.PushFront( 2, 2 ) );
 				EXPECT_TRUE( snake.Get( 2, 2 ) );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( snake.begin(), &snake.GetNode( 2, 2 ) );
+				EXPECT_EQ( snake.begin()->prev, snake.end() );
+				EXPECT_EQ( snake.begin()->next, &snake.GetNode( 1, 1 ) );
+				EXPECT_EQ( snake.begin()->next->next, snake.end() );
 
 				std::cout << r2cm::linefeed;
 

@@ -31,15 +31,15 @@ namespace psnake
 		node.prev = nullptr;
 
 		//
-		// New Node : 기존 연결의 마지막에 넣는다.
+		// New Node : 기존 연결의 처음에 넣는다.
 		//
-		node.prev = mEndNode.prev;
-		node.next = &mEndNode;
+		node.prev = &mEndNode;
+		node.next = mEndNode.next; 
 
 		//
 		//
 		//
-		mEndNode.prev = &node;
+		mEndNode.next = &node;
 	}
 	void Snake::Remove( const uint32_t x, const uint32_t y )
 	{
@@ -49,6 +49,10 @@ namespace psnake
 		node.value = false;
 	}
 
+	const Snake::Node& Snake::GetNode( const uint32_t x, const uint32_t y ) const
+	{
+		return mContainer.Get( x, y );
+	}
 	bool Snake::Get( const uint32_t x, const uint32_t y ) const
 	{
 		return mContainer.Get( x, y ).value;

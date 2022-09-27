@@ -20,7 +20,7 @@ namespace psnake
 
 	class Snake
 	{
-	private:
+	public:
 		struct Node
 		{
 			bool value = false;
@@ -29,7 +29,6 @@ namespace psnake
 			Node* next = nullptr;
 		};
 
-	public:
 		using Cell = Node;
 		using ContainerT = r2::Grid<Cell>;
 		using ConstIteratorT = typename ContainerT::ConstIteratorT;
@@ -82,6 +81,7 @@ namespace psnake
 		//
 		//
 		//
+		const Node& GetNode( const uint32_t x, const uint32_t y ) const;
 		bool Get( const uint32_t x, const uint32_t y ) const;
 
 	private:
