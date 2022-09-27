@@ -5,7 +5,7 @@
 namespace psnake
 {
 	Snake::Snake( const uint32_t width, const uint32_t height ) :
-		mContainer( width, height, false )
+		mContainer( width, height, Node{} )
 	{}
 
 	bool Snake::IsIn( const int32_t x, const int32_t y ) const
@@ -17,17 +17,17 @@ namespace psnake
 	{
 		R2ASSERT( false == Get( x, y ), "" );
 
-		mContainer.Set( x, y, true );
+		mContainer.Set( x, y, Node{ true } );
 	}
 	void Snake::Remove( const uint32_t x, const uint32_t y )
 	{
 		R2ASSERT( true == Get( x, y ), "" );
 
-		mContainer.Set( x, y, false );
+		mContainer.Set( x, y, Node{ false } );
 	}
 
-	Snake::Cell Snake::Get( const uint32_t x, const uint32_t y ) const
+	bool Snake::Get( const uint32_t x, const uint32_t y ) const
 	{
-		return mContainer.Get( x, y );
+		return mContainer.Get( x, y ).value;
 	}
 }

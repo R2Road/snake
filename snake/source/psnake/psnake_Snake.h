@@ -20,8 +20,15 @@ namespace psnake
 
 	class Snake
 	{
+	private:
+		struct Node
+		{
+			bool value = false;
+			Node* next = nullptr;
+		};
+
 	public:
-		using Cell = bool;
+		using Cell = Node;
 		using ContainerT = r2::Grid<Cell>;
 		using ConstIteratorT = typename ContainerT::ConstIteratorT;
 
