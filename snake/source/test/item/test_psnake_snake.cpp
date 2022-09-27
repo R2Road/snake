@@ -10,6 +10,11 @@
 #include "test/Utility4Snake.h"
 #include "test/Utility4Terrain.h"
 
+bool operator==( const psnake::Snake::Node& node_1, const psnake::Snake::Node& node_2 )
+{
+	return ( &node_1 == &node_2 );
+}
+
 namespace test_psnake_snake
 {
 	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
@@ -47,9 +52,9 @@ namespace test_psnake_snake
 				std::cout << r2cm::linefeed;
 
 				EXPECT_EQ( snake.GetHeadNode(), snake.GetEndNode() );
-				EXPECT_EQ( snake.GetHeadNode()->prev, snake.GetHeadNode() );
-				EXPECT_EQ( snake.GetHeadNode()->next, snake.GetHeadNode() );
-				EXPECT_FALSE( snake.GetHeadNode()->value );
+				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetHeadNode() );
+				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetHeadNode() );
+				EXPECT_FALSE( snake.GetHeadNode().value );
 			}
 
 			std::cout << r2cm::split;
@@ -94,11 +99,11 @@ namespace test_psnake_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.GetHeadNode(), &snake.GetNode( 1, 1 ) );
-				EXPECT_EQ( snake.GetHeadNode()->prev, snake.GetEndNode() );
-				EXPECT_EQ( snake.GetHeadNode()->next, snake.GetEndNode() );
-				EXPECT_EQ( snake.GetEndNode()->prev, snake.GetHeadNode() );
-				EXPECT_EQ( snake.GetEndNode()->next, snake.GetHeadNode() );
+				EXPECT_EQ( snake.GetHeadNode(), snake.GetNode( 1, 1 ) );
+				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetEndNode() );
+				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetEndNode() );
+				EXPECT_EQ( *snake.GetEndNode().prev, snake.GetHeadNode() );
+				EXPECT_EQ( *snake.GetEndNode().next, snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
@@ -116,12 +121,12 @@ namespace test_psnake_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.GetHeadNode(), &snake.GetNode( 2, 2 ) );
-				EXPECT_EQ( snake.GetHeadNode()->prev, snake.GetEndNode() );
-				EXPECT_EQ( snake.GetHeadNode()->next, &snake.GetNode( 1, 1 ) );
-				EXPECT_EQ( snake.GetHeadNode()->next->next, snake.GetEndNode() );
-				EXPECT_EQ( snake.GetEndNode()->prev, &snake.GetNode( 1, 1 ) );
-				EXPECT_EQ( snake.GetEndNode()->next, snake.GetHeadNode() );
+				EXPECT_EQ( snake.GetHeadNode(), snake.GetNode( 2, 2 ) );
+				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetEndNode() );
+				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetNode( 1, 1 ) );
+				EXPECT_EQ( *snake.GetHeadNode().next->next, snake.GetEndNode() );
+				EXPECT_EQ( *snake.GetEndNode().prev, snake.GetNode( 1, 1 ) );
+				EXPECT_EQ( *snake.GetEndNode().next, snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
@@ -164,7 +169,7 @@ namespace test_psnake_snake
 			std::cout << r2cm::split;
 
 			{
-				EXPECT_EQ( snake.GetHeadNode(), &snake.GetNode( 2, 2 ) );
+				EXPECT_EQ( snake.GetHeadNode(), snake.GetNode( 2, 2 ) );
 
 				std::cout << r2cm::linefeed;
 
@@ -174,11 +179,11 @@ namespace test_psnake_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.GetHeadNode(), &snake.GetNode( 2, 2 ) );
-				EXPECT_EQ( snake.GetHeadNode()->prev, snake.GetEndNode() );
-				EXPECT_EQ( snake.GetHeadNode()->next, snake.GetEndNode() );
-				EXPECT_EQ( snake.GetEndNode()->prev, snake.GetHeadNode() );
-				EXPECT_EQ( snake.GetEndNode()->next, snake.GetHeadNode() );
+				EXPECT_EQ( snake.GetHeadNode(), snake.GetNode( 2, 2 ) );
+				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetEndNode() );
+				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetEndNode() );
+				EXPECT_EQ( *snake.GetEndNode().prev, snake.GetHeadNode() );
+				EXPECT_EQ( *snake.GetEndNode().next, snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
@@ -199,10 +204,10 @@ namespace test_psnake_snake
 				std::cout << r2cm::linefeed;
 
 				EXPECT_EQ( snake.GetHeadNode(), snake.GetEndNode() );
-				EXPECT_EQ( snake.GetHeadNode()->prev, snake.GetEndNode() );
-				EXPECT_EQ( snake.GetHeadNode()->next, snake.GetEndNode() );
-				EXPECT_EQ( snake.GetEndNode()->prev, snake.GetHeadNode() );
-				EXPECT_EQ( snake.GetEndNode()->next, snake.GetHeadNode() );
+				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetEndNode() );
+				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetEndNode() );
+				EXPECT_EQ( *snake.GetEndNode().prev, snake.GetHeadNode() );
+				EXPECT_EQ( *snake.GetEndNode().next, snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 

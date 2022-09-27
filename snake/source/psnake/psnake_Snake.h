@@ -69,13 +69,13 @@ namespace psnake
 		//
 		//
 		//
-		Node* GetHeadNode() const
+		const Node& GetHeadNode() const
 		{
-			return mEndNode.next;
+			return *mEndNode.next;
 		}
-		const Node* GetEndNode() const
+		const Node& GetEndNode() const
 		{
-			return &mEndNode;
+			return mEndNode;
 		}
 		const Node& GetNode( const uint32_t x, const uint32_t y ) const;
 		bool Get( const uint32_t x, const uint32_t y ) const;
