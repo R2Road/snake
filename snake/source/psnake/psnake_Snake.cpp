@@ -6,7 +6,11 @@ namespace psnake
 {
 	Snake::Snake( const uint32_t width, const uint32_t height ) :
 		mContainer( width, height, Node{} )
-	{}
+		, mEndNode()
+	{
+		mEndNode.prev = &mEndNode;
+		mEndNode.next = &mEndNode;
+	}
 
 	bool Snake::IsIn( const int32_t x, const int32_t y ) const
 	{
@@ -19,6 +23,23 @@ namespace psnake
 
 		auto& node = mContainer.Get( x, y );
 		node.value = true;
+
+		//
+		// Clear
+		//
+		node.next = nullptr;
+		node.prev = nullptr;
+
+		//
+		// New Node : 기존 연결의 마지막에 넣는다.
+		//
+		node.prev = mEndNode.prev;
+		node.next = &mEndNode;
+
+		//
+		//
+		//
+		mEndNode.prev = &node;
 	}
 	void Snake::Remove( const uint32_t x, const uint32_t y )
 	{

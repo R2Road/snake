@@ -24,6 +24,8 @@ namespace psnake
 		struct Node
 		{
 			bool value = false;
+
+			Node* prev = nullptr;
 			Node* next = nullptr;
 		};
 
@@ -37,13 +39,13 @@ namespace psnake
 		//
 		// Iteration
 		//
-		ConstIteratorT begin() const
+		Node* begin() const
 		{
-			return mContainer.begin();
+			return mEndNode.next;
 		}
-		ConstIteratorT end() const
+		const Node* end() const
 		{
-			return mContainer.end();
+			return &mEndNode;
 		}
 
 		//
@@ -84,5 +86,6 @@ namespace psnake
 
 	private:
 		ContainerT mContainer;
+		Node mEndNode;
 	};
 }
