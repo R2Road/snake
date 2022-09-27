@@ -128,12 +128,53 @@ namespace test_psnake_snake
 
 			std::cout << r2cm::split;
 
+			return r2cm::eItemLeaveAction::Pause;
+		};
+	}
+
+
+
+	r2cm::iItem::TitleFunctionT PopTail::GetTitleFunction() const
+	{
+		return []()->const char*
+		{
+			return "Snake : PopTail";
+		};
+	}
+	r2cm::iItem::DoFunctionT PopTail::GetDoFunction()
+	{
+		return []()->r2cm::eItemLeaveAction
+		{
+			std::cout << r2cm::split;
+
+			DECLARATION_SUB( psnake::Terrain terrain( 4, 4 ) );
+			DECLARATION_MAIN( psnake::Snake snake( 4, 4 ) );
+
+			std::cout << r2cm::split;
+
 			{
-				std::cout << r2cm::tab << "+ Remove" << r2cm::linefeed2;
+				PROCESS_MAIN( snake.PushFront( 1, 1 ) );
+				PROCESS_MAIN( snake.PushFront( 2, 2 ) );
+			}
+
+			std::cout << r2cm::split;
+
+			{
+				EXPECT_EQ( snake.begin(), &snake.GetNode( 2, 2 ) );
+
+				std::cout << r2cm::linefeed;
 
 				EXPECT_TRUE( snake.Get( 1, 1 ) );
-				PROCESS_MAIN( snake.PopTail( 1, 1 ) );
+				PROCESS_MAIN( snake.PopTail() );
 				EXPECT_FALSE( snake.Get( 1, 1 ) );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( snake.begin(), &snake.GetNode( 2, 2 ) );
+				EXPECT_EQ( snake.begin()->prev, snake.end() );
+				EXPECT_EQ( snake.begin()->next, snake.end() );
+				EXPECT_EQ( snake.end()->prev, snake.begin() );
+				EXPECT_EQ( snake.end()->next, snake.begin() );
 
 				std::cout << r2cm::linefeed;
 
@@ -142,12 +183,22 @@ namespace test_psnake_snake
 					Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
 					Utility4Snake::Draw( 4, current_cursor_point.y, snake );
 				}
+			}
+
+			std::cout << r2cm::split;
+
+			{
+				EXPECT_TRUE( snake.Get( 2, 2 ) );
+				PROCESS_MAIN( snake.PopTail() );
+				EXPECT_FALSE( snake.Get( 2, 2 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_TRUE( snake.Get( 2, 2 ) );
-				PROCESS_MAIN( snake.PopTail( 2, 2 ) );
-				EXPECT_FALSE( snake.Get( 2, 2 ) );
+				EXPECT_EQ( snake.begin(), snake.end() );
+				EXPECT_EQ( snake.begin()->prev, snake.end() );
+				EXPECT_EQ( snake.begin()->next, snake.end() );
+				EXPECT_EQ( snake.end()->prev, snake.begin() );
+				EXPECT_EQ( snake.end()->next, snake.begin() );
 
 				std::cout << r2cm::linefeed;
 

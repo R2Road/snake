@@ -18,4 +18,11 @@ namespace test_psnake_snake
 		TitleFunctionT GetTitleFunction() const override;
 		DoFunctionT GetDoFunction() override;
 	};
+
+	class PopTail : public r2cm::iItem, public r2cm::SingleTon<PopTail>
+	{
+	public:
+		TitleFunctionT GetTitleFunction() const override;
+		DoFunctionT GetDoFunction() override;
+	};
 }

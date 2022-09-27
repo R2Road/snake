@@ -25,28 +25,47 @@ namespace psnake
 		node.value = true;
 
 		//
-		// Clear
-		//
-		node.next = nullptr;
-		node.prev = nullptr;
-
-		//
-		// New Node : 기존 연결의 처음에 넣는다.
+		// 새 노드의 전, 후 설정
 		//
 		node.prev = &mEndNode;
-		node.next = mEndNode.next; 
+		node.next = mEndNode.next;
 
 		//
+		// 이전 머리 노드와 새 머리 노드 연결
 		//
+		node.next->prev = &node;
+
+		//
+		// End Node 와 새 노드 연결
 		//
 		mEndNode.next = &node;
+		
 	}
-	void Snake::PopTail( const uint32_t x, const uint32_t y )
+	void Snake::PopTail()
 	{
-		R2ASSERT( true == Get( x, y ), "" );
+		if( &mEndNode == mEndNode.prev )
+		{
+			return;
+		}
 
-		auto& node = mContainer.Get( x, y );
-		node.value = false;
+		auto target_node = mEndNode.prev;
+		target_node->value = false;
+
+		//
+		// 새 꼬리 노드와 End Node 연결
+		//
+		( target_node->prev )->next = &mEndNode;
+
+		//
+		// End Node 와 새 꼬리 노드 연결
+		//
+		mEndNode.prev = ( target_node->prev );
+
+		//
+		// Clear
+		//
+		target_node->prev = nullptr;
+		target_node->next = nullptr;
 	}
 
 	const Snake::Node& Snake::GetNode( const uint32_t x, const uint32_t y ) const
