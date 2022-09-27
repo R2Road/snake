@@ -49,25 +49,25 @@ namespace psnake
 		//
 		// Getter
 		//
-		uint32_t GetWidth() const
+		std::size_t GetWidth() const
 		{
 			return mContainer.GetWidth();
 		}
-		uint32_t GetHeight() const
+		std::size_t GetHeight() const
 		{
 			return mContainer.GetHeight();
 		}
-		uint32_t GetMaxX() const
+		std::size_t GetMaxX() const
 		{
 			return mContainer.GetWidth() - 1;
 		}
-		uint32_t GetMaxY() const
+		std::size_t GetMaxY() const
 		{
 			return mContainer.GetHeight() - 1;
 		}
-		uint32_t Size() const
+		std::size_t Size() const
 		{
-			return static_cast<uint32_t>( mContainer.GetSize() );
+			return mContainer.GetSize();
 		}
 		bool IsIn( const int32_t x, const int32_t y ) const;
 
