@@ -17,7 +17,7 @@ namespace psnake
 		return ( 0 <= x && 0 <= y && static_cast<int>( GetWidth() ) > x && static_cast<int>( GetHeight() ) > y );
 	}
 
-	void Snake::Add( const uint32_t x, const uint32_t y )
+	void Snake::PushFront( const uint32_t x, const uint32_t y )
 	{
 		R2ASSERT( false == Get( x, y ), "" );
 

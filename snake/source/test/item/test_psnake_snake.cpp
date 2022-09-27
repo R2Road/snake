@@ -91,13 +91,13 @@ namespace test_psnake_snake
 				std::cout << r2cm::tab << "+ Add" << r2cm::linefeed2;
 
 				EXPECT_FALSE( snake.Get( 1, 1 ) );
-				PROCESS_MAIN( snake.Add( 1, 1 ) );
+				PROCESS_MAIN( snake.PushFront( 1, 1 ) );
 				EXPECT_TRUE( snake.Get( 1, 1 ) );
 
 				std::cout << r2cm::linefeed;
 
 				EXPECT_FALSE( snake.Get( 2, 2 ) );
-				PROCESS_MAIN( snake.Add( 2, 2 ) );
+				PROCESS_MAIN( snake.PushFront( 2, 2 ) );
 				EXPECT_TRUE( snake.Get( 2, 2 ) );
 
 				std::cout << r2cm::linefeed;
