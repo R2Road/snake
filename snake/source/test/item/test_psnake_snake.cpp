@@ -46,10 +46,10 @@ namespace test_psnake_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.begin(), snake.end() );
-				EXPECT_EQ( snake.begin()->prev, snake.begin() );
-				EXPECT_EQ( snake.begin()->next, snake.begin() );
-				EXPECT_FALSE( snake.begin()->value );
+				EXPECT_EQ( snake.GetHeadNode(), snake.GetEndNode() );
+				EXPECT_EQ( snake.GetHeadNode()->prev, snake.GetHeadNode() );
+				EXPECT_EQ( snake.GetHeadNode()->next, snake.GetHeadNode() );
+				EXPECT_FALSE( snake.GetHeadNode()->value );
 			}
 
 			std::cout << r2cm::split;
@@ -94,11 +94,11 @@ namespace test_psnake_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.begin(), &snake.GetNode( 1, 1 ) );
-				EXPECT_EQ( snake.begin()->prev, snake.end() );
-				EXPECT_EQ( snake.begin()->next, snake.end() );
-				EXPECT_EQ( snake.end()->prev, snake.begin() );
-				EXPECT_EQ( snake.end()->next, snake.begin() );
+				EXPECT_EQ( snake.GetHeadNode(), &snake.GetNode( 1, 1 ) );
+				EXPECT_EQ( snake.GetHeadNode()->prev, snake.GetEndNode() );
+				EXPECT_EQ( snake.GetHeadNode()->next, snake.GetEndNode() );
+				EXPECT_EQ( snake.GetEndNode()->prev, snake.GetHeadNode() );
+				EXPECT_EQ( snake.GetEndNode()->next, snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
@@ -116,12 +116,12 @@ namespace test_psnake_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.begin(), &snake.GetNode( 2, 2 ) );
-				EXPECT_EQ( snake.begin()->prev, snake.end() );
-				EXPECT_EQ( snake.begin()->next, &snake.GetNode( 1, 1 ) );
-				EXPECT_EQ( snake.begin()->next->next, snake.end() );
-				EXPECT_EQ( snake.end()->prev, &snake.GetNode( 1, 1 ) );
-				EXPECT_EQ( snake.end()->next, snake.begin() );
+				EXPECT_EQ( snake.GetHeadNode(), &snake.GetNode( 2, 2 ) );
+				EXPECT_EQ( snake.GetHeadNode()->prev, snake.GetEndNode() );
+				EXPECT_EQ( snake.GetHeadNode()->next, &snake.GetNode( 1, 1 ) );
+				EXPECT_EQ( snake.GetHeadNode()->next->next, snake.GetEndNode() );
+				EXPECT_EQ( snake.GetEndNode()->prev, &snake.GetNode( 1, 1 ) );
+				EXPECT_EQ( snake.GetEndNode()->next, snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
@@ -164,7 +164,7 @@ namespace test_psnake_snake
 			std::cout << r2cm::split;
 
 			{
-				EXPECT_EQ( snake.begin(), &snake.GetNode( 2, 2 ) );
+				EXPECT_EQ( snake.GetHeadNode(), &snake.GetNode( 2, 2 ) );
 
 				std::cout << r2cm::linefeed;
 
@@ -174,11 +174,11 @@ namespace test_psnake_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.begin(), &snake.GetNode( 2, 2 ) );
-				EXPECT_EQ( snake.begin()->prev, snake.end() );
-				EXPECT_EQ( snake.begin()->next, snake.end() );
-				EXPECT_EQ( snake.end()->prev, snake.begin() );
-				EXPECT_EQ( snake.end()->next, snake.begin() );
+				EXPECT_EQ( snake.GetHeadNode(), &snake.GetNode( 2, 2 ) );
+				EXPECT_EQ( snake.GetHeadNode()->prev, snake.GetEndNode() );
+				EXPECT_EQ( snake.GetHeadNode()->next, snake.GetEndNode() );
+				EXPECT_EQ( snake.GetEndNode()->prev, snake.GetHeadNode() );
+				EXPECT_EQ( snake.GetEndNode()->next, snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
@@ -198,11 +198,11 @@ namespace test_psnake_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.begin(), snake.end() );
-				EXPECT_EQ( snake.begin()->prev, snake.end() );
-				EXPECT_EQ( snake.begin()->next, snake.end() );
-				EXPECT_EQ( snake.end()->prev, snake.begin() );
-				EXPECT_EQ( snake.end()->next, snake.begin() );
+				EXPECT_EQ( snake.GetHeadNode(), snake.GetEndNode() );
+				EXPECT_EQ( snake.GetHeadNode()->prev, snake.GetEndNode() );
+				EXPECT_EQ( snake.GetHeadNode()->next, snake.GetEndNode() );
+				EXPECT_EQ( snake.GetEndNode()->prev, snake.GetHeadNode() );
+				EXPECT_EQ( snake.GetEndNode()->next, snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 

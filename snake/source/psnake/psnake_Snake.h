@@ -38,11 +38,11 @@ namespace psnake
 		//
 		// Iteration
 		//
-		Node* begin() const
+		Node* GetHeadNode() const
 		{
 			return mEndNode.next;
 		}
-		const Node* end() const
+		const Node* GetEndNode() const
 		{
 			return &mEndNode;
 		}
