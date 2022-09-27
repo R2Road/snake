@@ -132,7 +132,7 @@ namespace test_psnake_snake
 				std::cout << r2cm::tab << "+ Remove" << r2cm::linefeed2;
 
 				EXPECT_TRUE( snake.Get( 1, 1 ) );
-				PROCESS_MAIN( snake.Remove( 1, 1 ) );
+				PROCESS_MAIN( snake.PopTail( 1, 1 ) );
 				EXPECT_FALSE( snake.Get( 1, 1 ) );
 
 				std::cout << r2cm::linefeed;
@@ -146,7 +146,7 @@ namespace test_psnake_snake
 				std::cout << r2cm::linefeed;
 
 				EXPECT_TRUE( snake.Get( 2, 2 ) );
-				PROCESS_MAIN( snake.Remove( 2, 2 ) );
+				PROCESS_MAIN( snake.PopTail( 2, 2 ) );
 				EXPECT_FALSE( snake.Get( 2, 2 ) );
 
 				std::cout << r2cm::linefeed;

@@ -41,7 +41,7 @@ namespace psnake
 		//
 		mEndNode.next = &node;
 	}
-	void Snake::Remove( const uint32_t x, const uint32_t y )
+	void Snake::PopTail( const uint32_t x, const uint32_t y )
 	{
 		R2ASSERT( true == Get( x, y ), "" );
 
