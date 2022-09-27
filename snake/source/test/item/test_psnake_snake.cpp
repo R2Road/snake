@@ -97,6 +97,8 @@ namespace test_psnake_snake
 				EXPECT_EQ( snake.begin(), &snake.GetNode( 1, 1 ) );
 				EXPECT_EQ( snake.begin()->prev, snake.end() );
 				EXPECT_EQ( snake.begin()->next, snake.end() );
+				EXPECT_EQ( snake.end()->prev, snake.begin() );
+				EXPECT_EQ( snake.end()->next, snake.begin() );
 
 				std::cout << r2cm::linefeed;
 
@@ -118,6 +120,8 @@ namespace test_psnake_snake
 				EXPECT_EQ( snake.begin()->prev, snake.end() );
 				EXPECT_EQ( snake.begin()->next, &snake.GetNode( 1, 1 ) );
 				EXPECT_EQ( snake.begin()->next->next, snake.end() );
+				EXPECT_EQ( snake.end()->prev, &snake.GetNode( 1, 1 ) );
+				EXPECT_EQ( snake.end()->next, snake.begin() );
 
 				std::cout << r2cm::linefeed;
 
