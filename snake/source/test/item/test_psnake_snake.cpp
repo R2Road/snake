@@ -43,6 +43,13 @@ namespace test_psnake_snake
 
 				EXPECT_EQ( snake.GetWidth() * snake.GetHeight(), snake.Size() );
 				OUTPUT_VALUE( snake.Size() );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( snake.begin(), snake.end() );
+				EXPECT_EQ( snake.begin()->prev, snake.begin() );
+				EXPECT_EQ( snake.begin()->next, snake.begin() );
+				EXPECT_FALSE( snake.begin()->value );
 			}
 
 			std::cout << r2cm::split;
