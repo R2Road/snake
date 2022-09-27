@@ -36,18 +36,6 @@ namespace psnake
 		Snake( const uint32_t width, const uint32_t height );
 
 		//
-		// Iteration
-		//
-		Node* GetHeadNode() const
-		{
-			return mEndNode.next;
-		}
-		const Node* GetEndNode() const
-		{
-			return &mEndNode;
-		}
-
-		//
 		// Getter
 		//
 		std::size_t GetWidth() const
@@ -81,6 +69,14 @@ namespace psnake
 		//
 		//
 		//
+		Node* GetHeadNode() const
+		{
+			return mEndNode.next;
+		}
+		const Node* GetEndNode() const
+		{
+			return &mEndNode;
+		}
 		const Node& GetNode( const uint32_t x, const uint32_t y ) const;
 		bool Get( const uint32_t x, const uint32_t y ) const;
 
