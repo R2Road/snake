@@ -5,7 +5,7 @@
 #include "r2cm/r2cm_ostream.h"
 #include "r2cm/r2cm_WindowUtility.h"
 
-#include "psnake/psnake_Snake.h"
+#include "psm/psm_Snake.h"
 
 void Utility4Snake::Draw( const short x, const short y, const psnake::Snake& snake )
 {

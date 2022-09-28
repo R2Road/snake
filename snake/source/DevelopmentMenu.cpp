@@ -10,9 +10,9 @@
 #include "r2cm/r2cm_VersionInfo.h"
 #include "r2cm/r2cm_WindowUtility.h"
 
-#include "psnake/psnake_DirectorConfig.h"
-#include "psnake/psnake_VersionInfo.h"
-#include "psnake/psnake_scene_EntryScene.h"
+#include "psm/psm_DirectorConfig.h"
+#include "psm/psm_VersionInfo.h"
+#include "psm/psm_scene_EntryScene.h"
 
 #include "test/TestMenu.h"
 

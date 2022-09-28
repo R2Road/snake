@@ -4,8 +4,8 @@
 #include "r2cm/r2cm_ostream.h"
 #include "r2cm/r2cm_WindowUtility.h"
 
-#include "psnake/psnake_Snake.h"
-#include "psnake/psnake_Terrain.h"
+#include "psm/psm_Snake.h"
+#include "psm/psm_Terrain.h"
 
 #include "test/Utility4Snake.h"
 #include "test/Utility4Terrain.h"

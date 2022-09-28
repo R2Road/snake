@@ -227,29 +227,11 @@
     <ClCompile Include="external\r2bix\r2utility_StringSize.cpp">
       <Filter>external\r2bix</Filter>
     </ClCompile>
-    <ClCompile Include="source\psnake\psnake_table_TextureTable.cpp">
-      <Filter>project_snake_mini\table</Filter>
-    </ClCompile>
-    <ClCompile Include="source\psnake\psnake_table_TextureFrameAnimationTable.cpp">
-      <Filter>project_snake_mini\table</Filter>
-    </ClCompile>
-    <ClCompile Include="source\psnake\psnake_scene_CompanyScene.cpp">
-      <Filter>project_snake_mini\scene</Filter>
-    </ClCompile>
-    <ClCompile Include="source\psnake\psnake_scene_EntryScene.cpp">
-      <Filter>project_snake_mini\scene</Filter>
-    </ClCompile>
-    <ClCompile Include="source\psnake\psnake_Terrain.cpp">
-      <Filter>project_snake_mini</Filter>
-    </ClCompile>
     <ClCompile Include="source\test\item\test_psnake_terrain.cpp">
       <Filter>test\item</Filter>
     </ClCompile>
     <ClCompile Include="source\test\Utility4Terrain.cpp">
       <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="source\psnake\psnake_GameCore.cpp">
-      <Filter>project_snake_mini</Filter>
     </ClCompile>
     <ClCompile Include="source\test\item\test_psnake_demo.cpp">
       <Filter>test\item</Filter>
@@ -257,11 +239,29 @@
     <ClCompile Include="source\test\item\test_psnake_snake.cpp">
       <Filter>test\item</Filter>
     </ClCompile>
-    <ClCompile Include="source\psnake\psnake_Snake.cpp">
-      <Filter>project_snake_mini</Filter>
-    </ClCompile>
     <ClCompile Include="source\test\Utility4Snake.cpp">
       <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\psm\psm_scene_CompanyScene.cpp">
+      <Filter>project_snake_mini\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\psm\psm_scene_EntryScene.cpp">
+      <Filter>project_snake_mini\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\psm\psm_table_TextureFrameAnimationTable.cpp">
+      <Filter>project_snake_mini\table</Filter>
+    </ClCompile>
+    <ClCompile Include="source\psm\psm_table_TextureTable.cpp">
+      <Filter>project_snake_mini\table</Filter>
+    </ClCompile>
+    <ClCompile Include="source\psm\psm_GameCore.cpp">
+      <Filter>project_snake_mini</Filter>
+    </ClCompile>
+    <ClCompile Include="source\psm\psm_Terrain.cpp">
+      <Filter>project_snake_mini</Filter>
+    </ClCompile>
+    <ClCompile Include="source\psm\psm_Snake.cpp">
+      <Filter>project_snake_mini</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -548,41 +548,11 @@
     <ClInclude Include="external\r2bix\r2utility_StringSize.h">
       <Filter>external\r2bix</Filter>
     </ClInclude>
-    <ClInclude Include="source\psnake\psnake_DebugConfig.h">
-      <Filter>project_snake_mini</Filter>
-    </ClInclude>
-    <ClInclude Include="source\psnake\psnake_DirectorConfig.h">
-      <Filter>project_snake_mini</Filter>
-    </ClInclude>
-    <ClInclude Include="source\psnake\psnake_VersionInfo.h">
-      <Filter>project_snake_mini</Filter>
-    </ClInclude>
-    <ClInclude Include="source\psnake\psnake_table_TextureTable.h">
-      <Filter>project_snake_mini\table</Filter>
-    </ClInclude>
-    <ClInclude Include="source\psnake\psnake_table_TextureFrameAnimationTable.h">
-      <Filter>project_snake_mini\table</Filter>
-    </ClInclude>
-    <ClInclude Include="source\psnake\psnake_scene_CompanyScene.h">
-      <Filter>project_snake_mini\scene</Filter>
-    </ClInclude>
-    <ClInclude Include="source\psnake\psnake_scene_EntryScene.h">
-      <Filter>project_snake_mini\scene</Filter>
-    </ClInclude>
-    <ClInclude Include="source\psnake\psnake_Terrain.h">
-      <Filter>project_snake_mini</Filter>
-    </ClInclude>
     <ClInclude Include="source\test\item\test_psnake_terrain.h">
       <Filter>test\item</Filter>
     </ClInclude>
-    <ClInclude Include="source\psnake\psnake_constant.h">
-      <Filter>project_snake_mini</Filter>
-    </ClInclude>
     <ClInclude Include="source\test\Utility4Terrain.h">
       <Filter>test</Filter>
-    </ClInclude>
-    <ClInclude Include="source\psnake\psnake_GameCore.h">
-      <Filter>project_snake_mini</Filter>
     </ClInclude>
     <ClInclude Include="source\test\item\test_psnake_demo.h">
       <Filter>test\item</Filter>
@@ -590,14 +560,44 @@
     <ClInclude Include="source\test\item\test_psnake_snake.h">
       <Filter>test\item</Filter>
     </ClInclude>
-    <ClInclude Include="source\psnake\psnake_Snake.h">
-      <Filter>project_snake_mini</Filter>
-    </ClInclude>
     <ClInclude Include="source\test\Utility4Snake.h">
       <Filter>test</Filter>
     </ClInclude>
     <ClInclude Include="external\r2\r2_Grid.h">
       <Filter>external\r2</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psm\psm_scene_CompanyScene.h">
+      <Filter>project_snake_mini\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psm\psm_scene_EntryScene.h">
+      <Filter>project_snake_mini\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psm\psm_table_TextureFrameAnimationTable.h">
+      <Filter>project_snake_mini\table</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psm\psm_table_TextureTable.h">
+      <Filter>project_snake_mini\table</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psm\psm_constant.h">
+      <Filter>project_snake_mini</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psm\psm_DebugConfig.h">
+      <Filter>project_snake_mini</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psm\psm_DirectorConfig.h">
+      <Filter>project_snake_mini</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psm\psm_GameCore.h">
+      <Filter>project_snake_mini</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psm\psm_Terrain.h">
+      <Filter>project_snake_mini</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psm\psm_VersionInfo.h">
+      <Filter>project_snake_mini</Filter>
+    </ClInclude>
+    <ClInclude Include="source\psm\psm_Snake.h">
+      <Filter>project_snake_mini</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

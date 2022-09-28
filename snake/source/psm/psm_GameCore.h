@@ -2,8 +2,8 @@
 
 #include <memory>
 
-#include "psnake_Terrain.h"
-#include "psnake_Snake.h"
+#include "psm_Terrain.h"
+#include "psm_Snake.h"
 
 namespace psnake
 {

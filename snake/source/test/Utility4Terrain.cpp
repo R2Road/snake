@@ -5,7 +5,7 @@
 #include "r2cm/r2cm_ostream.h"
 #include "r2cm/r2cm_WindowUtility.h"
 
-#include "psnake/psnake_Terrain.h"
+#include "psm/psm_Terrain.h"
 
 void Utility4Terrain::Draw( const short x, const short y, const psnake::Terrain& terrain )
 {

@@ -1,8 +1,8 @@
-#include "psnake_table_TextureFrameAnimationTable.h"
+#include "psm_table_TextureFrameAnimationTable.h"
 
 #include <utility>
 
-#include "psnake_table_TextureTable.h"
+#include "psm_table_TextureTable.h"
 
 namespace psnake_table
 {

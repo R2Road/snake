@@ -1,12 +1,12 @@
-#include "psnake_scene_EntryScene.h"
+#include "psm_scene_EntryScene.h"
 
 #include "r2bix/r2base_Director.h"
 
-#include "psnake_GameCore.h"
-#include "psnake_table_TextureTable.h"
-#include "psnake_table_TextureFrameAnimationTable.h"
+#include "psm_GameCore.h"
+#include "psm_table_TextureTable.h"
+#include "psm_table_TextureFrameAnimationTable.h"
 
-#include "psnake_scene_CompanyScene.h"
+#include "psm_scene_CompanyScene.h"
 
 namespace psnake_scene
 {

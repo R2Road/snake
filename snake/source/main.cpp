@@ -3,7 +3,7 @@
 #endif
 
 #include "r2cm/r2cm_WindowUtility.h"
-#include "psnake/psnake_VersionInfo.h"
+#include "psm/psm_VersionInfo.h"
 
 #define DEVELOPMENT_PTT 1
 
@@ -15,8 +15,8 @@
 #else
 
 	#include "r2bix/r2base_Director.h"
-	#include "psnake/psnake_DirectorConfig.h"
-	#include "psnake/psnake_scene_EntryScene.h"
+	#include "psm/psm_DirectorConfig.h"
+	#include "psm/psm_scene_EntryScene.h"
 
 #endif
 

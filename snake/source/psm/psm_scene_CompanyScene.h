@@ -3,7 +3,7 @@
 #include <memory>
 
 #include "r2bix/r2node_SceneNode.h"
-#include "psnake/psnake_GameCore.h"
+#include "psm/psm_GameCore.h"
 
 namespace psnake_scene
 {

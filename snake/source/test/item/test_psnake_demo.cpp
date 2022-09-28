@@ -7,7 +7,7 @@
 #include "r2cm/r2cm_ostream.h"
 #include "r2cm/r2cm_WindowUtility.h"
 
-#include "psnake/psnake_GameCore.h"
+#include "psm/psm_GameCore.h"
 
 #include "test/Utility4Terrain.h"
 #include "test/Utility4Snake.h"

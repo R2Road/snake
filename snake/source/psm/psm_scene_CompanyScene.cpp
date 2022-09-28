@@ -1,4 +1,4 @@
-#include "psnake_scene_CompanyScene.h"
+#include "psm_scene_CompanyScene.h"
 
 #include <conio.h>
 

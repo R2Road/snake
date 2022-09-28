@@ -1,4 +1,4 @@
-#include "psnake_table_TextureTable.h"
+#include "psm_table_TextureTable.h"
 
 #include "r2bix/r2render_Texture.h"
 #include "r2bix/r2render_TextureFrame.h"
