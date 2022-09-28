@@ -1,5 +1,8 @@
 #include "test_psnake_demo.h"
 
+#include <conio.h>
+
+#include "r2/r2_FPSTimer.h"
 #include "r2cm/r2cm_Inspector.h"
 #include "r2cm/r2cm_ostream.h"
 #include "r2cm/r2cm_WindowUtility.h"
@@ -30,9 +33,24 @@ namespace test_psnake_demo
 			std::cout << r2cm::split;
 
 			{
+				r2::FPSTimer fps_timer( 30 );
 				const auto pivot_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( pivot_cursor_point.x, pivot_cursor_point.y, game_core->GetTerrain() );
-				Utility4Snake::Draw( pivot_cursor_point.x, pivot_cursor_point.y, game_core->GetSnake() );
+				int input = 0;
+				do
+				{
+					if( fps_timer.Update() )
+					{
+						r2cm::WindowUtility::MoveCursorPointWithClearBuffer( pivot_cursor_point );
+						Utility4Terrain::Draw( pivot_cursor_point.x, pivot_cursor_point.y, game_core->GetTerrain() );
+						Utility4Snake::Draw( pivot_cursor_point.x, pivot_cursor_point.y, game_core->GetSnake() );
+
+						if( _kbhit() )
+						{
+							input = _getch();
+						}
+					}
+
+				} while( 27 != input );
 			}
 
 			std::cout << r2cm::split;
