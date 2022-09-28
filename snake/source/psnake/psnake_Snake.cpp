@@ -17,6 +17,13 @@ namespace psnake
 		return ( 0 <= x && 0 <= y && static_cast<int>( GetWidth() ) > x && static_cast<int>( GetHeight() ) > y );
 	}
 
+	void Snake::Reset( const uint32_t width, const uint32_t height )
+	{
+		mContainer.Reset( width, height, Node{} );
+
+		mEndNode.prev = &mEndNode;
+		mEndNode.next = &mEndNode;
+	}
 	void Snake::PushFront( const uint32_t x, const uint32_t y )
 	{
 		R2ASSERT( false == Get( x, y ), "" );

@@ -20,5 +20,7 @@ namespace psnake
 			,	psnake::eCellType::Close		, psnake::eCellType::Open		, psnake::eCellType::Open		,psnake::eCellType::Close
 			,	psnake::eCellType::Close		, psnake::eCellType::Close		, psnake::eCellType::Close		,psnake::eCellType::Close
 		} );
+
+		mSnake.Reset( mTerrain.GetWidth(), mTerrain.GetHeight() );
 	}
 }

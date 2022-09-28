@@ -63,6 +63,7 @@ namespace psnake
 		//
 		//
 		//
+		void Reset( const uint32_t width, const uint32_t height );
 		void PushFront( const uint32_t x, const uint32_t y );
 		void PopTail();
 
