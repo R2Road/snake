@@ -164,15 +164,12 @@ namespace test_psnake_snake
 			{
 				PROCESS_MAIN( snake.PushFront( 1, 1 ) );
 				PROCESS_MAIN( snake.PushFront( 2, 2 ) );
+				EXPECT_EQ( snake.GetHeadNode(), snake.GetNode( 2, 2 ) );
 			}
 
 			std::cout << r2cm::split;
 
 			{
-				EXPECT_EQ( snake.GetHeadNode(), snake.GetNode( 2, 2 ) );
-
-				std::cout << r2cm::linefeed;
-
 				EXPECT_TRUE( snake.Get( 1, 1 ) );
 				PROCESS_MAIN( snake.PopTail() );
 				EXPECT_FALSE( snake.Get( 1, 1 ) );
