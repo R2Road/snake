@@ -3,7 +3,7 @@
 #include "r2cm/r2cm_iItem.h"
 #include "r2cm/r2cm_Singleton.h"
 
-namespace test_psnake_snake
+namespace test_psm_snake
 {
 	class Declaration : public r2cm::iItem, public r2cm::SingleTon<Declaration>
 	{

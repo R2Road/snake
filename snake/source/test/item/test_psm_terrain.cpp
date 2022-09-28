@@ -1,4 +1,4 @@
-#include "test_psnake_terrain.h"
+#include "test_psm_terrain.h"
 
 #include "r2cm/r2cm_Inspector.h"
 #include "r2cm/r2cm_ostream.h"
@@ -8,7 +8,7 @@
 
 #include "test/Utility4Terrain.h"
 
-namespace test_psnake_terrain
+namespace test_psm_terrain
 {
 	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
 	{

@@ -227,17 +227,8 @@
     <ClCompile Include="external\r2bix\r2utility_StringSize.cpp">
       <Filter>external\r2bix</Filter>
     </ClCompile>
-    <ClCompile Include="source\test\item\test_psnake_terrain.cpp">
-      <Filter>test\item</Filter>
-    </ClCompile>
     <ClCompile Include="source\test\Utility4Terrain.cpp">
       <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="source\test\item\test_psnake_demo.cpp">
-      <Filter>test\item</Filter>
-    </ClCompile>
-    <ClCompile Include="source\test\item\test_psnake_snake.cpp">
-      <Filter>test\item</Filter>
     </ClCompile>
     <ClCompile Include="source\test\Utility4Snake.cpp">
       <Filter>test</Filter>
@@ -262,6 +253,15 @@
     </ClCompile>
     <ClCompile Include="source\psm\psm_Snake.cpp">
       <Filter>project_snake_mini</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test\item\test_psm_demo.cpp">
+      <Filter>test\item</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test\item\test_psm_snake.cpp">
+      <Filter>test\item</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test\item\test_psm_terrain.cpp">
+      <Filter>test\item</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -548,17 +548,8 @@
     <ClInclude Include="external\r2bix\r2utility_StringSize.h">
       <Filter>external\r2bix</Filter>
     </ClInclude>
-    <ClInclude Include="source\test\item\test_psnake_terrain.h">
-      <Filter>test\item</Filter>
-    </ClInclude>
     <ClInclude Include="source\test\Utility4Terrain.h">
       <Filter>test</Filter>
-    </ClInclude>
-    <ClInclude Include="source\test\item\test_psnake_demo.h">
-      <Filter>test\item</Filter>
-    </ClInclude>
-    <ClInclude Include="source\test\item\test_psnake_snake.h">
-      <Filter>test\item</Filter>
     </ClInclude>
     <ClInclude Include="source\test\Utility4Snake.h">
       <Filter>test</Filter>
@@ -598,6 +589,15 @@
     </ClInclude>
     <ClInclude Include="source\psm\psm_Snake.h">
       <Filter>project_snake_mini</Filter>
+    </ClInclude>
+    <ClInclude Include="source\test\item\test_psm_demo.h">
+      <Filter>test\item</Filter>
+    </ClInclude>
+    <ClInclude Include="source\test\item\test_psm_snake.h">
+      <Filter>test\item</Filter>
+    </ClInclude>
+    <ClInclude Include="source\test\item\test_psm_terrain.h">
+      <Filter>test\item</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

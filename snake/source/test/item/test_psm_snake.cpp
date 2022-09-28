@@ -1,4 +1,4 @@
-#include "test_psnake_snake.h"
+#include "test_psm_snake.h"
 
 #include "r2cm/r2cm_Inspector.h"
 #include "r2cm/r2cm_ostream.h"
@@ -15,7 +15,7 @@ bool operator==( const psnake::Snake::Node& node_1, const psnake::Snake::Node& n
 	return ( &node_1 == &node_2 );
 }
 
-namespace test_psnake_snake
+namespace test_psm_snake
 {
 	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
 	{

@@ -3,9 +3,9 @@
 #include "r2cm/r2cm_Director.h"
 #include "r2cm/r2cm_ostream.h"
 
-#include "item/test_psnake_demo.h"
-#include "item/test_psnake_snake.h"
-#include "item/test_psnake_terrain.h"
+#include "item/test_psm_demo.h"
+#include "item/test_psm_snake.h"
+#include "item/test_psm_terrain.h"
 
 r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 {
@@ -15,9 +15,9 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 	) );
 
 	{
-		ret->AddItem( '1', test_psnake_terrain::Declaration::GetInstance() );
-		ret->AddItem( '2', test_psnake_terrain::Fill::GetInstance() );
-		ret->AddItem( '3', test_psnake_terrain::Get_IsIn::GetInstance() );
+		ret->AddItem( '1', test_psm_terrain::Declaration::GetInstance() );
+		ret->AddItem( '2', test_psm_terrain::Fill::GetInstance() );
+		ret->AddItem( '3', test_psm_terrain::Get_IsIn::GetInstance() );
 
 
 
@@ -25,9 +25,9 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 
 
 
-		ret->AddItem( 'q', test_psnake_snake::Declaration::GetInstance() );
-		ret->AddItem( 'w', test_psnake_snake::PushFront::GetInstance() );
-		ret->AddItem( 'e', test_psnake_snake::PopTail::GetInstance() );
+		ret->AddItem( 'q', test_psm_snake::Declaration::GetInstance() );
+		ret->AddItem( 'w', test_psm_snake::PushFront::GetInstance() );
+		ret->AddItem( 'e', test_psm_snake::PopTail::GetInstance() );
 
 
 
@@ -35,7 +35,7 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 
 
 
-		ret->AddItem( 32, test_psnake_demo::Do::GetInstance() );
+		ret->AddItem( 32, test_psm_demo::Do::GetInstance() );
 
 
 

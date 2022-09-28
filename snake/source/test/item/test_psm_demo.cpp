@@ -1,4 +1,4 @@
-#include "test_psnake_demo.h"
+#include "test_psm_demo.h"
 
 #include <conio.h>
 
@@ -12,7 +12,7 @@
 #include "test/Utility4Terrain.h"
 #include "test/Utility4Snake.h"
 
-namespace test_psnake_demo
+namespace test_psm_demo
 {
 	r2cm::iItem::TitleFunctionT Do::GetTitleFunction() const
 	{
