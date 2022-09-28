@@ -7,7 +7,7 @@
 
 #include "psm/psm_Terrain.h"
 
-void Utility4Terrain::Draw( const short x, const short y, const psnake::Terrain& terrain )
+void Utility4Terrain::Draw( const short x, const short y, const psm::Terrain& terrain )
 {
 	const r2cm::WindowUtility::CursorPoint pivot_point{ x, y };
 
@@ -17,7 +17,7 @@ void Utility4Terrain::Draw( const short x, const short y, const psnake::Terrain&
 		{
 			r2cm::WindowUtility::FillCharacter(
 				{ static_cast<short>( pivot_point.x + ( cx * 2 ) ),	static_cast<short>( pivot_point.y + cy ) }
-				, ( psnake::eCellType::Open == terrain.Get( cx, cy ) ? 'o' : 'x' )
+				, ( psm::eCellType::Open == terrain.Get( cx, cy ) ? 'o' : 'x' )
 			);
 		}
 	}

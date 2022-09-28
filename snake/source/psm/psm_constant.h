@@ -1,6 +1,6 @@
 #pragma once
 
-namespace psnake
+namespace psm
 {
 	enum class eCellType
 	{

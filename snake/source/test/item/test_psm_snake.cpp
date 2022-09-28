@@ -10,7 +10,7 @@
 #include "test/Utility4Snake.h"
 #include "test/Utility4Terrain.h"
 
-bool operator==( const psnake::Snake::Node& node_1, const psnake::Snake::Node& node_2 )
+bool operator==( const psm::Snake::Node& node_1, const psm::Snake::Node& node_2 )
 {
 	return ( &node_1 == &node_2 );
 }
@@ -30,8 +30,8 @@ namespace test_psm_snake
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_SUB( psnake::Terrain terrain( 3, 7 ) );
-			DECLARATION_MAIN( psnake::Snake snake( 3, 7 ) );
+			DECLARATION_SUB( psm::Terrain terrain( 3, 7 ) );
+			DECLARATION_MAIN( psm::Snake snake( 3, 7 ) );
 
 			std::cout << r2cm::split;
 
@@ -87,8 +87,8 @@ namespace test_psm_snake
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_SUB( psnake::Terrain terrain( 4, 4 ) );
-			DECLARATION_MAIN( psnake::Snake snake( 4, 4 ) );
+			DECLARATION_SUB( psm::Terrain terrain( 4, 4 ) );
+			DECLARATION_MAIN( psm::Snake snake( 4, 4 ) );
 
 			std::cout << r2cm::split;
 
@@ -156,8 +156,8 @@ namespace test_psm_snake
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_SUB( psnake::Terrain terrain( 4, 4 ) );
-			DECLARATION_MAIN( psnake::Snake snake( 4, 4 ) );
+			DECLARATION_SUB( psm::Terrain terrain( 4, 4 ) );
+			DECLARATION_MAIN( psm::Snake snake( 4, 4 ) );
 
 			std::cout << r2cm::split;
 

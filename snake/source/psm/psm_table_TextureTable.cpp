@@ -3,7 +3,7 @@
 #include "r2bix/r2render_Texture.h"
 #include "r2bix/r2render_TextureFrame.h"
 
-namespace psnake_table
+namespace psm_table
 {
 	void TextureTable::Load()
 	{

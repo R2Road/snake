@@ -5,7 +5,7 @@
 #include "psm_Terrain.h"
 #include "psm_Snake.h"
 
-namespace psnake
+namespace psm
 {
 	using GameCoreUp = std::unique_ptr<class GameCore>;
 	class GameCore

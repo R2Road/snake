@@ -7,13 +7,13 @@
 #include "r2bix/r2component_TextureRenderComponent.h"
 #include "r2bix/r2node_LabelSNode.h"
 
-namespace psnake_scene
+namespace psm_scene
 {
-	CompanyScene::CompanyScene( r2base::Director& director, psnake::GameCoreUp&& game_core ) : r2node::SceneNode( director )
+	CompanyScene::CompanyScene( r2base::Director& director, psm::GameCoreUp&& game_core ) : r2node::SceneNode( director )
 		, mGameCore( std::move( game_core ) )
 	{}
 
-	r2node::SceneNodeUp CompanyScene::Create( r2base::Director& director, psnake::GameCoreUp&& game_core )
+	r2node::SceneNodeUp CompanyScene::Create( r2base::Director& director, psm::GameCoreUp&& game_core )
 	{
 		r2node::SceneNodeUp ret( new ( std::nothrow ) CompanyScene( director, std::move( game_core ) ) );
 		if( !ret || !ret->Init() )

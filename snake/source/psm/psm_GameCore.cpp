@@ -2,7 +2,7 @@
 
 #include <new>
 
-namespace psnake
+namespace psm
 {
 	GameCore::GameCore() : mTerrain( 4, 4 ), mSnake( 4, 4 )
 	{}
@@ -15,10 +15,10 @@ namespace psnake
 	void GameCore::Reset()
 	{
 		mTerrain.Fill( {
-				psnake::eCellType::Close		, psnake::eCellType::Close		, psnake::eCellType::Close		,psnake::eCellType::Close
-			,	psnake::eCellType::Close		, psnake::eCellType::Open		, psnake::eCellType::Open		,psnake::eCellType::Close
-			,	psnake::eCellType::Close		, psnake::eCellType::Open		, psnake::eCellType::Open		,psnake::eCellType::Close
-			,	psnake::eCellType::Close		, psnake::eCellType::Close		, psnake::eCellType::Close		,psnake::eCellType::Close
+				psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
+			,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
+			,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
+			,	psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
 		} );
 
 		mSnake.Reset( mTerrain.GetWidth(), mTerrain.GetHeight() );

@@ -8,7 +8,7 @@
 
 #include "psm_scene_CompanyScene.h"
 
-namespace psnake_scene
+namespace psm_scene
 {
 	class EntrySceneComponent : public r2base::Component<EntrySceneComponent>
 	{
@@ -25,13 +25,13 @@ namespace psnake_scene
 			//
 			// Table Load
 			//
-			psnake_table::TextureTable::GetInstance().Load();
-			psnake_table::TextureFrameAnimationTable::GetInstance().Load();
+			psm_table::TextureTable::GetInstance().Load();
+			psm_table::TextureFrameAnimationTable::GetInstance().Load();
 
 			//
 			// Scene
 			//
-			auto next_scene = psnake_scene::CompanyScene::Create( mOwnerNode.GetDirector(), psnake::GameCore::Create() );
+			auto next_scene = psm_scene::CompanyScene::Create( mOwnerNode.GetDirector(), psm::GameCore::Create() );
 
 			//
 			// Go Next 

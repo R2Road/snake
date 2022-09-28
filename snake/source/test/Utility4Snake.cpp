@@ -7,7 +7,7 @@
 
 #include "psm/psm_Snake.h"
 
-void Utility4Snake::Draw( const short x, const short y, const psnake::Snake& snake )
+void Utility4Snake::Draw( const short x, const short y, const psm::Snake& snake )
 {
 	const r2cm::WindowUtility::CursorPoint pivot_point{ x, y };
 

@@ -27,7 +27,7 @@ namespace test_psm_demo
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_MAIN( auto game_core = psnake::GameCore::Create() );
+			DECLARATION_MAIN( auto game_core = psm::GameCore::Create() );
 			PROCESS_MAIN( game_core->Reset() );
 
 			std::cout << r2cm::split;

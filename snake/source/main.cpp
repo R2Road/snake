@@ -25,7 +25,7 @@ int main()
 	//
 	// Environment : Title
 	//
-	r2cm::WindowUtility::ChangeTitle( psnake::VersionInfo.String4Version );
+	r2cm::WindowUtility::ChangeTitle( psm::VersionInfo.String4Version );
 
 #if defined( DEVELOPMENT_PTT ) && ( DEVELOPMENT_PTT == 1 )
 
@@ -61,8 +61,8 @@ int main()
 	//
 	// Setup
 	//
-	r2base::Director director( psnake::DirectorConfig );
-	director.Setup( psnake_scene::EntryScene::Create( director ) );
+	r2base::Director director( psm::DirectorConfig );
+	director.Setup( psm_scene::EntryScene::Create( director ) );
 
 	//
 	// Environment : ScrollBar | Maximize Button | Frame Lock

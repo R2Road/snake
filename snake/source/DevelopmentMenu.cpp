@@ -22,7 +22,7 @@ const char* DevelopmentMenu::GetTitle()
 		std::string( "Development Menu" )
 		+ " : <" + r2cm::VersionInfo.String4Version + ">"
 		+ " : <" + r2base::VersionInfo.String4Version + ">"
-		+ " : <" + psnake::VersionInfo.String4Version + ">";
+		+ " : <" + psm::VersionInfo.String4Version + ">";
 	return ret.c_str();
 }
 
@@ -30,12 +30,12 @@ const char* GetMessage()
 {
 	static const std::string ret =
 		std::string()
-		+ psnake::VersionInfo.String4SubjectAsAProgrammer
+		+ psm::VersionInfo.String4SubjectAsAProgrammer
 		+ "\n"
 		+ "\n"	"==============================="
 		+ "\n"
 		+ "\n"
-		+ psnake::VersionInfo.String4Road2Version_0_0_1
+		+ psm::VersionInfo.String4Road2Version_0_0_1
 		;
 	return ret.c_str();
 }
@@ -92,8 +92,8 @@ r2cm::MenuUp DevelopmentMenu::Create( r2cm::Director& director )
 					//
 					// Setup
 					//
-					r2base::Director director( psnake::DirectorConfig );
-					director.Setup( psnake_scene::EntryScene::Create( director ) );
+					r2base::Director director( psm::DirectorConfig );
+					director.Setup( psm_scene::EntryScene::Create( director ) );
 
 					//
 					// Environment : ScrollBar | Maximize Button | Frame Lock

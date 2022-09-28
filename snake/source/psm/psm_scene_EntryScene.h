@@ -2,7 +2,7 @@
 
 #include "r2bix/r2node_SceneNode.h"
 
-namespace psnake_scene
+namespace psm_scene
 {
 	class EntryScene : public r2node::SceneNode
 	{

@@ -4,7 +4,7 @@
 
 #include "psm_table_TextureTable.h"
 
-namespace psnake_table
+namespace psm_table
 {
 	void TextureFrameAnimationTable::Load()
 	{

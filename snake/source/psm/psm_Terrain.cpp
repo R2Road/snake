@@ -2,7 +2,7 @@
 
 #include "r2/r2_Assert.h"
 
-namespace psnake
+namespace psm
 {
 	Terrain::Terrain( const uint32_t width, const uint32_t height ) :
 		mGridIndexConverter( width, height )

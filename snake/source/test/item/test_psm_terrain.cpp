@@ -23,7 +23,7 @@ namespace test_psm_terrain
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_MAIN( psnake::Terrain terrain( 3, 7 ) );
+			DECLARATION_MAIN( psm::Terrain terrain( 3, 7 ) );
 
 			std::cout << r2cm::split;
 
@@ -71,16 +71,16 @@ namespace test_psm_terrain
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_MAIN( psnake::Terrain terrain( 4, 4 ) );
+			DECLARATION_MAIN( psm::Terrain terrain( 4, 4 ) );
 
 			std::cout << r2cm::split;
 
 			{
 				PROCESS_MAIN( terrain.Fill( {
-						psnake::eCellType::Close		, psnake::eCellType::Close	, psnake::eCellType::Close		,psnake::eCellType::Close
-					,	psnake::eCellType::Close		, psnake::eCellType::Open		, psnake::eCellType::Open			,psnake::eCellType::Close
-					,	psnake::eCellType::Close		, psnake::eCellType::Open		, psnake::eCellType::Open			,psnake::eCellType::Close
-					,	psnake::eCellType::Close		, psnake::eCellType::Close	, psnake::eCellType::Close		,psnake::eCellType::Close
+						psm::eCellType::Close		, psm::eCellType::Close	, psm::eCellType::Close		,psm::eCellType::Close
+					,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open			,psm::eCellType::Close
+					,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open			,psm::eCellType::Close
+					,	psm::eCellType::Close		, psm::eCellType::Close	, psm::eCellType::Close		,psm::eCellType::Close
 					} ) );
 			}
 			
@@ -113,10 +113,10 @@ namespace test_psm_terrain
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_MAIN( psnake::Terrain terrain( 2, 2 ) );
+			DECLARATION_MAIN( psm::Terrain terrain( 2, 2 ) );
 			PROCESS_MAIN( terrain.Fill( {
-						psnake::eCellType::Open		, psnake::eCellType::Close
-					,	psnake::eCellType::Close		, psnake::eCellType::Open
+						psm::eCellType::Open		, psm::eCellType::Close
+					,	psm::eCellType::Close		, psm::eCellType::Open
 			} ) );
 
 			std::cout << r2cm::split;
@@ -130,15 +130,15 @@ namespace test_psm_terrain
 			std::cout << r2cm::split;
 
 			{
-				EXPECT_EQ( psnake::eCellType::Open, terrain.Get( 0, 0 ) );
-				EXPECT_EQ( psnake::eCellType::Close, terrain.Get( 1, 0 ) );
-				EXPECT_EQ( psnake::eCellType::Close, terrain.Get( 0, 1 ) );
-				EXPECT_EQ( psnake::eCellType::Open, terrain.Get( 1, 1 ) );
+				EXPECT_EQ( psm::eCellType::Open, terrain.Get( 0, 0 ) );
+				EXPECT_EQ( psm::eCellType::Close, terrain.Get( 1, 0 ) );
+				EXPECT_EQ( psm::eCellType::Close, terrain.Get( 0, 1 ) );
+				EXPECT_EQ( psm::eCellType::Open, terrain.Get( 1, 1 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( psnake::eCellType::Open, terrain.Get( 2, 1 ) );
-				EXPECT_EQ( psnake::eCellType::Open, terrain.Get( 1, 2 ) );
+				EXPECT_EQ( psm::eCellType::Open, terrain.Get( 2, 1 ) );
+				EXPECT_EQ( psm::eCellType::Open, terrain.Get( 1, 2 ) );
 			}
 
 			std::cout << r2cm::split;

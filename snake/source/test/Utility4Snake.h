@@ -1,6 +1,6 @@
 #pragma once
 
-namespace psnake
+namespace psm
 {
 	class Snake;
 }
@@ -11,5 +11,5 @@ private:
 	Utility4Snake() = delete;
 
 public:
-	static void Draw( const short x, const short y, const psnake::Snake& snake );
+	static void Draw( const short x, const short y, const psm::Snake& snake );
 };
