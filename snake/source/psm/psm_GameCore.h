@@ -31,7 +31,7 @@ namespace psm
 		//
 		//
 		//
-		void Reset();
+		void Reset( const psm_table::TerrainData& terrain_data );
 
 	private:
 		Terrain mTerrain;

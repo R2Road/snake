@@ -12,15 +12,9 @@ namespace psm
 		return GameCoreUp( new (std::nothrow) GameCore );
 	}
 
-	void GameCore::Reset()
+	void GameCore::Reset( const psm_table::TerrainData& terrain_data )
 	{
-		mTerrain.Reset( { 4, 4, {
-				psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
-			,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
-			,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
-			,	psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
-		} } );
-
-		mSnake.Reset( mTerrain.GetWidth(), mTerrain.GetHeight() );
+		mTerrain.Reset( terrain_data );
+		mSnake.Reset( terrain_data.width, terrain_data.height );
 	}
 }

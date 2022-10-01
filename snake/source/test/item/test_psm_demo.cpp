@@ -28,7 +28,12 @@ namespace test_psm_demo
 			std::cout << r2cm::split;
 
 			DECLARATION_MAIN( auto game_core = psm::GameCore::Create() );
-			PROCESS_MAIN( game_core->Reset() );
+			PROCESS_MAIN( game_core->Reset( { 4, 4, {
+					psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
+				,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
+				,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
+				,	psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
+			} } ) );
 
 			std::cout << r2cm::split;
 
@@ -47,6 +52,18 @@ namespace test_psm_demo
 						if( _kbhit() )
 						{
 							input = _getch();
+
+							switch( input )
+							{
+							case 'w':
+								break;
+							case 'a':
+								break;
+							case 's':
+								break;
+							case 'd':
+								break;
+							}
 						}
 					}
 
