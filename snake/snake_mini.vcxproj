@@ -88,6 +88,7 @@
     <ClCompile Include="source\psm\psm_scene_CompanyScene.cpp" />
     <ClCompile Include="source\psm\psm_scene_EntryScene.cpp" />
     <ClCompile Include="source\psm\psm_Snake.cpp" />
+    <ClCompile Include="source\psm\psm_table_TerrainDataTable.cpp" />
     <ClCompile Include="source\psm\psm_table_TextureFrameAnimationTable.cpp" />
     <ClCompile Include="source\psm\psm_table_TextureTable.cpp" />
     <ClCompile Include="source\psm\psm_Terrain.cpp" />
@@ -202,6 +203,7 @@
     <ClInclude Include="source\psm\psm_scene_EntryScene.h" />
     <ClInclude Include="source\psm\psm_Snake.h" />
     <ClInclude Include="source\psm\psm_table_TerrainData.h" />
+    <ClInclude Include="source\psm\psm_table_TerrainDataTable.h" />
     <ClInclude Include="source\psm\psm_table_TextureFrameAnimationTable.h" />
     <ClInclude Include="source\psm\psm_table_TextureTable.h" />
     <ClInclude Include="source\psm\psm_Terrain.h" />

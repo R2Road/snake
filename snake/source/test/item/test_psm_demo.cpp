@@ -8,6 +8,7 @@
 #include "r2cm/r2cm_WindowUtility.h"
 
 #include "psm/psm_GameCore.h"
+#include "psm/psm_table_TerrainDataTable.h"
 
 #include "test/Utility4Terrain.h"
 #include "test/Utility4Snake.h"
@@ -27,13 +28,12 @@ namespace test_psm_demo
 		{
 			std::cout << r2cm::split;
 
+			psm_table::TerrainDataTable::GetInstance().Load();
+
+			std::cout << r2cm::split;
+
 			DECLARATION_MAIN( auto game_core = psm::GameCore::Create() );
-			PROCESS_MAIN( game_core->Reset( { 4, 4, {
-					psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
-				,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
-				,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
-				,	psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
-			} } ) );
+			PROCESS_MAIN( game_core->Reset( psm_table::TerrainDataTable::GetInstance().Get( 1 ) ) );
 
 			std::cout << r2cm::split;
 
