@@ -201,6 +201,7 @@
     <ClInclude Include="source\psm\psm_scene_CompanyScene.h" />
     <ClInclude Include="source\psm\psm_scene_EntryScene.h" />
     <ClInclude Include="source\psm\psm_Snake.h" />
+    <ClInclude Include="source\psm\psm_table_TerrainData.h" />
     <ClInclude Include="source\psm\psm_table_TextureFrameAnimationTable.h" />
     <ClInclude Include="source\psm\psm_table_TextureTable.h" />
     <ClInclude Include="source\psm\psm_Terrain.h" />

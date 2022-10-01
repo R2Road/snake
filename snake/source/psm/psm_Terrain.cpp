@@ -12,6 +12,10 @@ namespace psm
 		mGridIndexConverter( width, height )
 		, mContainer( width * height, eCellType::Open )
 	{}
+	Terrain::Terrain( const psm_table::TerrainData& terrain_data ) :
+		mGridIndexConverter( terrain_data.width, terrain_data.height )
+		, mContainer( terrain_data.data )
+	{}
 
 	bool Terrain::IsIn( const int32_t x, const int32_t y ) const
 	{

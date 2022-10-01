@@ -599,5 +599,8 @@
     <ClInclude Include="source\test\item\test_psm_terrain.h">
       <Filter>test\item</Filter>
     </ClInclude>
+    <ClInclude Include="source\psm\psm_table_TerrainData.h">
+      <Filter>project_snake_mini\table</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

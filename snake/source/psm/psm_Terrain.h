@@ -4,6 +4,7 @@
 
 #include "r2/r2_GridIndexConverter.h"
 #include "psm_constant.h"
+#include "psm_table_TerrainData.h"
 
 namespace psm
 {
@@ -16,6 +17,7 @@ namespace psm
 
 		Terrain();
 		Terrain( const uint32_t width, const uint32_t height );
+		Terrain( const psm_table::TerrainData& terrain_data );
 
 		//
 		// Iteration
