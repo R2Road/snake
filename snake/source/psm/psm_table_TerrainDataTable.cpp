@@ -9,14 +9,17 @@ namespace psm_table
 			return;
 		}
 
+		const psm::eCellType cO = psm::eCellType::Open;
+		const psm::eCellType cX = psm::eCellType::Close;
+
 		//
 		// 1 : Dummy 1
 		//
 		mContainer.emplace( 1, TerrainData{ 4, 4, {
-				psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
-			,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
-			,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
-			,	psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
+				cX		, cX		, cX		,cX
+			,	cX		, cO		, cO		,cX
+			,	cX		, cO		, cO		,cX
+			,	cX		, cX		, cX		,cX
 		} } );
 	}
 
