@@ -120,17 +120,47 @@ namespace test_psm_terrain
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_MAIN( psm::Terrain terrain( 4, 4 ) );
+			DECLARATION_MAIN( psm::Terrain terrain );
+
+			std::cout << r2cm::linefeed;
+
+			EXPECT_EQ( 1, terrain.GetWidth() );
+			EXPECT_EQ( 1, terrain.GetHeight() );
+
+			std::cout << r2cm::linefeed;
+
+			EXPECT_EQ( 0, terrain.GetMaxX() );
+			EXPECT_EQ( 0, terrain.GetMaxY() );
+
+			std::cout << r2cm::linefeed;
+
+			EXPECT_EQ( terrain.GetWidth() * terrain.GetHeight(), terrain.Size() );
+			OUTPUT_VALUE( terrain.Size() );
 
 			std::cout << r2cm::split;
 
 			{
-				PROCESS_MAIN( terrain.Reset( {
-						psm::eCellType::Close		, psm::eCellType::Close	, psm::eCellType::Close		,psm::eCellType::Close
-					,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open			,psm::eCellType::Close
-					,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open			,psm::eCellType::Close
-					,	psm::eCellType::Close		, psm::eCellType::Close	, psm::eCellType::Close		,psm::eCellType::Close
-					} ) );
+				PROCESS_MAIN( terrain.Reset( { 4, 4, {
+						psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
+					,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
+					,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
+					,	psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
+				} } ) );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( 4, terrain.GetWidth() );
+				EXPECT_EQ( 4, terrain.GetHeight() );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( 3, terrain.GetMaxX() );
+				EXPECT_EQ( 3, terrain.GetMaxY() );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( terrain.GetWidth() * terrain.GetHeight(), terrain.Size() );
+				OUTPUT_VALUE( terrain.Size() );
 			}
 			
 			std::cout << r2cm::split;
@@ -162,11 +192,11 @@ namespace test_psm_terrain
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_MAIN( psm::Terrain terrain( 2, 2 ) );
-			PROCESS_MAIN( terrain.Reset( {
+			DECLARATION_MAIN( psm::Terrain terrain );
+			PROCESS_MAIN( terrain.Reset( { 2, 2, {
 						psm::eCellType::Open		, psm::eCellType::Close
 					,	psm::eCellType::Close		, psm::eCellType::Open
-			} ) );
+			} }  ) );
 
 			std::cout << r2cm::split;
 

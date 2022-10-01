@@ -14,12 +14,12 @@ namespace psm
 
 	void GameCore::Reset()
 	{
-		mTerrain.Fill( {
+		mTerrain.Reset( { 4, 4, {
 				psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
 			,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
 			,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
 			,	psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
-		} );
+		} } );
 
 		mSnake.Reset( mTerrain.GetWidth(), mTerrain.GetHeight() );
 	}

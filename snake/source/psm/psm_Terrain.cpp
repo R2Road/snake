@@ -22,17 +22,10 @@ namespace psm
 		return ( 0 <= x && 0 <= y && static_cast<int>( GetWidth() ) > x && static_cast<int>( GetHeight() ) > y );
 	}
 
-	void Terrain::Reset( const std::initializer_list<eCellType> datas )
+	void Terrain::Reset( const psm_table::TerrainData& terrain_data )
 	{
-		R2ASSERT( datas.size() == mContainer.size(), "" );
-
-		std::size_t i = 0u;
-		for( const auto c : datas )
-		{
-			mContainer[i] = c;
-
-			++i;
-		}
+		mGridIndexConverter = r2::GridIndexConverter( terrain_data.width, terrain_data.height );
+		mContainer = terrain_data.data;
 	}
 
 	eCellType Terrain::Get( const uint32_t x, const uint32_t y ) const
