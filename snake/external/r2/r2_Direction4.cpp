@@ -2,58 +2,57 @@
 
 namespace r2
 {
-	Direction4::Direction4() : mState( eState::Up )
-	{}
-	Direction4::Direction4( const eState state ) : mState( state )
-	{}
-
-	void Direction4::Rotate( const bool rotate_right )
+	void ConvertDirection4State2Point( const eDirection4State state, int& out_x, int& out_y )
 	{
-		char new_state = 0;
-		if( rotate_right )
+		switch( state )
 		{
-			new_state = static_cast<char>( mState << 1 );
-			if( eState::LAST < new_state )
-			{
-				new_state = eState::FIRST;
-			}
+		case eDirection4State::UP: out_x = 0; out_y = 1; break;
+		case eDirection4State::RIGHT: out_x = 1; out_y = 0; break;
+		case eDirection4State::DOWN: out_x = 0; out_y = -1; break;
+		case eDirection4State::LEFT: out_x = -1; out_y = 0; break;
 		}
-		else
-		{
-			new_state = static_cast<char>( mState >> 1 );
-			if( eState::None >= new_state )
-			{
-				new_state = eState::LAST;
-			}
-		}
-
-		mState = static_cast<eState>( new_state );
 	}
 
-	r2::PointInt Direction4::GetPoint() const
+	Direction4::Direction4() :
+		mState( eDirection4State::UP )
+		, mX( 0 )
+		, mY( 0 )
 	{
-		r2::PointInt out_point;
+		ConvertDirection4State2Point( mState, mX, mY );
+	}
+	Direction4::Direction4( const eDirection4State state ) :
+		mState( state )
+		, mX( 0 )
+		, mY( 0 )
+	{
+		ConvertDirection4State2Point( mState, mX, mY );
+	}
+	Direction4::Direction4( const int x, const int y ) :
+		mState( eDirection4State::NONE )
+		, mX( 0 )
+		, mY( 0 )
+	{
+		mState = ConvertPoint2Direction4State( x, y );
+		ConvertDirection4State2Point( mState, mX, mY );
+	}
 
+	void Direction4::Rotate( const bool is_right )
+	{
 		switch( mState )
 		{
-		case Direction4::eState::Up:
-			out_point = r2::Point{ 0, 1 };
-			break;
-		case Direction4::eState::Right:
-			out_point = r2::Point{ 1, 0 };
-			break;
-		case Direction4::eState::Down:
-			out_point = r2::Point{ 0, -1 };
-			break;
-		case Direction4::eState::Left:
-			out_point = r2::Point{ -1, 0 };
-			break;
-
-		default:
-			out_point = r2::Point{ 0, 0 };
-			break;
+		case eDirection4State::UP: mState = ( is_right ? eDirection4State::RIGHT : eDirection4State::LEFT ); break;
+		case eDirection4State::RIGHT: mState = ( is_right ? eDirection4State::DOWN : eDirection4State::UP ); break;
+		case eDirection4State::DOWN: mState = ( is_right ? eDirection4State::LEFT : eDirection4State::RIGHT ); break;
+		case eDirection4State::LEFT: mState = ( is_right ? eDirection4State::UP : eDirection4State::DOWN ); break;
 		}
 
-		return out_point;
+		ConvertDirection4State2Point( mState, mX, mY );
+	}
+	void Direction4::Rotate( const bool direction_right, const int rotate_count )
+	{
+		for( int i = 0; rotate_count > i; ++i )
+		{
+			Rotate( direction_right );
+		}
 	}
 }

@@ -266,6 +266,9 @@
     <ClCompile Include="source\psm\psm_table_TerrainDataTable.cpp">
       <Filter>project_snake_mini\table</Filter>
     </ClCompile>
+    <ClCompile Include="external\r2\r2_Direction4State.cpp">
+      <Filter>external\r2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\DevelopmentMenu.h" />
@@ -607,6 +610,9 @@
     </ClInclude>
     <ClInclude Include="source\psm\psm_table_TerrainDataTable.h">
       <Filter>project_snake_mini\table</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2\r2_Direction4State.h">
+      <Filter>external\r2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

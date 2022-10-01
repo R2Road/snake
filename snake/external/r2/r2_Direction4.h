@@ -1,37 +1,53 @@
 #pragma once
 
-#include "r2_PointInt.h"
+#include "r2_Direction4State.h"
 
 namespace r2
 {
 	class Direction4
 	{
 	public:
-		enum eState
-		{
-			None = 0,
-			Up = 1,
-			Right = 1 << 1,
-			Down = 1 << 2,
-			Left = 1 << 3,
-
-			FIRST = Up,
-			LAST = Left,
-			ALL = Up | Right | Down | Left,
-			SIZE = 4,
-		};
-
 		Direction4();
-		Direction4( const eState state );
+		explicit Direction4( const eDirection4State state );
+		explicit Direction4( const int x, const int y );
 
-		eState GetState() const { return mState; }
-		void SetState( eState state ) { mState = state; }
+		//
+		//
+		//
+		bool operator==( const Direction4& other ) const
+		{
+			return other.mState == mState;
+		}
+		bool operator!=( const Direction4& other ) const
+		{
+			return !( operator==( other ) );
+		}
 
-		void Rotate( const bool rotate_right );
+		//
+		//
+		//
+		eDirection4State GetState() const
+		{
+			return mState;
+		}
+		int GetX() const
+		{
+			return mX;
+		}
+		int GetY() const
+		{
+			return mY;
+		}
 
-		r2::PointInt GetPoint() const;
+		//
+		//
+		//
+		void Rotate( const bool is_right = true );
+		void Rotate( const bool direction_right, const int rotate_count );
 
 	private:
-		eState mState;
+		eDirection4State mState;
+		int mX;
+		int mY;
 	};
 }

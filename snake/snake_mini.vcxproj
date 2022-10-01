@@ -71,6 +71,7 @@
     <ClCompile Include="external\r2cm\r2cm_StopWatch.cpp" />
     <ClCompile Include="external\r2cm\r2cm_WindowUtility.cpp" />
     <ClCompile Include="external\r2\r2_Direction4.cpp" />
+    <ClCompile Include="external\r2\r2_Direction4State.cpp" />
     <ClCompile Include="external\r2\r2_FPSTimer.cpp" />
     <ClCompile Include="external\r2\r2_GridIndexConverter.cpp" />
     <ClCompile Include="external\r2\r2_IndexEnumerator.cpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="external\r2\r2_Assert.h" />
     <ClInclude Include="external\r2\r2_Counter.h" />
     <ClInclude Include="external\r2\r2_Direction4.h" />
+    <ClInclude Include="external\r2\r2_Direction4State.h" />
     <ClInclude Include="external\r2\r2_FPSTimer.h" />
     <ClInclude Include="external\r2\r2_Grid.h" />
     <ClInclude Include="external\r2\r2_GridIndexConverter.h" />
