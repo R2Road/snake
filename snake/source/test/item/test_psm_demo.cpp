@@ -28,7 +28,7 @@ namespace test_psm_demo
 		{
 			std::cout << r2cm::split;
 
-			psm_table::TerrainDataTable::GetInstance().Load();
+			PROCESS_MAIN( psm_table::TerrainDataTable::GetInstance().Load() );
 
 			std::cout << r2cm::split;
 
