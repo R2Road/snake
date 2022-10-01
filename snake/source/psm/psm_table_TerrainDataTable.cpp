@@ -15,11 +15,17 @@ namespace psm_table
 		//
 		// 1 : Dummy 1
 		//
-		mContainer.emplace( 1, TerrainData{ 4, 4, {
-				cX		, cX		, cX		,cX
-			,	cX		, cO		, cO		,cX
-			,	cX		, cO		, cO		,cX
-			,	cX		, cX		, cX		,cX
+		mContainer.emplace( 1, TerrainData{ 10, 10, {
+				cX,		cX,		cX,		cX,		cX,		cX,		cX,		cX,		cX,		cX
+			,	cX,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cX
+			,	cX,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cX
+			,	cX,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cX
+			,	cX,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cX
+			,	cX,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cX
+			,	cX,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cX
+			,	cX,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cX
+			,	cX,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cO,		cX
+			,	cX,		cX,		cX,		cX,		cX,		cX,		cX,		cX,		cX,		cX
 		} } );
 	}
 
