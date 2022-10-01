@@ -10,14 +10,14 @@
 
 namespace test_psm_terrain
 {
-	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
+	r2cm::iItem::TitleFunctionT Declaration_1::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
-			return "Terrain : Declaration";
+			return "Terrain : Declaration 1";
 		};
 	}
-	r2cm::iItem::DoFunctionT Declaration::GetDoFunction()
+	r2cm::iItem::DoFunctionT Declaration_1::GetDoFunction()
 	{
 		return []()->r2cm::eItemLeaveAction
 		{
@@ -43,6 +43,7 @@ namespace test_psm_terrain
 
 				std::cout << r2cm::linefeed;
 
+				std::cout << "# View" << r2cm::linefeed2;
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
 			}
@@ -50,17 +51,17 @@ namespace test_psm_terrain
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( psm::Terrain terrain( 3, 2 ) );
+				DECLARATION_MAIN( psm::Terrain terrain( 3, 7 ) );
 
 				std::cout << r2cm::linefeed;
 
 				EXPECT_EQ( 3, terrain.GetWidth() );
-				EXPECT_EQ( 2, terrain.GetHeight() );
+				EXPECT_EQ( 7, terrain.GetHeight() );
 
 				std::cout << r2cm::linefeed;
 
 				EXPECT_EQ( 2, terrain.GetMaxX() );
-				EXPECT_EQ( 1, terrain.GetMaxY() );
+				EXPECT_EQ( 6, terrain.GetMaxY() );
 
 				std::cout << r2cm::linefeed;
 
@@ -69,10 +70,30 @@ namespace test_psm_terrain
 
 				std::cout << r2cm::linefeed;
 
+				std::cout << "# View" << r2cm::linefeed2;
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
 			}
 
+			std::cout << r2cm::split;
+
+			return r2cm::eItemLeaveAction::Pause;
+		};
+	}
+
+
+
+	r2cm::iItem::TitleFunctionT Declaration_2::GetTitleFunction() const
+	{
+		return []()->const char*
+		{
+			return "Terrain : Declaration 2";
+		};
+	}
+	r2cm::iItem::DoFunctionT Declaration_2::GetDoFunction()
+	{
+		return []()->r2cm::eItemLeaveAction
+		{
 			std::cout << r2cm::split;
 
 			{
@@ -95,6 +116,7 @@ namespace test_psm_terrain
 
 				std::cout << r2cm::linefeed;
 
+				std::cout << "# View" << r2cm::linefeed2;
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
 			}

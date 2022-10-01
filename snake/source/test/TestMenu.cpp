@@ -15,9 +15,10 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 	) );
 
 	{
-		ret->AddItem( '1', test_psm_terrain::Declaration::GetInstance() );
-		ret->AddItem( '2', test_psm_terrain::Reset::GetInstance() );
-		ret->AddItem( '3', test_psm_terrain::Get_IsIn::GetInstance() );
+		ret->AddItem( '1', test_psm_terrain::Declaration_1::GetInstance() );
+		ret->AddItem( '2', test_psm_terrain::Declaration_2::GetInstance() );
+		ret->AddItem( '3', test_psm_terrain::Reset::GetInstance() );
+		ret->AddItem( '4', test_psm_terrain::Get_IsIn::GetInstance() );
 
 
 

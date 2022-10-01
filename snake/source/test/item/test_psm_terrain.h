@@ -5,7 +5,14 @@
 
 namespace test_psm_terrain
 {
-	class Declaration : public r2cm::iItem, public r2cm::SingleTon<Declaration>
+	class Declaration_1 : public r2cm::iItem, public r2cm::SingleTon<Declaration_1>
+	{
+	public:
+		TitleFunctionT GetTitleFunction() const override;
+		DoFunctionT GetDoFunction() override;
+	};
+
+	class Declaration_2 : public r2cm::iItem, public r2cm::SingleTon<Declaration_2>
 	{
 	public:
 		TitleFunctionT GetTitleFunction() const override;
