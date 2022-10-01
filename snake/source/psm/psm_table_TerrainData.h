@@ -1,6 +1,6 @@
 #pragma once
 
-#include <initializer_list>
+#include <vector>
 
 #include "psm_constant.h"
 
@@ -10,6 +10,6 @@ namespace psm_table
 	{
 		int width;
 		int height;
-		std::initializer_list<psm::eCellType> data;
+		std::vector<psm::eCellType> data;
 	};
 }
