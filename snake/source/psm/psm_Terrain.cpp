@@ -4,6 +4,10 @@
 
 namespace psm
 {
+	Terrain::Terrain() :
+		mGridIndexConverter( 1, 1 )
+		, mContainer( 1, eCellType::Open )
+	{}
 	Terrain::Terrain( const uint32_t width, const uint32_t height ) :
 		mGridIndexConverter( width, height )
 		, mContainer( width * height, eCellType::Open )

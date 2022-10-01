@@ -14,6 +14,7 @@ namespace psm
 		using ContainerT = std::vector<Cell>;
 		using ConstIteratorT = typename ContainerT::const_iterator;
 
+		Terrain();
 		Terrain( const uint32_t width, const uint32_t height );
 
 		//
