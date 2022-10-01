@@ -4,7 +4,7 @@
 
 namespace psm
 {
-	GameCore::GameCore() : mTerrain( 4, 4 ), mSnake( 4, 4 )
+	GameCore::GameCore() : mTerrain(), mSnake()
 	{}
 
 	GameCoreUp GameCore::Create()

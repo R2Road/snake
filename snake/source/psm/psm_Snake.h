@@ -33,6 +33,7 @@ namespace psm
 		using ContainerT = r2::Grid<Cell>;
 		using ConstIteratorT = typename ContainerT::ConstIteratorT;
 
+		Snake();
 		Snake( const uint32_t width, const uint32_t height );
 
 		//

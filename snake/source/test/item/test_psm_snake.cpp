@@ -30,12 +30,40 @@ namespace test_psm_snake
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_SUB( psm::Terrain terrain( 3, 7 ) );
-			DECLARATION_MAIN( psm::Snake snake( 3, 7 ) );
+			{
+				DECLARATION_MAIN( psm::Snake snake );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( 1, snake.GetWidth() );
+				EXPECT_EQ( 1, snake.GetHeight() );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( 0, snake.GetMaxX() );
+				EXPECT_EQ( 0, snake.GetMaxY() );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( snake.GetWidth() * snake.GetHeight(), snake.Size() );
+				OUTPUT_VALUE( snake.Size() );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( snake.GetHeadNode(), snake.GetEndNode() );
+				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetHeadNode() );
+				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetHeadNode() );
+				EXPECT_FALSE( snake.GetHeadNode().value );
+			}
 
 			std::cout << r2cm::split;
 
 			{
+				DECLARATION_SUB( psm::Terrain terrain( 3, 7 ) );
+				DECLARATION_MAIN( psm::Snake snake( 3, 7 ) );
+
+				std::cout << r2cm::linefeed;
+
 				EXPECT_EQ( 3, snake.GetWidth() );
 				EXPECT_EQ( 7, snake.GetHeight() );
 
@@ -55,11 +83,9 @@ namespace test_psm_snake
 				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetHeadNode() );
 				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetHeadNode() );
 				EXPECT_FALSE( snake.GetHeadNode().value );
-			}
 
-			std::cout << r2cm::split;
+				std::cout << r2cm::linefeed;
 
-			{
 				std::cout << "# View" << r2cm::linefeed2;
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );

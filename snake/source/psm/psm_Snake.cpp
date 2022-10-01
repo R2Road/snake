@@ -4,6 +4,13 @@
 
 namespace psm
 {
+	Snake::Snake() :
+		mContainer( 1, 1, Node{} )
+		, mEndNode()
+	{
+		mEndNode.prev = &mEndNode;
+		mEndNode.next = &mEndNode;
+	}
 	Snake::Snake( const uint32_t width, const uint32_t height ) :
 		mContainer( width, height, Node{} )
 		, mEndNode()
