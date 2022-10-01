@@ -59,7 +59,7 @@ namespace psm
 		//
 		//
 		//
-		void Fill( const std::initializer_list<eCellType> datas );
+		void Reset( const std::initializer_list<eCellType> datas );
 
 		//
 		//

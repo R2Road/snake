@@ -12,7 +12,7 @@ namespace test_psm_terrain
 		DoFunctionT GetDoFunction() override;
 	};
 
-	class Fill : public r2cm::iItem, public r2cm::SingleTon<Fill>
+	class Reset : public r2cm::iItem, public r2cm::SingleTon<Reset>
 	{
 	public:
 		TitleFunctionT GetTitleFunction() const override;

@@ -107,14 +107,14 @@ namespace test_psm_terrain
 
 
 
-	r2cm::iItem::TitleFunctionT Fill::GetTitleFunction() const
+	r2cm::iItem::TitleFunctionT Reset::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
-			return "Terrain : Fill";
+			return "Terrain : Reset";
 		};
 	}
-	r2cm::iItem::DoFunctionT Fill::GetDoFunction()
+	r2cm::iItem::DoFunctionT Reset::GetDoFunction()
 	{
 		return []()->r2cm::eItemLeaveAction
 		{
@@ -125,7 +125,7 @@ namespace test_psm_terrain
 			std::cout << r2cm::split;
 
 			{
-				PROCESS_MAIN( terrain.Fill( {
+				PROCESS_MAIN( terrain.Reset( {
 						psm::eCellType::Close		, psm::eCellType::Close	, psm::eCellType::Close		,psm::eCellType::Close
 					,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open			,psm::eCellType::Close
 					,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open			,psm::eCellType::Close
@@ -163,7 +163,7 @@ namespace test_psm_terrain
 			std::cout << r2cm::split;
 
 			DECLARATION_MAIN( psm::Terrain terrain( 2, 2 ) );
-			PROCESS_MAIN( terrain.Fill( {
+			PROCESS_MAIN( terrain.Reset( {
 						psm::eCellType::Open		, psm::eCellType::Close
 					,	psm::eCellType::Close		, psm::eCellType::Open
 			} ) );

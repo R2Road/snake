@@ -22,7 +22,7 @@ namespace psm
 		return ( 0 <= x && 0 <= y && static_cast<int>( GetWidth() ) > x && static_cast<int>( GetHeight() ) > y );
 	}
 
-	void Terrain::Fill( const std::initializer_list<eCellType> datas )
+	void Terrain::Reset( const std::initializer_list<eCellType> datas )
 	{
 		R2ASSERT( datas.size() == mContainer.size(), "" );
 
