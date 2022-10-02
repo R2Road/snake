@@ -20,7 +20,7 @@ namespace psm
 
 
 		const char* const String4SubjectAsAProgrammer = {
-			"### 이 프로젝트의 실험 목표 | Subject As A Programmer ###"
+			"### 프로젝트 목표 | Subject Of A Project ###"
 			"\n"
 			"\n"	"1. Core"
 			"\n"	"[ ] "    "> 전반의 데이터를 다루는 Core 객체를 둔다"
