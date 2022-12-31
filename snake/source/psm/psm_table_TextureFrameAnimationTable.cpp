@@ -22,7 +22,7 @@ namespace psm_table
 		{
 			{
 				animation.Index = r2animation::eIndex::Idle_1;
-				animation.Container.push_back( r2base::TextureFrameAnimationInfo::AnimationFrame{ 0.f, TextureTable::GetInstance().GetTextureFrame( "number_1" ) } );
+				animation.Container.push_back( r2base::TextureFrameAnimationInfo::AnimationFrame{ 0.f, TextureTable().GetTextureFrame( "number_1" ) } );
 				animation_package.push_back( std::move( animation ) );
 			}
 

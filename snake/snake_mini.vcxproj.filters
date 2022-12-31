@@ -74,21 +74,6 @@
     <ClCompile Include="external\r2\r2_TimerFloat.cpp">
       <Filter>external\r2</Filter>
     </ClCompile>
-    <ClCompile Include="external\r2cm\r2cm_Director.cpp">
-      <Filter>external\r2cm</Filter>
-    </ClCompile>
-    <ClCompile Include="external\r2cm\r2cm_Inspector.cpp">
-      <Filter>external\r2cm</Filter>
-    </ClCompile>
-    <ClCompile Include="external\r2cm\r2cm_Menu.cpp">
-      <Filter>external\r2cm</Filter>
-    </ClCompile>
-    <ClCompile Include="external\r2cm\r2cm_StopWatch.cpp">
-      <Filter>external\r2cm</Filter>
-    </ClCompile>
-    <ClCompile Include="external\r2cm\r2cm_WindowUtility.cpp">
-      <Filter>external\r2cm</Filter>
-    </ClCompile>
     <ClCompile Include="external\r2bix\r2action_AnimationRequestAction.cpp">
       <Filter>external\r2bix</Filter>
     </ClCompile>
@@ -269,6 +254,24 @@
     <ClCompile Include="external\r2\r2_Direction4State.cpp">
       <Filter>external\r2</Filter>
     </ClCompile>
+    <ClCompile Include="external\r2cm\r2cm_Director.cpp">
+      <Filter>external\r2cm</Filter>
+    </ClCompile>
+    <ClCompile Include="external\r2cm\r2cm_MenuProcessor.cpp">
+      <Filter>external\r2cm</Filter>
+    </ClCompile>
+    <ClCompile Include="external\r2cm\r2cm_PrintBinary.cpp">
+      <Filter>external\r2cm</Filter>
+    </ClCompile>
+    <ClCompile Include="external\r2cm\r2cm_PrintFile.cpp">
+      <Filter>external\r2cm</Filter>
+    </ClCompile>
+    <ClCompile Include="external\r2cm\r2cm_StopWatch.cpp">
+      <Filter>external\r2cm</Filter>
+    </ClCompile>
+    <ClCompile Include="external\r2cm\r2cm_WindowUtility.cpp">
+      <Filter>external\r2cm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\DevelopmentMenu.h" />
@@ -367,33 +370,6 @@
     </ClInclude>
     <ClInclude Include="external\r2\r2_VersionInfo.h">
       <Filter>external\r2</Filter>
-    </ClInclude>
-    <ClInclude Include="external\r2cm\r2cm_Director.h">
-      <Filter>external\r2cm</Filter>
-    </ClInclude>
-    <ClInclude Include="external\r2cm\r2cm_iItem.h">
-      <Filter>external\r2cm</Filter>
-    </ClInclude>
-    <ClInclude Include="external\r2cm\r2cm_Inspector.h">
-      <Filter>external\r2cm</Filter>
-    </ClInclude>
-    <ClInclude Include="external\r2cm\r2cm_Menu.h">
-      <Filter>external\r2cm</Filter>
-    </ClInclude>
-    <ClInclude Include="external\r2cm\r2cm_ostream.h">
-      <Filter>external\r2cm</Filter>
-    </ClInclude>
-    <ClInclude Include="external\r2cm\r2cm_Singleton.h">
-      <Filter>external\r2cm</Filter>
-    </ClInclude>
-    <ClInclude Include="external\r2cm\r2cm_StopWatch.h">
-      <Filter>external\r2cm</Filter>
-    </ClInclude>
-    <ClInclude Include="external\r2cm\r2cm_VersionInfo.h">
-      <Filter>external\r2cm</Filter>
-    </ClInclude>
-    <ClInclude Include="external\r2cm\r2cm_WindowUtility.h">
-      <Filter>external\r2cm</Filter>
     </ClInclude>
     <ClInclude Include="external\r2bix\r2action_AnimationRequestAction.h">
       <Filter>external\r2bix</Filter>
@@ -612,6 +588,51 @@
       <Filter>project_snake_mini\table</Filter>
     </ClInclude>
     <ClInclude Include="external\r2\r2_Direction4State.h">
+      <Filter>external\r2</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_ColorModifier.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_Director.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_iItem.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_iMenu.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_Inspector.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_MenuConstant.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_MenuProcessor.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_ostream.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_PrintBinary.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_PrintFile.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_StopWatch.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_VersionInfo.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2cm\r2cm_WindowUtility.h">
+      <Filter>external\r2cm</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2\r2_SingletonWithStaticFunction.h">
+      <Filter>external\r2</Filter>
+    </ClInclude>
+    <ClInclude Include="external\r2\r2_NoneCopyable.h">
       <Filter>external\r2</Filter>
     </ClInclude>
   </ItemGroup>

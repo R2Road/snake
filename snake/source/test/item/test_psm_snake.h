@@ -1,28 +1,27 @@
 #pragma once
 
 #include "r2cm/r2cm_iItem.h"
-#include "r2cm/r2cm_Singleton.h"
 
 namespace test_psm_snake
 {
-	class Declaration : public r2cm::iItem, public r2cm::SingleTon<Declaration>
+	class Declaration : public r2cm::iItem
 	{
 	public:
-		TitleFunctionT GetTitleFunction() const override;
-		DoFunctionT GetDoFunction() override;
+		r2cm::TitleFunctionT GetTitleFunction() const override;
+		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 
-	class PushFront : public r2cm::iItem, public r2cm::SingleTon<PushFront>
+	class PushFront : public r2cm::iItem
 	{
 	public:
-		TitleFunctionT GetTitleFunction() const override;
-		DoFunctionT GetDoFunction() override;
+		r2cm::TitleFunctionT GetTitleFunction() const override;
+		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 
-	class PopTail : public r2cm::iItem, public r2cm::SingleTon<PopTail>
+	class PopTail : public r2cm::iItem
 	{
 	public:
-		TitleFunctionT GetTitleFunction() const override;
-		DoFunctionT GetDoFunction() override;
+		r2cm::TitleFunctionT GetTitleFunction() const override;
+		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 }

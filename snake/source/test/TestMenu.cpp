@@ -7,18 +7,28 @@
 #include "item/test_psm_snake.h"
 #include "item/test_psm_terrain.h"
 
-r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
+r2cm::TitleFunctionT TestMenu::GetTitleFunction() const
 {
-	r2cm::MenuUp ret( new ( std::nothrow ) r2cm::Menu(
-		director
-		, GetTitle()
-	) );
-
+	return []()->const char*
 	{
-		ret->AddItem( '1', test_psm_terrain::Declaration_1::GetInstance() );
-		ret->AddItem( '2', test_psm_terrain::Declaration_2::GetInstance() );
-		ret->AddItem( '3', test_psm_terrain::Reset::GetInstance() );
-		ret->AddItem( '4', test_psm_terrain::Get_IsIn::GetInstance() );
+		return "Test Menu";
+	};
+}
+r2cm::DescriptionFunctionT TestMenu::GetDescriptionFunction() const
+{
+	return []()->const char*
+	{
+		return "";
+	};
+}
+r2cm::WriteFunctionT TestMenu::GetWriteFunction() const
+{
+	return []( r2cm::MenuProcessor* ret )
+	{
+		ret->AddItem( '1', test_psm_terrain::Declaration_1() );
+		ret->AddItem( '2', test_psm_terrain::Declaration_2() );
+		ret->AddItem( '3', test_psm_terrain::Reset() );
+		ret->AddItem( '4', test_psm_terrain::Get_IsIn() );
 
 
 
@@ -26,9 +36,9 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 
 
 
-		ret->AddItem( 'q', test_psm_snake::Declaration::GetInstance() );
-		ret->AddItem( 'w', test_psm_snake::PushFront::GetInstance() );
-		ret->AddItem( 'e', test_psm_snake::PopTail::GetInstance() );
+		ret->AddItem( 'q', test_psm_snake::Declaration() );
+		ret->AddItem( 'w', test_psm_snake::PushFront() );
+		ret->AddItem( 'e', test_psm_snake::PopTail() );
 
 
 
@@ -36,7 +46,7 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 
 
 
-		ret->AddItem( 32, test_psm_demo::Do::GetInstance() );
+		ret->AddItem( 32, test_psm_demo::Do() );
 
 
 
@@ -46,14 +56,12 @@ r2cm::MenuUp TestMenu::Create( r2cm::Director& director )
 
 		ret->AddItem(
 			27
-			, r2cm::eColor::FG_White
+			, r2cm::eColor::BG_Purple
 			, []()->const char* { return "Exit"; }
-			, [&director]()->r2cm::eItemLeaveAction
+			, []()->r2cm::eDoLeaveAction
 			{
-				return r2cm::eItemLeaveAction::Exit;
+				return r2cm::eDoLeaveAction::Exit;
 			}
 		);
-	}
-
-	return ret;
+	};
 }

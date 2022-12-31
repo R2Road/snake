@@ -2,14 +2,14 @@
 
 #include <unordered_map>
 
-#include "r2cm/r2cm_Singleton.h"
+#include "r2/r2_SingletonWithStaticFunction.h"
 
 #include "psm_constant.h"
 #include "psm_table_TerrainData.h"
 
 namespace psm_table
 {
-	class TerrainDataTable : public r2cm::SingleTon< TerrainDataTable>
+	class TerrainDataTable : public r2::SingletonWithStaticFunction<TerrainDataTable>
 	{
 	public:
 		void Load();

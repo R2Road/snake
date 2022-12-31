@@ -1,35 +1,34 @@
 #pragma once
 
 #include "r2cm/r2cm_iItem.h"
-#include "r2cm/r2cm_Singleton.h"
 
 namespace test_psm_terrain
 {
-	class Declaration_1 : public r2cm::iItem, public r2cm::SingleTon<Declaration_1>
+	class Declaration_1 : public r2cm::iItem
 	{
 	public:
-		TitleFunctionT GetTitleFunction() const override;
-		DoFunctionT GetDoFunction() override;
+		r2cm::TitleFunctionT GetTitleFunction() const override;
+		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 
-	class Declaration_2 : public r2cm::iItem, public r2cm::SingleTon<Declaration_2>
+	class Declaration_2 : public r2cm::iItem
 	{
 	public:
-		TitleFunctionT GetTitleFunction() const override;
-		DoFunctionT GetDoFunction() override;
+		r2cm::TitleFunctionT GetTitleFunction() const override;
+		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 
-	class Reset : public r2cm::iItem, public r2cm::SingleTon<Reset>
+	class Reset : public r2cm::iItem
 	{
 	public:
-		TitleFunctionT GetTitleFunction() const override;
-		DoFunctionT GetDoFunction() override;
+		r2cm::TitleFunctionT GetTitleFunction() const override;
+		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 
-	class Get_IsIn : public r2cm::iItem, public r2cm::SingleTon<Get_IsIn>
+	class Get_IsIn : public r2cm::iItem
 	{
 	public:
-		TitleFunctionT GetTitleFunction() const override;
-		DoFunctionT GetDoFunction() override;
+		r2cm::TitleFunctionT GetTitleFunction() const override;
+		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 }

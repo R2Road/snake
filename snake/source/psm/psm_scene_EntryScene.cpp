@@ -25,8 +25,8 @@ namespace psm_scene
 			//
 			// Table Load
 			//
-			psm_table::TextureTable::GetInstance().Load();
-			psm_table::TextureFrameAnimationTable::GetInstance().Load();
+			psm_table::TextureTable().Load();
+			psm_table::TextureFrameAnimationTable().Load();
 
 			//
 			// Scene

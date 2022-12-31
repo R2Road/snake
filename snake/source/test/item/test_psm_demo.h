@@ -1,14 +1,13 @@
 #pragma once
 
 #include "r2cm/r2cm_iItem.h"
-#include "r2cm/r2cm_Singleton.h"
 
 namespace test_psm_demo
 {
-	class Do : public r2cm::iItem, public r2cm::SingleTon<Do>
+	class Do : public r2cm::iItem
 	{
 	public:
-		TitleFunctionT GetTitleFunction() const override;
-		DoFunctionT GetDoFunction() override;
+		r2cm::TitleFunctionT GetTitleFunction() const override;
+		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 }

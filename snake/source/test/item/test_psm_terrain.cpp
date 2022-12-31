@@ -10,16 +10,21 @@
 
 namespace test_psm_terrain
 {
-	r2cm::iItem::TitleFunctionT Declaration_1::GetTitleFunction() const
+	std::ostream& operator<<( std::ostream& o, psm::eCellType value )
+	{
+		return o << static_cast<int>( value ) << r2cm::linefeed;
+	}
+
+	r2cm::TitleFunctionT Declaration_1::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Terrain : Declaration 1";
 		};
 	}
-	r2cm::iItem::DoFunctionT Declaration_1::GetDoFunction()
+	r2cm::DoFunctionT Declaration_1::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -77,22 +82,22 @@ namespace test_psm_terrain
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 
 
 
-	r2cm::iItem::TitleFunctionT Declaration_2::GetTitleFunction() const
+	r2cm::TitleFunctionT Declaration_2::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Terrain : Declaration 2";
 		};
 	}
-	r2cm::iItem::DoFunctionT Declaration_2::GetDoFunction()
+	r2cm::DoFunctionT Declaration_2::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -123,22 +128,22 @@ namespace test_psm_terrain
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 
 
 
-	r2cm::iItem::TitleFunctionT Reset::GetTitleFunction() const
+	r2cm::TitleFunctionT Reset::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Terrain : Reset";
 		};
 	}
-	r2cm::iItem::DoFunctionT Reset::GetDoFunction()
+	r2cm::DoFunctionT Reset::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -195,22 +200,22 @@ namespace test_psm_terrain
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 
 
 
-	r2cm::iItem::TitleFunctionT Get_IsIn::GetTitleFunction() const
+	r2cm::TitleFunctionT Get_IsIn::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Terrain : Get and IsIn";
 		};
 	}
-	r2cm::iItem::DoFunctionT Get_IsIn::GetDoFunction()
+	r2cm::DoFunctionT Get_IsIn::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -260,7 +265,7 @@ namespace test_psm_terrain
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 }

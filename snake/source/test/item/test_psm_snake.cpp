@@ -17,16 +17,16 @@ bool operator==( const psm::Snake::Node& node_1, const psm::Snake::Node& node_2 
 
 namespace test_psm_snake
 {
-	r2cm::iItem::TitleFunctionT Declaration::GetTitleFunction() const
+	r2cm::TitleFunctionT Declaration::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Snake : Declaration";
 		};
 	}
-	r2cm::iItem::DoFunctionT Declaration::GetDoFunction()
+	r2cm::DoFunctionT Declaration::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -50,9 +50,9 @@ namespace test_psm_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.GetHeadNode(), snake.GetEndNode() );
-				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetHeadNode() );
-				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetHeadNode() );
+				EXPECT_TRUE( snake.GetHeadNode() == snake.GetEndNode() );
+				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetHeadNode() );
+				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetHeadNode() );
 				EXPECT_FALSE( snake.GetHeadNode().value );
 			}
 
@@ -79,9 +79,9 @@ namespace test_psm_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.GetHeadNode(), snake.GetEndNode() );
-				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetHeadNode() );
-				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetHeadNode() );
+				EXPECT_TRUE( snake.GetHeadNode() == snake.GetEndNode() );
+				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetHeadNode() );
+				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetHeadNode() );
 				EXPECT_FALSE( snake.GetHeadNode().value );
 
 				std::cout << r2cm::linefeed;
@@ -94,22 +94,22 @@ namespace test_psm_snake
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 
 
 
-	r2cm::iItem::TitleFunctionT PushFront::GetTitleFunction() const
+	r2cm::TitleFunctionT PushFront::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Snake : PushFront";
 		};
 	}
-	r2cm::iItem::DoFunctionT PushFront::GetDoFunction()
+	r2cm::DoFunctionT PushFront::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -125,11 +125,11 @@ namespace test_psm_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.GetHeadNode(), snake.GetNode( 1, 1 ) );
-				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetEndNode() );
-				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetEndNode() );
-				EXPECT_EQ( *snake.GetEndNode().prev, snake.GetHeadNode() );
-				EXPECT_EQ( *snake.GetEndNode().next, snake.GetHeadNode() );
+				EXPECT_TRUE( snake.GetHeadNode() == snake.GetNode( 1, 1 ) );
+				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetEndNode() );
+				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetEndNode() );
+				EXPECT_TRUE( *snake.GetEndNode().prev == snake.GetHeadNode() );
+				EXPECT_TRUE( *snake.GetEndNode().next == snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
@@ -147,12 +147,12 @@ namespace test_psm_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.GetHeadNode(), snake.GetNode( 2, 2 ) );
-				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetEndNode() );
-				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetNode( 1, 1 ) );
-				EXPECT_EQ( *snake.GetHeadNode().next->next, snake.GetEndNode() );
-				EXPECT_EQ( *snake.GetEndNode().prev, snake.GetNode( 1, 1 ) );
-				EXPECT_EQ( *snake.GetEndNode().next, snake.GetHeadNode() );
+				EXPECT_TRUE( snake.GetHeadNode() == snake.GetNode( 2, 2 ) );
+				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetEndNode() );
+				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetNode( 1, 1 ) );
+				EXPECT_TRUE( *snake.GetHeadNode().next->next == snake.GetEndNode() );
+				EXPECT_TRUE( *snake.GetEndNode().prev == snake.GetNode( 1, 1 ) );
+				EXPECT_TRUE( *snake.GetEndNode().next == snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
@@ -163,22 +163,22 @@ namespace test_psm_snake
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 
 
 
-	r2cm::iItem::TitleFunctionT PopTail::GetTitleFunction() const
+	r2cm::TitleFunctionT PopTail::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
 			return "Snake : PopTail";
 		};
 	}
-	r2cm::iItem::DoFunctionT PopTail::GetDoFunction()
+	r2cm::DoFunctionT PopTail::GetDoFunction() const
 	{
-		return []()->r2cm::eItemLeaveAction
+		return []()->r2cm::eDoLeaveAction
 		{
 			std::cout << r2cm::split;
 
@@ -190,7 +190,7 @@ namespace test_psm_snake
 			{
 				PROCESS_MAIN( snake.PushFront( 1, 1 ) );
 				PROCESS_MAIN( snake.PushFront( 2, 2 ) );
-				EXPECT_EQ( snake.GetHeadNode(), snake.GetNode( 2, 2 ) );
+				EXPECT_TRUE( snake.GetHeadNode() == snake.GetNode( 2, 2 ) );
 			}
 
 			std::cout << r2cm::split;
@@ -202,11 +202,11 @@ namespace test_psm_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.GetHeadNode(), snake.GetNode( 2, 2 ) );
-				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetEndNode() );
-				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetEndNode() );
-				EXPECT_EQ( *snake.GetEndNode().prev, snake.GetHeadNode() );
-				EXPECT_EQ( *snake.GetEndNode().next, snake.GetHeadNode() );
+				EXPECT_TRUE( snake.GetHeadNode() == snake.GetNode( 2, 2 ) );
+				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetEndNode() );
+				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetEndNode() );
+				EXPECT_TRUE( *snake.GetEndNode().prev == snake.GetHeadNode() );
+				EXPECT_TRUE( *snake.GetEndNode().next == snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
@@ -226,11 +226,11 @@ namespace test_psm_snake
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( snake.GetHeadNode(), snake.GetEndNode() );
-				EXPECT_EQ( *snake.GetHeadNode().prev, snake.GetEndNode() );
-				EXPECT_EQ( *snake.GetHeadNode().next, snake.GetEndNode() );
-				EXPECT_EQ( *snake.GetEndNode().prev, snake.GetHeadNode() );
-				EXPECT_EQ( *snake.GetEndNode().next, snake.GetHeadNode() );
+				EXPECT_TRUE( snake.GetHeadNode() == snake.GetEndNode() );
+				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetEndNode() );
+				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetEndNode() );
+				EXPECT_TRUE( *snake.GetEndNode().prev == snake.GetHeadNode() );
+				EXPECT_TRUE( *snake.GetEndNode().next == snake.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
@@ -243,7 +243,7 @@ namespace test_psm_snake
 
 			std::cout << r2cm::split;
 
-			return r2cm::eItemLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::Pause;
 		};
 	}
 }
