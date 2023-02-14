@@ -11,7 +11,7 @@ namespace test_psm_snake
 		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 
-	class PushFront : public r2cm::iItem
+	class Push : public r2cm::iItem
 	{
 	public:
 		r2cm::TitleFunctionT GetTitleFunction() const override;

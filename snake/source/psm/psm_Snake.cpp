@@ -31,7 +31,7 @@ namespace psm
 		mEndNode.prev = &mEndNode;
 		mEndNode.next = &mEndNode;
 	}
-	void Snake::PushFront( const uint32_t x, const uint32_t y )
+	void Snake::Push( const uint32_t x, const uint32_t y )
 	{
 		R2ASSERT( false == Get( x, y ), "" );
 

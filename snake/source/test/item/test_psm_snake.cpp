@@ -100,14 +100,14 @@ namespace test_psm_snake
 
 
 
-	r2cm::TitleFunctionT PushFront::GetTitleFunction() const
+	r2cm::TitleFunctionT Push::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
-			return "Snake : PushFront";
+			return "Snake : Push";
 		};
 	}
-	r2cm::DoFunctionT PushFront::GetDoFunction() const
+	r2cm::DoFunctionT Push::GetDoFunction() const
 	{
 		return []()->r2cm::eDoLeaveAction
 		{
@@ -120,7 +120,7 @@ namespace test_psm_snake
 
 			{
 				EXPECT_FALSE( snake.Get( 1, 1 ) );
-				PROCESS_MAIN( snake.PushFront( 1, 1 ) );
+				PROCESS_MAIN( snake.Push( 1, 1 ) );
 				EXPECT_TRUE( snake.Get( 1, 1 ) );
 
 				std::cout << r2cm::linefeed;
@@ -142,7 +142,7 @@ namespace test_psm_snake
 
 			{
 				EXPECT_FALSE( snake.Get( 2, 2 ) );
-				PROCESS_MAIN( snake.PushFront( 2, 2 ) );
+				PROCESS_MAIN( snake.Push( 2, 2 ) );
 				EXPECT_TRUE( snake.Get( 2, 2 ) );
 
 				std::cout << r2cm::linefeed;
@@ -188,8 +188,8 @@ namespace test_psm_snake
 			std::cout << r2cm::split;
 
 			{
-				PROCESS_MAIN( snake.PushFront( 1, 1 ) );
-				PROCESS_MAIN( snake.PushFront( 2, 2 ) );
+				PROCESS_MAIN( snake.Push( 1, 1 ) );
+				PROCESS_MAIN( snake.Push( 2, 2 ) );
 				EXPECT_TRUE( snake.GetHeadNode() == snake.GetNode( 2, 2 ) );
 			}
 
