@@ -169,14 +169,14 @@ namespace test_psm_snake
 
 
 
-	r2cm::TitleFunctionT PopTail::GetTitleFunction() const
+	r2cm::TitleFunctionT Pop::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
-			return "Snake : PopTail";
+			return "Snake : Pop";
 		};
 	}
-	r2cm::DoFunctionT PopTail::GetDoFunction() const
+	r2cm::DoFunctionT Pop::GetDoFunction() const
 	{
 		return []()->r2cm::eDoLeaveAction
 		{
@@ -197,7 +197,7 @@ namespace test_psm_snake
 
 			{
 				EXPECT_TRUE( snake.Get( 1, 1 ) );
-				PROCESS_MAIN( snake.PopTail() );
+				PROCESS_MAIN( snake.Pop() );
 				EXPECT_FALSE( snake.Get( 1, 1 ) );
 
 				std::cout << r2cm::linefeed;
@@ -221,7 +221,7 @@ namespace test_psm_snake
 
 			{
 				EXPECT_TRUE( snake.Get( 2, 2 ) );
-				PROCESS_MAIN( snake.PopTail() );
+				PROCESS_MAIN( snake.Pop() );
 				EXPECT_FALSE( snake.Get( 2, 2 ) );
 
 				std::cout << r2cm::linefeed;

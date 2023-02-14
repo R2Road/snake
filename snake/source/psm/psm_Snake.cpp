@@ -55,7 +55,7 @@ namespace psm
 		mEndNode.next = &node;
 		
 	}
-	void Snake::PopTail()
+	void Snake::Pop()
 	{
 		if( &mEndNode == mEndNode.prev )
 		{

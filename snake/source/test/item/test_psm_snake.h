@@ -18,7 +18,7 @@ namespace test_psm_snake
 		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 
-	class PopTail : public r2cm::iItem
+	class Pop : public r2cm::iItem
 	{
 	public:
 		r2cm::TitleFunctionT GetTitleFunction() const override;

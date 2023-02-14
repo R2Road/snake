@@ -38,7 +38,7 @@ r2cm::WriteFunctionT TestMenu::GetWriteFunction() const
 
 		ret->AddItem( 'q', test_psm_snake::Declaration() );
 		ret->AddItem( 'w', test_psm_snake::Push() );
-		ret->AddItem( 'e', test_psm_snake::PopTail() );
+		ret->AddItem( 'e', test_psm_snake::Pop() );
 
 
 
