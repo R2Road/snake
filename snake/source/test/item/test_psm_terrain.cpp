@@ -102,7 +102,7 @@ namespace test_psm_terrain
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( psm::Terrain terrain( psm_table::TerrainData{ 2, 2, { psm::eCellType::Close, psm::eCellType::Open, psm::eCellType::Open, psm::eCellType::Close } } ) );
+				DECLARATION_MAIN( psm::Terrain terrain( psm_table::TerrainData{ 2, 2, std::initializer_list<psm_table::TerrainData::CellT>{} } ) );
 
 				std::cout << r2cm::linefeed;
 
@@ -125,7 +125,7 @@ namespace test_psm_terrain
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( psm::Terrain terrain( psm_table::TerrainData{ 2, 2, { psm::eCellType::Close, psm::eCellType::Open } } ) );
+				DECLARATION_MAIN( psm::Terrain terrain( psm_table::TerrainData{ 2, 2, { psm::eCellType::Close, psm::eCellType::Close } } ) );
 
 				std::cout << r2cm::linefeed;
 
@@ -148,7 +148,7 @@ namespace test_psm_terrain
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( psm::Terrain terrain( psm_table::TerrainData{ 2, 2, { psm::eCellType::Close, psm::eCellType::Open, psm::eCellType::Close, psm::eCellType::Open, psm::eCellType::Close, psm::eCellType::Open } } ) );
+				DECLARATION_MAIN( psm::Terrain terrain( psm_table::TerrainData{ 2, 2, { psm::eCellType::Close, psm::eCellType::Open, psm::eCellType::Open, psm::eCellType::Close, psm::eCellType::Close, psm::eCellType::Close } } ) );
 
 				std::cout << r2cm::linefeed;
 
