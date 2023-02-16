@@ -18,6 +18,13 @@ namespace test_psm_terrain
 		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 
+	class Declaration_3 : public r2cm::iItem
+	{
+	public:
+		r2cm::TitleFunctionT GetTitleFunction() const override;
+		r2cm::DoFunctionT GetDoFunction() const override;
+	};
+
 	class Reset : public r2cm::iItem
 	{
 	public:

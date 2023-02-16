@@ -176,6 +176,71 @@ namespace test_psm_terrain
 
 
 
+	r2cm::TitleFunctionT Declaration_3::GetTitleFunction() const
+	{
+		return []()->const char*
+		{
+			return "Terrain : Declaration 3";
+		};
+	}
+	r2cm::DoFunctionT Declaration_3::GetDoFunction() const
+	{
+		return []()->r2cm::eDoLeaveAction
+		{
+			std::cout << r2cm::split;
+
+			{
+				DECLARATION_MAIN( psm::Terrain terrain( psm_table::TerrainData{ 2, 2, { 1, 1 } } ) );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( 2, terrain.GetWidth() );
+				EXPECT_EQ( 2, terrain.GetHeight() );
+				EXPECT_EQ( terrain.GetWidth() * terrain.GetHeight(), terrain.Size() );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( 1, terrain.GetMaxX() );
+				EXPECT_EQ( 1, terrain.GetMaxY() );
+
+				std::cout << r2cm::linefeed;
+
+				std::cout << "# View" << r2cm::linefeed2;
+				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+			}
+
+			std::cout << r2cm::split;
+
+			{
+				DECLARATION_MAIN( psm::Terrain terrain( psm_table::TerrainData{ 2, 2, { 1, 0, 0, 1, 1, 1 } } ) );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( 2, terrain.GetWidth() );
+				EXPECT_EQ( 2, terrain.GetHeight() );
+				EXPECT_EQ( terrain.GetWidth() * terrain.GetHeight(), terrain.Size() );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_EQ( 1, terrain.GetMaxX() );
+				EXPECT_EQ( 1, terrain.GetMaxY() );
+
+				std::cout << r2cm::linefeed;
+
+				std::cout << "# View" << r2cm::linefeed2;
+				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+			}
+
+			std::cout << r2cm::split;
+
+			return r2cm::eDoLeaveAction::Pause;
+		};
+	}
+
+
+
 	r2cm::TitleFunctionT Reset::GetTitleFunction() const
 	{
 		return []()->const char*

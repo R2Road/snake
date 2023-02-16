@@ -32,6 +32,34 @@ namespace psm_table
 			);
 		}
 
+		TerrainData( const int new_width, const int new_height, const std::initializer_list<int> new_data ) :
+			width( new_width )
+			, height( new_height )
+			, data( new_width * new_height, CellT::Open )
+		{
+			R2ASSERT( 0 < width, "" );
+			R2ASSERT( 0 < height, "" );
+
+			memcpy_s(
+				&data[0]
+				, data.size() * sizeof( CellT )
+				, &( *new_data.begin() )
+				, ( new_data.size() > data.size() ? data.size() * sizeof( CellT ) : new_data.size() * sizeof( CellT ) )
+			);
+
+			auto data_itr = data.begin();
+			for( const auto& i : new_data )
+			{
+				*data_itr = static_cast<CellT>( i );
+
+				++data_itr;
+				if( data.end() == data_itr )
+				{
+					break;
+				}
+			}
+		}
+
 		int width;
 		int height;
 		std::vector<CellT> data;
