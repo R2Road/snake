@@ -108,15 +108,12 @@ namespace test_psm_terrain
 
 				EXPECT_EQ( 2, terrain.GetWidth() );
 				EXPECT_EQ( 2, terrain.GetHeight() );
+				EXPECT_EQ( terrain.GetWidth() * terrain.GetHeight(), terrain.Size() );
 
 				std::cout << r2cm::linefeed;
 
 				EXPECT_EQ( 1, terrain.GetMaxX() );
 				EXPECT_EQ( 1, terrain.GetMaxY() );
-
-				std::cout << r2cm::linefeed;
-
-				EXPECT_EQ( terrain.GetWidth() * terrain.GetHeight(), terrain.Size() );
 
 				std::cout << r2cm::linefeed;
 
@@ -134,15 +131,12 @@ namespace test_psm_terrain
 
 				EXPECT_EQ( 2, terrain.GetWidth() );
 				EXPECT_EQ( 2, terrain.GetHeight() );
+				EXPECT_EQ( terrain.GetWidth() * terrain.GetHeight(), terrain.Size() );
 
 				std::cout << r2cm::linefeed;
 
 				EXPECT_EQ( 1, terrain.GetMaxX() );
 				EXPECT_EQ( 1, terrain.GetMaxY() );
-
-				std::cout << r2cm::linefeed;
-
-				EXPECT_EQ( terrain.GetWidth() * terrain.GetHeight(), terrain.Size() );
 
 				std::cout << r2cm::linefeed;
 
@@ -160,15 +154,12 @@ namespace test_psm_terrain
 
 				EXPECT_EQ( 2, terrain.GetWidth() );
 				EXPECT_EQ( 2, terrain.GetHeight() );
+				EXPECT_EQ( terrain.GetWidth() * terrain.GetHeight(), terrain.Size() );
 
 				std::cout << r2cm::linefeed;
 
 				EXPECT_EQ( 1, terrain.GetMaxX() );
 				EXPECT_EQ( 1, terrain.GetMaxY() );
-
-				std::cout << r2cm::linefeed;
-
-				EXPECT_EQ( terrain.GetWidth() * terrain.GetHeight(), terrain.Size() );
 
 				std::cout << r2cm::linefeed;
 
