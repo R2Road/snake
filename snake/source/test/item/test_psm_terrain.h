@@ -32,14 +32,14 @@ namespace test_psm_terrain
 		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 
-	class Reset : public r2cm::iItem
+	class Get_IsIn : public r2cm::iItem
 	{
 	public:
 		r2cm::TitleFunctionT GetTitleFunction() const override;
 		r2cm::DoFunctionT GetDoFunction() const override;
 	};
 
-	class Get_IsIn : public r2cm::iItem
+	class Reset : public r2cm::iItem
 	{
 	public:
 		r2cm::TitleFunctionT GetTitleFunction() const override;
