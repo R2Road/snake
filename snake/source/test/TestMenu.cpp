@@ -30,7 +30,7 @@ r2cm::WriteFunctionT TestMenu::GetWriteFunction() const
 		ret->AddItem( '3', test_psm_terrain::Declaration_3() );
 		ret->AddItem( '4', test_psm_terrain::IsIn() );
 		ret->AddItem( '5', test_psm_terrain::Reset() );
-		ret->AddItem( '6', test_psm_terrain::Get_IsIn() );
+		ret->AddItem( '6', test_psm_terrain::Get() );
 
 
 

@@ -334,14 +334,14 @@ namespace test_psm_terrain
 
 
 
-	r2cm::TitleFunctionT Get_IsIn::GetTitleFunction() const
+	r2cm::TitleFunctionT Get::GetTitleFunction() const
 	{
 		return []()->const char*
 		{
-			return "Terrain : Get and IsIn";
+			return "Terrain : Get";
 		};
 	}
-	r2cm::DoFunctionT Get_IsIn::GetDoFunction() const
+	r2cm::DoFunctionT Get::GetDoFunction() const
 	{
 		return []()->r2cm::eDoLeaveAction
 		{
