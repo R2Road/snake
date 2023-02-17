@@ -31,57 +31,57 @@ namespace test_psm_snake
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_MAIN( psm::Snake snake );
+				DECLARATION_MAIN( psm::Snake s );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( 1, snake.GetWidth() );
-				EXPECT_EQ( 1, snake.GetHeight() );
-				EXPECT_EQ( snake.GetWidth() * snake.GetHeight(), snake.Size() );
+				EXPECT_EQ( 1, s.GetWidth() );
+				EXPECT_EQ( 1, s.GetHeight() );
+				EXPECT_EQ( s.GetWidth() * s.GetHeight(), s.Size() );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( 0, snake.GetMaxX() );
-				EXPECT_EQ( 0, snake.GetMaxY() );
+				EXPECT_EQ( 0, s.GetMaxX() );
+				EXPECT_EQ( 0, s.GetMaxY() );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_TRUE( snake.GetHeadNode() == snake.GetEndNode() );
-				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetHeadNode() );
-				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetHeadNode() );
-				EXPECT_FALSE( snake.GetHeadNode().value );
+				EXPECT_TRUE( s.GetHeadNode() == s.GetEndNode() );
+				EXPECT_TRUE( *s.GetHeadNode().prev == s.GetHeadNode() );
+				EXPECT_TRUE( *s.GetHeadNode().next == s.GetHeadNode() );
+				EXPECT_FALSE( s.GetHeadNode().value );
 			}
 
 			std::cout << r2cm::split;
 
 			{
 				DECLARATION_SUB( psm::Terrain terrain( 3, 7 ) );
-				DECLARATION_MAIN( psm::Snake snake( 3, 7 ) );
+				DECLARATION_MAIN( psm::Snake s( 3, 7 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( 3, snake.GetWidth() );
-				EXPECT_EQ( 7, snake.GetHeight() );
-				EXPECT_EQ( snake.GetWidth() * snake.GetHeight(), snake.Size() );
+				EXPECT_EQ( 3, s.GetWidth() );
+				EXPECT_EQ( 7, s.GetHeight() );
+				EXPECT_EQ( s.GetWidth() * s.GetHeight(), s.Size() );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( 2, snake.GetMaxX() );
-				EXPECT_EQ( 6, snake.GetMaxY() );
+				EXPECT_EQ( 2, s.GetMaxX() );
+				EXPECT_EQ( 6, s.GetMaxY() );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_TRUE( snake.GetHeadNode() == snake.GetEndNode() );
-				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetHeadNode() );
-				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetHeadNode() );
-				EXPECT_FALSE( snake.GetHeadNode().value );
+				EXPECT_TRUE( s.GetHeadNode() == s.GetEndNode() );
+				EXPECT_TRUE( *s.GetHeadNode().prev == s.GetHeadNode() );
+				EXPECT_TRUE( *s.GetHeadNode().next == s.GetHeadNode() );
+				EXPECT_FALSE( s.GetHeadNode().value );
 
 				std::cout << r2cm::linefeed;
 
 				std::cout << "# View" << r2cm::linefeed2;
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
-				Utility4Snake::Draw( 4, current_cursor_point.y, snake );
+				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
 			std::cout << r2cm::split;
@@ -106,51 +106,51 @@ namespace test_psm_snake
 			std::cout << r2cm::split;
 
 			DECLARATION_SUB( psm::Terrain terrain( 4, 4 ) );
-			DECLARATION_MAIN( psm::Snake snake( 4, 4 ) );
+			DECLARATION_MAIN( psm::Snake s( 4, 4 ) );
 
 			std::cout << r2cm::split;
 
 			{
-				EXPECT_FALSE( snake.Get( 1, 1 ) );
-				PROCESS_MAIN( snake.Push( 1, 1 ) );
-				EXPECT_TRUE( snake.Get( 1, 1 ) );
+				EXPECT_FALSE( s.Get( 1, 1 ) );
+				PROCESS_MAIN( s.Push( 1, 1 ) );
+				EXPECT_TRUE( s.Get( 1, 1 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_TRUE( snake.GetHeadNode() == snake.GetNode( 1, 1 ) );
-				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetEndNode() );
-				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetEndNode() );
-				EXPECT_TRUE( *snake.GetEndNode().prev == snake.GetHeadNode() );
-				EXPECT_TRUE( *snake.GetEndNode().next == snake.GetHeadNode() );
+				EXPECT_TRUE( s.GetHeadNode() == s.GetNode( 1, 1 ) );
+				EXPECT_TRUE( *s.GetHeadNode().prev == s.GetEndNode() );
+				EXPECT_TRUE( *s.GetHeadNode().next == s.GetEndNode() );
+				EXPECT_TRUE( *s.GetEndNode().prev == s.GetHeadNode() );
+				EXPECT_TRUE( *s.GetEndNode().next == s.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
-				Utility4Snake::Draw( 4, current_cursor_point.y, snake );
+				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
 			std::cout << r2cm::split;
 
 			{
-				EXPECT_FALSE( snake.Get( 2, 2 ) );
-				PROCESS_MAIN( snake.Push( 2, 2 ) );
-				EXPECT_TRUE( snake.Get( 2, 2 ) );
+				EXPECT_FALSE( s.Get( 2, 2 ) );
+				PROCESS_MAIN( s.Push( 2, 2 ) );
+				EXPECT_TRUE( s.Get( 2, 2 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_TRUE( snake.GetHeadNode() == snake.GetNode( 2, 2 ) );
-				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetEndNode() );
-				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetNode( 1, 1 ) );
-				EXPECT_TRUE( *snake.GetHeadNode().next->next == snake.GetEndNode() );
-				EXPECT_TRUE( *snake.GetEndNode().prev == snake.GetNode( 1, 1 ) );
-				EXPECT_TRUE( *snake.GetEndNode().next == snake.GetHeadNode() );
+				EXPECT_TRUE( s.GetHeadNode() == s.GetNode( 2, 2 ) );
+				EXPECT_TRUE( *s.GetHeadNode().prev == s.GetEndNode() );
+				EXPECT_TRUE( *s.GetHeadNode().next == s.GetNode( 1, 1 ) );
+				EXPECT_TRUE( *s.GetHeadNode().next->next == s.GetEndNode() );
+				EXPECT_TRUE( *s.GetEndNode().prev == s.GetNode( 1, 1 ) );
+				EXPECT_TRUE( *s.GetEndNode().next == s.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
-				Utility4Snake::Draw( 4, current_cursor_point.y, snake );
+				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
 			std::cout << r2cm::split;
@@ -175,61 +175,61 @@ namespace test_psm_snake
 			std::cout << r2cm::split;
 
 			DECLARATION_SUB( psm::Terrain terrain( 4, 4 ) );
-			DECLARATION_MAIN( psm::Snake snake( 4, 4 ) );
+			DECLARATION_MAIN( psm::Snake s( 4, 4 ) );
 
 			std::cout << r2cm::split;
 
 			{
-				PROCESS_MAIN( snake.Push( 1, 1 ) );
-				PROCESS_MAIN( snake.Push( 2, 2 ) );
-				EXPECT_TRUE( snake.GetHeadNode() == snake.GetNode( 2, 2 ) );
+				PROCESS_MAIN( s.Push( 1, 1 ) );
+				PROCESS_MAIN( s.Push( 2, 2 ) );
+				EXPECT_TRUE( s.GetHeadNode() == s.GetNode( 2, 2 ) );
 			}
 
 			std::cout << r2cm::split;
 
 			{
-				EXPECT_TRUE( snake.Get( 1, 1 ) );
-				PROCESS_MAIN( snake.Pop() );
-				EXPECT_FALSE( snake.Get( 1, 1 ) );
+				EXPECT_TRUE( s.Get( 1, 1 ) );
+				PROCESS_MAIN( s.Pop() );
+				EXPECT_FALSE( s.Get( 1, 1 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_TRUE( snake.GetHeadNode() == snake.GetNode( 2, 2 ) );
-				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetEndNode() );
-				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetEndNode() );
-				EXPECT_TRUE( *snake.GetEndNode().prev == snake.GetHeadNode() );
-				EXPECT_TRUE( *snake.GetEndNode().next == snake.GetHeadNode() );
+				EXPECT_TRUE( s.GetHeadNode() == s.GetNode( 2, 2 ) );
+				EXPECT_TRUE( *s.GetHeadNode().prev == s.GetEndNode() );
+				EXPECT_TRUE( *s.GetHeadNode().next == s.GetEndNode() );
+				EXPECT_TRUE( *s.GetEndNode().prev == s.GetHeadNode() );
+				EXPECT_TRUE( *s.GetEndNode().next == s.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 					Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
-					Utility4Snake::Draw( 4, current_cursor_point.y, snake );
+					Utility4Snake::Draw( 4, current_cursor_point.y, s );
 				}
 			}
 
 			std::cout << r2cm::split;
 
 			{
-				EXPECT_TRUE( snake.Get( 2, 2 ) );
-				PROCESS_MAIN( snake.Pop() );
-				EXPECT_FALSE( snake.Get( 2, 2 ) );
+				EXPECT_TRUE( s.Get( 2, 2 ) );
+				PROCESS_MAIN( s.Pop() );
+				EXPECT_FALSE( s.Get( 2, 2 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_TRUE( snake.GetHeadNode() == snake.GetEndNode() );
-				EXPECT_TRUE( *snake.GetHeadNode().prev == snake.GetEndNode() );
-				EXPECT_TRUE( *snake.GetHeadNode().next == snake.GetEndNode() );
-				EXPECT_TRUE( *snake.GetEndNode().prev == snake.GetHeadNode() );
-				EXPECT_TRUE( *snake.GetEndNode().next == snake.GetHeadNode() );
+				EXPECT_TRUE( s.GetHeadNode() == s.GetEndNode() );
+				EXPECT_TRUE( *s.GetHeadNode().prev == s.GetEndNode() );
+				EXPECT_TRUE( *s.GetHeadNode().next == s.GetEndNode() );
+				EXPECT_TRUE( *s.GetEndNode().prev == s.GetHeadNode() );
+				EXPECT_TRUE( *s.GetEndNode().next == s.GetHeadNode() );
 
 				std::cout << r2cm::linefeed;
 
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 					Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
-					Utility4Snake::Draw( 4, current_cursor_point.y, snake );
+					Utility4Snake::Draw( 4, current_cursor_point.y, s );
 				}
 			}
 
