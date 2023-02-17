@@ -15,9 +15,13 @@ namespace psm
 		using ContainerT = std::vector<Cell>;
 		using ConstIteratorT = typename ContainerT::const_iterator;
 
+
+
 		Terrain();
 		Terrain( const uint32_t width, const uint32_t height );
 		Terrain( const psm_table::TerrainData& terrain_data );
+
+
 
 		//
 		// Iteration
@@ -30,6 +34,8 @@ namespace psm
 		{
 			return mContainer.end();
 		}
+
+
 
 		//
 		// Getter
@@ -56,15 +62,21 @@ namespace psm
 		}
 		bool IsIn( const int32_t x, const int32_t y ) const;
 
+
+
 		//
 		//
 		//
 		void Reset( const psm_table::TerrainData& terrain_data );
 
+
+
 		//
 		//
 		//
 		eCellType Get( const uint32_t x, const uint32_t y ) const;
+
+
 
 	private:
 		r2::GridIndexConverter mGridIndexConverter;

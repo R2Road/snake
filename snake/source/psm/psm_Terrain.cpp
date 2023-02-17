@@ -17,16 +17,22 @@ namespace psm
 		, mContainer( terrain_data.data )
 	{}
 
+
+
 	bool Terrain::IsIn( const int32_t x, const int32_t y ) const
 	{
 		return ( 0 <= x && 0 <= y && static_cast<int>( GetWidth() ) > x && static_cast<int>( GetHeight() ) > y );
 	}
+
+
 
 	void Terrain::Reset( const psm_table::TerrainData& terrain_data )
 	{
 		mGridIndexConverter = r2::GridIndexConverter( terrain_data.width, terrain_data.height );
 		mContainer = terrain_data.data;
 	}
+
+
 
 	eCellType Terrain::Get( const uint32_t x, const uint32_t y ) const
 	{

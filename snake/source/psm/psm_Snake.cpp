@@ -19,10 +19,14 @@ namespace psm
 		mEndNode.next = &mEndNode;
 	}
 
+
+
 	bool Snake::IsIn( const int32_t x, const int32_t y ) const
 	{
 		return ( 0 <= x && 0 <= y && static_cast<int>( GetWidth() ) > x && static_cast<int>( GetHeight() ) > y );
 	}
+
+
 
 	void Snake::Reset( const uint32_t width, const uint32_t height )
 	{
@@ -81,6 +85,8 @@ namespace psm
 		target_node->prev = nullptr;
 		target_node->next = nullptr;
 	}
+
+
 
 	const Snake::Node& Snake::GetNode( const uint32_t x, const uint32_t y ) const
 	{

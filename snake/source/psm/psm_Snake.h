@@ -33,8 +33,12 @@ namespace psm
 		using ContainerT = r2::Grid<Cell>;
 		using ConstIteratorT = typename ContainerT::ConstIteratorT;
 
+
+
 		Snake();
 		Snake( const uint32_t width, const uint32_t height );
+
+
 
 		//
 		// Getter
@@ -61,12 +65,16 @@ namespace psm
 		}
 		bool IsIn( const int32_t x, const int32_t y ) const;
 
+
+
 		//
 		//
 		//
 		void Reset( const uint32_t width, const uint32_t height );
 		void Push( const uint32_t x, const uint32_t y );
 		void Pop();
+
+
 
 		//
 		//
@@ -81,6 +89,8 @@ namespace psm
 		}
 		const Node& GetNode( const uint32_t x, const uint32_t y ) const;
 		bool Get( const uint32_t x, const uint32_t y ) const;
+
+
 
 	private:
 		ContainerT mContainer;
