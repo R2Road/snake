@@ -264,6 +264,57 @@ namespace test_psm_terrain
 
 
 
+	r2cm::TitleFunctionT IsIn::GetTitleFunction() const
+	{
+		return []()->const char*
+		{
+			return "Terrain : IsIn";
+		};
+	}
+	r2cm::DoFunctionT IsIn::GetDoFunction() const
+	{
+		return []()->r2cm::eDoLeaveAction
+		{
+			std::cout << r2cm::split;
+
+			DECLARATION_MAIN( psm::Terrain terrain );
+			PROCESS_MAIN( terrain.Reset( { 2, 2, {
+						psm::eCellType::Open		, psm::eCellType::Close
+					,	psm::eCellType::Close		, psm::eCellType::Open
+			} } ) );
+
+			std::cout << r2cm::split;
+
+			{
+				std::cout << "# View" << r2cm::linefeed2;
+				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+			}
+
+			std::cout << r2cm::split;
+
+			{
+				EXPECT_TRUE( terrain.IsIn( 0, 0 ) );
+				EXPECT_TRUE( terrain.IsIn( 1, 0 ) );
+				EXPECT_TRUE( terrain.IsIn( 0, 1 ) );
+				EXPECT_TRUE( terrain.IsIn( 1, 1 ) );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_FALSE( terrain.IsIn( -1, 0 ) );
+				EXPECT_FALSE( terrain.IsIn( 0, -1 ) );
+				EXPECT_FALSE( terrain.IsIn( 2, 1 ) );
+				EXPECT_FALSE( terrain.IsIn( 1, 2 ) );
+			}
+
+			std::cout << r2cm::split;
+
+			return r2cm::eDoLeaveAction::Pause;
+		};
+	}
+
+
+
 	r2cm::TitleFunctionT Reset::GetTitleFunction() const
 	{
 		return []()->const char*
@@ -375,22 +426,6 @@ namespace test_psm_terrain
 
 				EXPECT_EQ( psm::eCellType::Open, terrain.Get( 2, 1 ) );
 				EXPECT_EQ( psm::eCellType::Open, terrain.Get( 1, 2 ) );
-			}
-
-			std::cout << r2cm::split;
-
-			{
-				EXPECT_TRUE( terrain.IsIn( 0, 0 ) );
-				EXPECT_TRUE( terrain.IsIn( 1, 0 ) );
-				EXPECT_TRUE( terrain.IsIn( 0, 1 ) );
-				EXPECT_TRUE( terrain.IsIn( 1, 1 ) );
-
-				std::cout << r2cm::linefeed;
-
-				EXPECT_FALSE( terrain.IsIn( -1, 0 ) );
-				EXPECT_FALSE( terrain.IsIn( 0, -1 ) );
-				EXPECT_FALSE( terrain.IsIn( 2, 1 ) );
-				EXPECT_FALSE( terrain.IsIn( 1, 2 ) );
 			}
 
 			std::cout << r2cm::split;
