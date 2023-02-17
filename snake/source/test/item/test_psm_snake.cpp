@@ -55,7 +55,7 @@ namespace test_psm_snake
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_SUB( psm::Terrain terrain( 3, 7 ) );
+				DECLARATION_SUB( psm::Terrain t( 3, 7 ) );
 				DECLARATION_MAIN( psm::Snake s( 3, 7 ) );
 
 				std::cout << r2cm::linefeed;
@@ -80,7 +80,7 @@ namespace test_psm_snake
 
 				std::cout << "# View" << r2cm::linefeed2;
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				Utility4Terrain::Draw( 4, current_cursor_point.y, t );
 				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
@@ -105,7 +105,7 @@ namespace test_psm_snake
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_SUB( psm::Terrain terrain( 4, 4 ) );
+			DECLARATION_SUB( psm::Terrain t( 4, 4 ) );
 			DECLARATION_MAIN( psm::Snake s( 4, 4 ) );
 
 			std::cout << r2cm::split;
@@ -126,7 +126,7 @@ namespace test_psm_snake
 				std::cout << r2cm::linefeed;
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				Utility4Terrain::Draw( 4, current_cursor_point.y, t );
 				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
@@ -149,7 +149,7 @@ namespace test_psm_snake
 				std::cout << r2cm::linefeed;
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				Utility4Terrain::Draw( 4, current_cursor_point.y, t );
 				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
@@ -174,7 +174,7 @@ namespace test_psm_snake
 		{
 			std::cout << r2cm::split;
 
-			DECLARATION_SUB( psm::Terrain terrain( 4, 4 ) );
+			DECLARATION_SUB( psm::Terrain t( 4, 4 ) );
 			DECLARATION_MAIN( psm::Snake s( 4, 4 ) );
 
 			std::cout << r2cm::split;
@@ -204,7 +204,7 @@ namespace test_psm_snake
 
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-					Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+					Utility4Terrain::Draw( 4, current_cursor_point.y, t );
 					Utility4Snake::Draw( 4, current_cursor_point.y, s );
 				}
 			}
@@ -228,7 +228,7 @@ namespace test_psm_snake
 
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-					Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+					Utility4Terrain::Draw( 4, current_cursor_point.y, t );
 					Utility4Snake::Draw( 4, current_cursor_point.y, s );
 				}
 			}
