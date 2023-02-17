@@ -37,16 +37,12 @@ namespace test_psm_snake
 
 				EXPECT_EQ( 1, snake.GetWidth() );
 				EXPECT_EQ( 1, snake.GetHeight() );
+				EXPECT_EQ( snake.GetWidth() * snake.GetHeight(), snake.Size() );
 
 				std::cout << r2cm::linefeed;
 
 				EXPECT_EQ( 0, snake.GetMaxX() );
 				EXPECT_EQ( 0, snake.GetMaxY() );
-
-				std::cout << r2cm::linefeed;
-
-				EXPECT_EQ( snake.GetWidth() * snake.GetHeight(), snake.Size() );
-				OUTPUT_VALUE( snake.Size() );
 
 				std::cout << r2cm::linefeed;
 
@@ -66,16 +62,12 @@ namespace test_psm_snake
 
 				EXPECT_EQ( 3, snake.GetWidth() );
 				EXPECT_EQ( 7, snake.GetHeight() );
+				EXPECT_EQ( snake.GetWidth() * snake.GetHeight(), snake.Size() );
 
 				std::cout << r2cm::linefeed;
 
 				EXPECT_EQ( 2, snake.GetMaxX() );
 				EXPECT_EQ( 6, snake.GetMaxY() );
-
-				std::cout << r2cm::linefeed;
-
-				EXPECT_EQ( snake.GetWidth() * snake.GetHeight(), snake.Size() );
-				OUTPUT_VALUE( snake.Size() );
 
 				std::cout << r2cm::linefeed;
 
