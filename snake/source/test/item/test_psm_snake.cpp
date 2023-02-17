@@ -31,6 +31,7 @@ namespace test_psm_snake
 			std::cout << r2cm::split;
 
 			{
+				DECLARATION_SUB( psm::Terrain t );
 				DECLARATION_MAIN( psm::Snake s );
 
 				std::cout << r2cm::linefeed;
@@ -50,24 +51,31 @@ namespace test_psm_snake
 				EXPECT_TRUE( *s.GetHeadNode().prev == s.GetHeadNode() );
 				EXPECT_TRUE( *s.GetHeadNode().next == s.GetHeadNode() );
 				EXPECT_FALSE( s.GetHeadNode().value );
+
+				std::cout << r2cm::linefeed;
+
+				std::cout << "# View" << r2cm::linefeed2;
+				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
+				Utility4Terrain::Draw( 4, current_cursor_point.y, t );
+				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
 			std::cout << r2cm::split;
 
 			{
-				DECLARATION_SUB( psm::Terrain t( 3, 7 ) );
-				DECLARATION_MAIN( psm::Snake s( 3, 7 ) );
+				DECLARATION_SUB( psm::Terrain t( 3, 4 ) );
+				DECLARATION_MAIN( psm::Snake s( 3, 4 ) );
 
 				std::cout << r2cm::linefeed;
 
 				EXPECT_EQ( 3, s.GetWidth() );
-				EXPECT_EQ( 7, s.GetHeight() );
+				EXPECT_EQ( 4, s.GetHeight() );
 				EXPECT_EQ( s.GetWidth() * s.GetHeight(), s.Size() );
 
 				std::cout << r2cm::linefeed;
 
 				EXPECT_EQ( 2, s.GetMaxX() );
-				EXPECT_EQ( 6, s.GetMaxY() );
+				EXPECT_EQ( 3, s.GetMaxY() );
 
 				std::cout << r2cm::linefeed;
 
