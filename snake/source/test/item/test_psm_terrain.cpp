@@ -298,13 +298,32 @@ namespace test_psm_terrain
 				EXPECT_TRUE( terrain.IsIn( 1, 0 ) );
 				EXPECT_TRUE( terrain.IsIn( 0, 1 ) );
 				EXPECT_TRUE( terrain.IsIn( 1, 1 ) );
+			}
+
+			std::cout << r2cm::split;
+
+			{
+				EXPECT_FALSE( terrain.IsIn( -1, -1 ) );
+				EXPECT_FALSE( terrain.IsIn( 0, -1 ) );
+				EXPECT_FALSE( terrain.IsIn( 1, -1 ) );
+				EXPECT_FALSE( terrain.IsIn( 2, -1 ) );
 
 				std::cout << r2cm::linefeed;
 
 				EXPECT_FALSE( terrain.IsIn( -1, 0 ) );
-				EXPECT_FALSE( terrain.IsIn( 0, -1 ) );
+				EXPECT_FALSE( terrain.IsIn( 2, 0 ) );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_FALSE( terrain.IsIn( -1, 1 ) );
 				EXPECT_FALSE( terrain.IsIn( 2, 1 ) );
+
+				std::cout << r2cm::linefeed;
+
+				EXPECT_FALSE( terrain.IsIn( -1, 2 ) );
+				EXPECT_FALSE( terrain.IsIn( 0, 2 ) );
 				EXPECT_FALSE( terrain.IsIn( 1, 2 ) );
+				EXPECT_FALSE( terrain.IsIn( 2, 2 ) );
 			}
 
 			std::cout << r2cm::split;
