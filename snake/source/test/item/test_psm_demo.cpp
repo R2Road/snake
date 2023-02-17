@@ -29,12 +29,12 @@ namespace test_psm_demo
 		{
 			std::cout << r2cm::split;
 
-			PROCESS_MAIN( psm_table::TerrainDataTable().Load() );
+			PROCESS_MAIN( psm_table::TerrainDataTable::GetInstance().Load() );
 
 			std::cout << r2cm::split;
 
 			DECLARATION_MAIN( auto game_core = psm::GameCore::Create() );
-			PROCESS_MAIN( game_core->Reset( psm_table::TerrainDataTable().Get( 1 ) ) );
+			PROCESS_MAIN( game_core->Reset( psm_table::TerrainDataTable::GetInstance().Get( 1 ) ) );
 
 			std::cout << r2cm::split;
 
