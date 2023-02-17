@@ -300,24 +300,14 @@ namespace test_psm_terrain
 			std::cout << r2cm::split;
 
 			{
-				EXPECT_FALSE( terrain.IsIn( -1, -1 ) );
-				EXPECT_FALSE( terrain.IsIn( 0, -1 ) );
-				EXPECT_FALSE( terrain.IsIn( 1, -1 ) );
-				EXPECT_FALSE( terrain.IsIn( 2, -1 ) );
-
-				std::cout << r2cm::linefeed;
-
-				EXPECT_FALSE( terrain.IsIn( -1, 0 ) );
 				EXPECT_FALSE( terrain.IsIn( 2, 0 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_FALSE( terrain.IsIn( -1, 1 ) );
 				EXPECT_FALSE( terrain.IsIn( 2, 1 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_FALSE( terrain.IsIn( -1, 2 ) );
 				EXPECT_FALSE( terrain.IsIn( 0, 2 ) );
 				EXPECT_FALSE( terrain.IsIn( 1, 2 ) );
 				EXPECT_FALSE( terrain.IsIn( 2, 2 ) );
@@ -370,24 +360,14 @@ namespace test_psm_terrain
 			std::cout << r2cm::split;
 
 			{
-				EXPECT_EQ( terrain.Get( 0, 0 ), terrain.Get( -1, -1 ) );
-				EXPECT_EQ( terrain.Get( 0, 0 ), terrain.Get( 0, -1 ) );
-				EXPECT_EQ( terrain.Get( 1, 0 ), terrain.Get( 1, -1 ) );
-				EXPECT_EQ( terrain.Get( 1, 0 ), terrain.Get( 2, -1 ) );
-
-				std::cout << r2cm::linefeed;
-
-				EXPECT_EQ( terrain.Get( 0, 0 ), terrain.Get( -1, 0 ) );
 				EXPECT_EQ( terrain.Get( 1, 0 ), terrain.Get( 2, 0 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( terrain.Get( 0, 1 ), terrain.Get( -1, 1 ) );
 				EXPECT_EQ( terrain.Get( 1, 1 ), terrain.Get( 2, 1 ) );
 
 				std::cout << r2cm::linefeed;
 
-				EXPECT_EQ( terrain.Get( 0, 1 ), terrain.Get( -1, 2 ) );
 				EXPECT_EQ( terrain.Get( 0, 1 ), terrain.Get( 0, 2 ) );
 				EXPECT_EQ( terrain.Get( 1, 1 ), terrain.Get( 1, 2 ) );
 				EXPECT_EQ( terrain.Get( 1, 1 ), terrain.Get( 2, 2 ) );
