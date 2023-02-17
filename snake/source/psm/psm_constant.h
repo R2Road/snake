@@ -4,7 +4,7 @@ namespace psm
 {
 	enum class eCellType
 	{
-		Open,
 		Close,
+		Open,
 	};
 }

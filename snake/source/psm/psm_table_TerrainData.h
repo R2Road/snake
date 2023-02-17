@@ -13,13 +13,13 @@ namespace psm_table
 	public:
 		using CellT = psm::eCellType;
 
-		TerrainData() : width( 1 ), height( 1 ), data( { 0 } )
+		TerrainData() : width( 1 ), height( 1 ), data( { CellT::Close } )
 		{}
 
 		TerrainData( const int new_width, const int new_height, const std::initializer_list<CellT> new_data ) :
 			width( new_width )
 			, height( new_height )
-			, data( new_width * new_height, CellT::Open )
+			, data( new_width * new_height, CellT::Close )
 		{
 			R2ASSERT( 0 < width , "" );
 			R2ASSERT( 0 < height, "" );
@@ -35,7 +35,7 @@ namespace psm_table
 		TerrainData( const int new_width, const int new_height, const std::initializer_list<int> new_data ) :
 			width( new_width )
 			, height( new_height )
-			, data( new_width * new_height, CellT::Open )
+			, data( new_width * new_height, CellT::Close )
 		{
 			R2ASSERT( 0 < width, "" );
 			R2ASSERT( 0 < height, "" );

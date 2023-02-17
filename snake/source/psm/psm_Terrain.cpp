@@ -6,11 +6,11 @@ namespace psm
 {
 	Terrain::Terrain() :
 		mGridIndexConverter( 1, 1 )
-		, mContainer( 1, eCellType::Open )
+		, mContainer( 1, eCellType::Close )
 	{}
 	Terrain::Terrain( const uint32_t width, const uint32_t height ) :
 		mGridIndexConverter( width, height )
-		, mContainer( width * height, eCellType::Open )
+		, mContainer( width * height, eCellType::Close )
 	{}
 	Terrain::Terrain( const psm_table::TerrainData& terrain_data ) :
 		mGridIndexConverter( terrain_data.width, terrain_data.height )
