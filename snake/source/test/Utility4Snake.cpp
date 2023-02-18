@@ -21,6 +21,11 @@ void Utility4Snake::Draw( const short x, const short y, const psm::Snake& snake 
 					{ static_cast<short>( pivot_point.x + ( cx * 2 ) ),	static_cast<short>( pivot_point.y + cy ) }
 					, 'S'
 				);
+
+				r2cm::WindowUtility::FillColor(
+					{ static_cast<short>( pivot_point.x + ( cx * 2 ) ),	static_cast<short>( pivot_point.y + cy ) }
+					, r2cm::WindowUtility::eColor::FG_Red
+				);
 			}
 		}
 	}
