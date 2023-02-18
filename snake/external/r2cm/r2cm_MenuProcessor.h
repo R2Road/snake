@@ -60,6 +60,9 @@ namespace r2cm
 		void AddItem( const char key_code, const TitleFunctionT& func_title, const DoFunctionT& func_do );
 		void AddItem( const char key_code, const iItem& item_obj );
 
+		void AddExit( const char key_code, const int color_code );
+		void AddExit( const char key_code );
+
 		void AddMenu( const char key_code, const iMenu& menu_obj );
 
 		void AddLineFeed();
