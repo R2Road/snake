@@ -27,16 +27,16 @@ namespace test_psm_demo
 	{
 		return []()->r2cm::eDoLeaveAction
 		{
-			std::cout << r2cm::split;
+			LS();
 
 			PROCESS_MAIN( psm_table::TerrainDataTable::GetInstance().Load() );
 
-			std::cout << r2cm::split;
+			LS();
 
 			DECLARATION_MAIN( auto game_core = psm::GameCore::Create() );
 			PROCESS_MAIN( game_core->Reset( psm_table::TerrainDataTable::GetInstance().Get( 1 ) ) );
 
-			std::cout << r2cm::split;
+			LS();
 
 			{
 				r2::FPSTimer fps_timer( 30 );
@@ -86,7 +86,7 @@ namespace test_psm_demo
 				} while( 27 != input );
 			}
 
-			std::cout << r2cm::split;
+			LS();
 
 			return r2cm::eDoLeaveAction::Pause;
 		};
