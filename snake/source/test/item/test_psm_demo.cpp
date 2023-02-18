@@ -39,6 +39,12 @@ namespace test_psm_demo
 			LS();
 
 			{
+				std::cout << "[ W, A, S, D ] : Move" << r2cm::linefeed;
+			}
+
+			LS();
+
+			{
 				r2::FPSTimer fps_timer( 30 );
 				const auto pivot_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				int input = 0;
