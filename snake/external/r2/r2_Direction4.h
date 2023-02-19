@@ -26,6 +26,7 @@ namespace r2
 		//
 		//
 		//
+		void SetState( const eDirection4State new_state );
 		eDirection4State GetState() const
 		{
 			return mState;
