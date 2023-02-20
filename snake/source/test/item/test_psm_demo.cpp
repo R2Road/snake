@@ -3,7 +3,8 @@
 #include <conio.h>
 
 #include "r2/r2_FPSTimer.h"
-#include "r2/r2_PointInt.h"
+#include "r2/r2_Direction4.h"
+
 #include "r2cm/r2cm_Inspector.h"
 #include "r2cm/r2cm_ostream.h"
 #include "r2cm/r2cm_WindowUtility.h"
@@ -48,6 +49,7 @@ namespace test_psm_demo
 				r2::FPSTimer fps_timer( 30 );
 				const auto pivot_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				int input = 0;
+				r2::Direction4 move_direction;
 
 				r2::PointInt move_amount;
 
@@ -56,8 +58,16 @@ namespace test_psm_demo
 					if( fps_timer.Update() )
 					{
 						r2cm::WindowUtility::MoveCursorPointWithClearBuffer( pivot_cursor_point );
+
 						Utility4Terrain::Draw( pivot_cursor_point.x, pivot_cursor_point.y, game_core->GetTerrain() );
 						Utility4Snake::Draw( pivot_cursor_point.x, pivot_cursor_point.y, game_core->GetSnake() );
+
+						LS();
+
+						std::cout << "Input Direction" << "    " << "X : " << move_direction.GetX() << "   " << "Y : " << move_direction.GetY() << r2cm::linefeed;
+
+						LS();
+
 
 						if( _kbhit() )
 						{
@@ -66,16 +76,16 @@ namespace test_psm_demo
 							switch( input )
 							{
 							case 'w':
-								move_amount.Set( 0, -1 );
+								move_direction.SetState( r2::eDirection4State::DOWN );
 								break;
 							case 'a':
-								move_amount.Set( -1, 0 );
+								move_direction.SetState( r2::eDirection4State::LEFT );
 								break;
 							case 's':
-								move_amount.Set( 0, 1 );
+								move_direction.SetState( r2::eDirection4State::UP );
 								break;
 							case 'd':
-								move_amount.Set( 1, 0 );
+								move_direction.SetState( r2::eDirection4State::RIGHT );
 								break;
 							default:
 								move_amount.SetZero();
