@@ -104,7 +104,7 @@ namespace test_psm_demo
 
 			LS();
 
-			return r2cm::eDoLeaveAction::Pause;
+			return r2cm::eDoLeaveAction::None;
 		};
 	}
 }
