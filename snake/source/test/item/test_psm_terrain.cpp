@@ -111,6 +111,10 @@ namespace test_psm_terrain
 		{
 			LS();
 
+			OUTPUT_SUBJECT( "TerrainData 를 인자로 받는 생성자" );
+
+			LS();
+
 			{
 				DECLARATION_MAIN( psm::Terrain terrain( psm_table::TerrainData{ 2, 2, std::initializer_list<psm_table::TerrainData::CellT>{} } ) );
 
