@@ -16,7 +16,7 @@ namespace psm_table
 		TerrainData() : width( 1 ), height( 1 ), data( { CellT::Close } )
 		{}
 
-		TerrainData( const int new_width, const int new_height, const std::initializer_list<CellT> new_data ) :
+		explicit TerrainData( const int new_width, const int new_height, const std::initializer_list<CellT>& new_data ) :
 			width( new_width )
 			, height( new_height )
 			, data( new_width * new_height, CellT::Close )
@@ -32,7 +32,7 @@ namespace psm_table
 			);
 		}
 
-		TerrainData( const int new_width, const int new_height, const std::initializer_list<int> new_data ) :
+		explicit TerrainData( const int new_width, const int new_height, const std::initializer_list<int>& new_data ) :
 			width( new_width )
 			, height( new_height )
 			, data( new_width * new_height, CellT::Close )

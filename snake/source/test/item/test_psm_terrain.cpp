@@ -288,7 +288,7 @@ namespace test_psm_terrain
 			LS();
 
 			DECLARATION_MAIN( psm::Terrain terrain );
-			PROCESS_MAIN( terrain.Reset( { 2, 2, std::initializer_list<int>{} } ) );
+			PROCESS_MAIN( terrain.Reset( psm_table::TerrainData{ 2, 2, std::initializer_list<int>{} } ) );
 
 			LS();
 
@@ -345,7 +345,7 @@ namespace test_psm_terrain
 			LS();
 
 			DECLARATION_MAIN( psm::Terrain terrain );
-			PROCESS_MAIN( terrain.Reset( { 2, 2, {
+			PROCESS_MAIN( terrain.Reset( psm_table::TerrainData{ 2, 2, {
 						psm::eCellType::Open		, psm::eCellType::Close
 					,	psm::eCellType::Close		, psm::eCellType::Open
 			} } ) );
@@ -428,7 +428,7 @@ namespace test_psm_terrain
 			LS();
 
 			{
-				PROCESS_MAIN( terrain.Reset( { 4, 4, {
+				PROCESS_MAIN( terrain.Reset( psm_table::TerrainData{ 4, 4, {
 						psm::eCellType::Close		, psm::eCellType::Close		, psm::eCellType::Close		,psm::eCellType::Close
 					,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
 					,	psm::eCellType::Close		, psm::eCellType::Open		, psm::eCellType::Open		,psm::eCellType::Close
