@@ -13,13 +13,13 @@ namespace psmhelper
 		Printer4Terrain_CharOX() = delete;
 
 	public:
-		inline static void Print( short pivot_x, short pivot_y, const short offset_x, const short offset_y, uint16_t space_h, uint16_t space_v, const psm::Terrain& container )
+		inline static void Print( r2cm::WindowUtility::CursorPoint pivot, const short offset_x, const short offset_y, uint16_t space_h, uint16_t space_v, const psm::Terrain& container )
 		{
 			//
 			//
 			//
-			pivot_x += offset_x;
-			pivot_y += offset_y;
+			pivot.x += offset_x;
+			pivot.y += offset_y;
 
 			//
 			//
@@ -38,15 +38,15 @@ namespace psmhelper
 					{
 						r2cm::WindowUtility::FillColor(
 							{
-									static_cast<short>( pivot_x + ( cx * space_h ) )
-								,	static_cast<short>( pivot_y + ( cy * space_v ) )
+									static_cast<short>( pivot.x + ( cx * space_h ) )
+								,	static_cast<short>( pivot.y + ( cy * space_v ) )
 							}
 							, r2cm::WindowUtility::eColor::BG_Blue | r2cm::WindowUtility::eColor::FG_White
 						);
 						r2cm::WindowUtility::FillCharacter(
 							{
-									static_cast<short>( pivot_x + ( cx * space_h ) )
-								,	static_cast<short>( pivot_y + ( cy * space_v ) )
+									static_cast<short>( pivot.x + ( cx * space_h ) )
+								,	static_cast<short>( pivot.y + ( cy * space_v ) )
 							}
 							, 'o'
 						);
@@ -55,8 +55,8 @@ namespace psmhelper
 					{
 						r2cm::WindowUtility::FillCharacter(
 							{
-									static_cast<short>( pivot_x + ( cx * space_h ) )
-								,	static_cast<short>( pivot_y + ( cy * space_v ) )
+									static_cast<short>( pivot.x + ( cx * space_h ) )
+								,	static_cast<short>( pivot.y + ( cy * space_v ) )
 							}
 							, 'x'
 						);
@@ -69,14 +69,14 @@ namespace psmhelper
 			//
 			r2cm::WindowUtility::MoveCursorPoint( {
 					0
-				,	static_cast<short>( pivot_y + ( container.GetMaxY() * space_v ) + 1 )
+				,	static_cast<short>( pivot.y + ( container.GetMaxY() * space_v ) + 1 )
 				} );
 		}
 
 		inline static void Print( const short offset_x, const short offset_y, uint16_t space_h, uint16_t space_v, const psm::Terrain& container )
 		{
-			const auto pivot_point = r2cm::WindowUtility::GetCursorPoint();
-			Print( pivot_point.x, pivot_point.y, offset_x, offset_y, space_h, space_v, container );
+			const auto pivot = r2cm::WindowUtility::GetCursorPoint();
+			Print( pivot, offset_x, offset_y, space_h, space_v, container );
 		}
 
 		inline static void Print( const short offset_x, const short offset_y, const psm::Terrain& container )
@@ -90,9 +90,9 @@ namespace psmhelper
 		}
 
 
-		inline static void Print( const r2cm::WindowUtility::CursorPoint pivot_point, const short offset_x, const short offset_y, const psm::Terrain& container )
+		inline static void Print( const r2cm::WindowUtility::CursorPoint pivot, const short offset_x, const short offset_y, const psm::Terrain& container )
 		{
-			Print( pivot_point.x, pivot_point.y, offset_x, offset_y, 2, 1, container );
+			Print( pivot, offset_x, offset_y, 2, 1, container );
 		}
 	};
 }
