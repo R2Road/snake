@@ -15,6 +15,8 @@ namespace test_psm_terrain
 		return o << static_cast<int>( value ) << r2cm::linefeed;
 	}
 
+
+
 	r2cm::TitleFunctionT Declaration_1::GetTitleFunction() const
 	{
 		return []()->const char*
