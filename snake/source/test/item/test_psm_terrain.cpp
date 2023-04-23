@@ -31,6 +31,10 @@ namespace test_psm_terrain
 			LS();
 
 			{
+				OUTPUT_SUBJECT( "기본 생성자" );
+
+				LF();
+
 				DECLARATION_MAIN( psm::Terrain terrain );
 
 				LF();
@@ -58,17 +62,21 @@ namespace test_psm_terrain
 			LS();
 
 			{
-				DECLARATION_MAIN( psm::Terrain terrain( 3, 7 ) );
+				OUTPUT_SUBJECT( "가로, 세로를 인자로 받는 생성자" );
+
+				LF();
+
+				DECLARATION_MAIN( psm::Terrain terrain( 3, 5 ) );
 
 				LF();
 
 				EXPECT_EQ( 3, terrain.GetWidth() );
-				EXPECT_EQ( 7, terrain.GetHeight() );
+				EXPECT_EQ( 5, terrain.GetHeight() );
 
 				LF();
 
 				EXPECT_EQ( 2, terrain.GetMaxX() );
-				EXPECT_EQ( 6, terrain.GetMaxY() );
+				EXPECT_EQ( 4, terrain.GetMaxY() );
 
 				LF();
 
