@@ -54,9 +54,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -85,9 +83,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -131,9 +127,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -154,9 +148,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -177,9 +169,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -219,9 +209,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -242,9 +230,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -265,9 +251,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -297,9 +281,7 @@ namespace test_psm_terrain
 			LS();
 
 			{
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -357,9 +339,7 @@ namespace test_psm_terrain
 			LS();
 
 			{
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -424,9 +404,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -452,9 +430,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
-				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, terrain );
+				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 			
 			LS();

@@ -54,9 +54,8 @@ namespace test_psm_snake
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, t );
+				psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
@@ -86,9 +85,8 @@ namespace test_psm_snake
 
 				LF();
 
-				std::cout << "# View" << r2cm::linefeed2;
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, t );
+				psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
@@ -134,7 +132,7 @@ namespace test_psm_snake
 				LF();
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, t );
+				psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
@@ -157,7 +155,7 @@ namespace test_psm_snake
 				LF();
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				Utility4Terrain::Draw( 4, current_cursor_point.y, t );
+				psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
@@ -212,7 +210,7 @@ namespace test_psm_snake
 
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-					Utility4Terrain::Draw( 4, current_cursor_point.y, t );
+					psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 					Utility4Snake::Draw( 4, current_cursor_point.y, s );
 				}
 			}
@@ -236,7 +234,7 @@ namespace test_psm_snake
 
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-					Utility4Terrain::Draw( 4, current_cursor_point.y, t );
+					psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 					Utility4Snake::Draw( 4, current_cursor_point.y, s );
 				}
 			}
