@@ -8,7 +8,7 @@
 #include "psm/psm_Terrain.h"
 
 #include "test/Utility4Snake.h"
-#include "test/Utility4Terrain.h"
+#include "test/psmhelper_Printer4Terrain_CharOX.h"
 
 bool operator==( const psm::Snake::Node& node_1, const psm::Snake::Node& node_2 )
 {

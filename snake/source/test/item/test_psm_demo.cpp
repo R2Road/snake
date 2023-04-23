@@ -12,7 +12,7 @@
 #include "psm/psm_GameCore.h"
 #include "psm/psm_table_TerrainDataTable.h"
 
-#include "test/Utility4Terrain.h"
+#include "test/psmhelper_Printer4Terrain_CharOX.h"
 #include "test/Utility4Snake.h"
 
 namespace test_psm_demo

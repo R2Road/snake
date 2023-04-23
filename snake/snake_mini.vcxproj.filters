@@ -212,9 +212,6 @@
     <ClCompile Include="external\r2bix\r2utility_StringSize.cpp">
       <Filter>external\r2bix</Filter>
     </ClCompile>
-    <ClCompile Include="source\test\Utility4Terrain.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
     <ClCompile Include="source\test\Utility4Snake.cpp">
       <Filter>test</Filter>
     </ClCompile>
@@ -530,9 +527,6 @@
     <ClInclude Include="external\r2bix\r2utility_StringSize.h">
       <Filter>external\r2bix</Filter>
     </ClInclude>
-    <ClInclude Include="source\test\Utility4Terrain.h">
-      <Filter>test</Filter>
-    </ClInclude>
     <ClInclude Include="source\test\Utility4Snake.h">
       <Filter>test</Filter>
     </ClInclude>
@@ -634,6 +628,9 @@
     </ClInclude>
     <ClInclude Include="external\r2\r2_NoneCopyable.h">
       <Filter>external\r2</Filter>
+    </ClInclude>
+    <ClInclude Include="source\test\psmhelper_Printer4Terrain_CharOX.h">
+      <Filter>test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

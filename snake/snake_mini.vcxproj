@@ -99,7 +99,6 @@
     <ClCompile Include="source\test\item\test_psm_terrain.cpp" />
     <ClCompile Include="source\test\TestMenu.cpp" />
     <ClCompile Include="source\test\Utility4Snake.cpp" />
-    <ClCompile Include="source\test\Utility4Terrain.cpp" />
     <ClCompile Include="source\test\Utility4Test.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -222,7 +221,7 @@
     <ClInclude Include="source\test\item\test_psm_terrain.h" />
     <ClInclude Include="source\test\TestMenu.h" />
     <ClInclude Include="source\test\Utility4Snake.h" />
-    <ClInclude Include="source\test\Utility4Terrain.h" />
+    <ClInclude Include="source\test\psmhelper_Printer4Terrain_CharOX.h" />
     <ClInclude Include="source\test\Utility4Test.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

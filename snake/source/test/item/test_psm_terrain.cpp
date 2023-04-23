@@ -6,7 +6,7 @@
 
 #include "psm/psm_Terrain.h"
 
-#include "test/Utility4Terrain.h"
+#include "test/psmhelper_Printer4Terrain_CharOX.h"
 
 namespace test_psm_terrain
 {
