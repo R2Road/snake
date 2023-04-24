@@ -4,11 +4,10 @@
 #include "r2cm/r2cm_ostream.h"
 #include "r2cm/r2cm_WindowUtility.h"
 
+#include "psm/psm_helper_Printer4Terrain_CharOX.h"
 #include "psm/psm_Snake.h"
-#include "psm/psm_Terrain.h"
 
 #include "test/Utility4Snake.h"
-#include "test/psmhelper_Printer4Terrain_CharOX.h"
 
 bool operator==( const psm::Snake::Node& node_1, const psm::Snake::Node& node_2 )
 {
@@ -55,7 +54,7 @@ namespace test_psm_snake
 				LF();
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
+				psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
@@ -86,7 +85,7 @@ namespace test_psm_snake
 				LF();
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
+				psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
@@ -132,7 +131,7 @@ namespace test_psm_snake
 				LF();
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
+				psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
@@ -155,7 +154,7 @@ namespace test_psm_snake
 				LF();
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-				psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
+				psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 				Utility4Snake::Draw( 4, current_cursor_point.y, s );
 			}
 
@@ -210,7 +209,7 @@ namespace test_psm_snake
 
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-					psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
+					psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 					Utility4Snake::Draw( 4, current_cursor_point.y, s );
 				}
 			}
@@ -234,7 +233,7 @@ namespace test_psm_snake
 
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
-					psmhelper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
+					psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
 					Utility4Snake::Draw( 4, current_cursor_point.y, s );
 				}
 			}

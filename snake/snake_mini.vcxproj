@@ -207,6 +207,7 @@
     <ClInclude Include="source\psm\psm_DebugConfig.h" />
     <ClInclude Include="source\psm\psm_DirectorConfig.h" />
     <ClInclude Include="source\psm\psm_GameCore.h" />
+    <ClInclude Include="source\psm\psm_helper_Printer4Terrain_CharOX.h" />
     <ClInclude Include="source\psm\psm_scene_CompanyScene.h" />
     <ClInclude Include="source\psm\psm_scene_EntryScene.h" />
     <ClInclude Include="source\psm\psm_Snake.h" />
@@ -221,7 +222,6 @@
     <ClInclude Include="source\test\item\test_psm_terrain.h" />
     <ClInclude Include="source\test\TestMenu.h" />
     <ClInclude Include="source\test\Utility4Snake.h" />
-    <ClInclude Include="source\test\psmhelper_Printer4Terrain_CharOX.h" />
     <ClInclude Include="source\test\Utility4Test.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

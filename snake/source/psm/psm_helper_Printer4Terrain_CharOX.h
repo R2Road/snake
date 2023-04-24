@@ -5,7 +5,7 @@
 #include "psm/psm_Terrain.h"
 #include "r2/r2_NoneCopyable.h"
 
-namespace psmhelper
+namespace psm_helper
 {
 	class Printer4Terrain_CharOX : private r2::NoneCopyable
 	{

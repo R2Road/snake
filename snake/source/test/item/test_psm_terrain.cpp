@@ -4,9 +4,7 @@
 #include "r2cm/r2cm_ostream.h"
 #include "r2cm/r2cm_WindowUtility.h"
 
-#include "psm/psm_Terrain.h"
-
-#include "test/psmhelper_Printer4Terrain_CharOX.h"
+#include "psm/psm_helper_Printer4Terrain_CharOX.h"
 
 namespace test_psm_terrain
 {
@@ -54,7 +52,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -83,7 +81,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -127,7 +125,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -148,7 +146,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -169,7 +167,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -209,7 +207,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -230,7 +228,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -251,7 +249,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -281,7 +279,7 @@ namespace test_psm_terrain
 			LS();
 
 			{
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -339,7 +337,7 @@ namespace test_psm_terrain
 			LS();
 
 			{
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -404,7 +402,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 
 			LS();
@@ -430,7 +428,7 @@ namespace test_psm_terrain
 
 				LF();
 
-				psmhelper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
+				psm_helper::Printer4Terrain_CharOX::Print( 4, 0, terrain );
 			}
 			
 			LS();

@@ -59,7 +59,7 @@ namespace test_psm_demo
 					{
 						r2cm::WindowUtility::MoveCursorPointWithClearBuffer( pivot_cursor_point );
 
-						psmhelper::Printer4Terrain_CharOX::Print( pivot_cursor_point.x, pivot_cursor_point.y, game_core->GetTerrain() );
+						psm_helper::Printer4Terrain_CharOX::Print( pivot_cursor_point.x, pivot_cursor_point.y, game_core->GetTerrain() );
 						Utility4Snake::Draw( pivot_cursor_point.x, pivot_cursor_point.y, game_core->GetSnake() );
 
 						LS();

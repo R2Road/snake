@@ -28,6 +28,9 @@
     <Filter Include="project_snake_mini\table">
       <UniqueIdentifier>{697f67b0-ebe8-4b80-9bed-da0cafab8281}</UniqueIdentifier>
     </Filter>
+    <Filter Include="project_snake_mini\helper">
+      <UniqueIdentifier>{21abab8e-e996-45e3-a219-b7239991f0c4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\DevelopmentMenu.cpp" />
@@ -629,8 +632,8 @@
     <ClInclude Include="external\r2\r2_NoneCopyable.h">
       <Filter>external\r2</Filter>
     </ClInclude>
-    <ClInclude Include="source\test\psmhelper_Printer4Terrain_CharOX.h">
-      <Filter>test</Filter>
+    <ClInclude Include="source\psm\psm_helper_Printer4Terrain_CharOX.h">
+      <Filter>project_snake_mini\helper</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
