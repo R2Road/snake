@@ -5,11 +5,14 @@ namespace psm
 	class Snake;
 }
 
-class Utility4Snake
+namespace psm_helper
 {
-private:
-	Utility4Snake() = delete;
+	class Utility4Snake
+	{
+	private:
+		Utility4Snake() = delete;
 
-public:
-	static void Draw( const short x, const short y, const psm::Snake& snake );
-};
+	public:
+		static void Draw( const short x, const short y, const psm::Snake& snake );
+	};
+}
