@@ -13,30 +13,76 @@ namespace psm_helper
 		Printer4Snake_CharS() = delete;
 
 	public:
-		static void Draw( const short x, const short y, const psm::Snake& snake )
+		inline static void Print( r2cm::WindowUtility::CursorPoint pivot, const short offset_x, const short offset_y, uint16_t space_h, uint16_t space_v, const psm::Snake& container )
 		{
-			const r2cm::WindowUtility::CursorPoint pivot_point{ x, y };
+			//
+			//
+			//
+			pivot.x += offset_x;
+			pivot.y += offset_y;
 
-			for( uint32_t cy = 0; cy < snake.GetHeight(); ++cy )
+			//
+			//
+			//
+			space_h = ( space_h > 0 ? space_h : 1 );
+			space_v = ( space_v > 0 ? space_v : 1 );
+
+			//
+			// Draw
+			//
+			for( uint32_t cy = 0; cy < container.GetHeight(); ++cy )
 			{
-				for( uint32_t cx = 0; cx < snake.GetWidth(); ++cx )
+				for( uint32_t cx = 0; cx < container.GetWidth(); ++cx )
 				{
-					if( snake.Get( cx, cy ) )
+					if( container.Get( cx, cy ) )
 					{
-						r2cm::WindowUtility::FillCharacter(
-							{ static_cast<short>( pivot_point.x + ( cx * 2 ) ),	static_cast<short>( pivot_point.y + cy ) }
-							, 'S'
-						);
-
 						r2cm::WindowUtility::FillColor(
-							{ static_cast<short>( pivot_point.x + ( cx * 2 ) ),	static_cast<short>( pivot_point.y + cy ) }
+							{
+									static_cast<short>( pivot.x + ( cx * space_h ) )
+								,	static_cast<short>( pivot.y + ( cy * space_v ) )
+							}
 							, r2cm::WindowUtility::eColor::FG_Red
+						);
+						r2cm::WindowUtility::FillCharacter(
+							{
+									static_cast<short>( pivot.x + ( cx * space_h ) )
+								,	static_cast<short>( pivot.y + ( cy * space_v ) )
+							}
+							, 'S'
 						);
 					}
 				}
 			}
 
-			r2cm::WindowUtility::MoveCursorPoint( { static_cast<short>( pivot_point.x ), static_cast<short>( pivot_point.y + snake.GetHeight() ) } );
+			//
+			// Move Cursor
+			//
+			r2cm::WindowUtility::MoveCursorPoint( {
+					0
+				,	static_cast<short>( pivot.y + ( container.GetMaxY() * space_v ) + 1 )
+			} );
+		}
+
+		inline static void Print( const short offset_x, const short offset_y, uint16_t space_h, uint16_t space_v, const psm::Snake& container )
+		{
+			const auto pivot = r2cm::WindowUtility::GetCursorPoint();
+			Print( pivot, offset_x, offset_y, space_h, space_v, container );
+		}
+
+		inline static void Print( const short offset_x, const short offset_y, const psm::Snake& container )
+		{
+			Print( offset_x, offset_y, 2, 1, container );
+		}
+
+		inline static void Print( const psm::Snake& container )
+		{
+			Print( 0, 0, 2, 1, container );
+		}
+
+
+		inline static void Print( const r2cm::WindowUtility::CursorPoint pivot, const short offset_x, const short offset_y, const psm::Snake& container )
+		{
+			Print( pivot, offset_x, offset_y, 2, 1, container );
 		}
 	};
 }

@@ -53,7 +53,7 @@ namespace test_psm_snake
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
-				psm_helper::Printer4Snake_CharS::Draw( 4, current_cursor_point.y, s );
+				psm_helper::Printer4Snake_CharS::Print( current_cursor_point, 4, 0, s );
 			}
 
 			LS();
@@ -84,7 +84,7 @@ namespace test_psm_snake
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
-				psm_helper::Printer4Snake_CharS::Draw( 4, current_cursor_point.y, s );
+				psm_helper::Printer4Snake_CharS::Print( current_cursor_point, 4, 0, s );
 			}
 
 			LS();
@@ -130,7 +130,7 @@ namespace test_psm_snake
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
-				psm_helper::Printer4Snake_CharS::Draw( 4, current_cursor_point.y, s );
+				psm_helper::Printer4Snake_CharS::Print( current_cursor_point, 4, 0, s );
 			}
 
 			LS();
@@ -153,7 +153,7 @@ namespace test_psm_snake
 
 				const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 				psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
-				psm_helper::Printer4Snake_CharS::Draw( 4, current_cursor_point.y, s );
+				psm_helper::Printer4Snake_CharS::Print( current_cursor_point, 4, 0, s );
 			}
 
 			LS();
@@ -208,7 +208,7 @@ namespace test_psm_snake
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 					psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
-					psm_helper::Printer4Snake_CharS::Draw( 4, current_cursor_point.y, s );
+					psm_helper::Printer4Snake_CharS::Print( current_cursor_point, 4, 0, s );
 				}
 			}
 
@@ -232,7 +232,7 @@ namespace test_psm_snake
 				{
 					const auto current_cursor_point = r2cm::WindowUtility::GetCursorPoint();
 					psm_helper::Printer4Terrain_CharOX::Print( current_cursor_point, 4, 0, t );
-					psm_helper::Printer4Snake_CharS::Draw( 4, current_cursor_point.y, s );
+					psm_helper::Printer4Snake_CharS::Print( current_cursor_point, 4, 0, s );
 				}
 			}
 
