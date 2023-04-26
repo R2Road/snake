@@ -87,7 +87,6 @@
     <ClCompile Include="source\DevelopmentMenu.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\psm\psm_GameCore.cpp" />
-    <ClCompile Include="source\psm\psm_helper_Printer4Snake_CharS.cpp" />
     <ClCompile Include="source\psm\psm_scene_CompanyScene.cpp" />
     <ClCompile Include="source\psm\psm_scene_EntryScene.cpp" />
     <ClCompile Include="source\psm\psm_Snake.cpp" />

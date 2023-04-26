@@ -6,7 +6,6 @@
 
 #include "psm/psm_helper_Printer4Snake_CharS.h"
 #include "psm/psm_helper_Printer4Terrain_CharOX.h"
-#include "psm/psm_Snake.h"
 
 bool operator==( const psm::Snake::Node& node_1, const psm::Snake::Node& node_2 )
 {
