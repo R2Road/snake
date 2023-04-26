@@ -1,12 +1,13 @@
 #pragma once
 
+#include "r2/r2_NoneCopyable.h"
 #include "r2cm/r2cm_WindowUtility.h"
 
 #include "psm/psm_Snake.h"
 
 namespace psm_helper
 {
-	class Printer4Snake_CharS
+	class Printer4Snake_CharS : private r2::NoneCopyable
 	{
 	private:
 		Printer4Snake_CharS() = delete;
