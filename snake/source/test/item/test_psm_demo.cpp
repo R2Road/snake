@@ -10,10 +10,12 @@
 #include "r2cm/r2cm_WindowUtility.h"
 
 #include "psm/psm_GameCore.h"
+
+#include "psm/psm_helper_Printer4Snake_CharS.h"
 #include "psm/psm_helper_Printer4Terrain_CharOX.h"
+
 #include "psm/psm_table_TerrainDataTable.h"
 
-#include "test/Utility4Snake.h"
 
 namespace test_psm_demo
 {
