@@ -9,7 +9,7 @@
 
 namespace psm_helper
 {
-	void Utility4Snake::Draw( const short x, const short y, const psm::Snake& snake )
+	void Printer4Snake_CharS::Draw( const short x, const short y, const psm::Snake& snake )
 	{
 		const r2cm::WindowUtility::CursorPoint pivot_point{ x, y };
 
